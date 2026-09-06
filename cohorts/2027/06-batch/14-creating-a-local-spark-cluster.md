@@ -3,21 +3,75 @@ video_url: https://www.youtube.com/watch?v=HXBwSlXo5IA
 ---
 # Creating a Local Spark Cluster
 
-> [!WARNING]
-> **Scaffold — the lesson text for this unit has not been written.**
-> Everything on this page was carried over mechanically: the title, the video
-> and the material that already existed in the repository. Nothing here
-> explains the topic. Watch the video; do not read this page as the lesson.
+In this unit we take the Spark SQL job from the previous units out of the
+notebook: we turn the notebook into a Python script, create a standalone
+Spark cluster with a master and a worker, and submit the job to it with
+`spark-submit`. Even though we run everything on the same machine, this is
+the same flow you would use to submit jobs to a real cluster, including
+the managed one we create in the next unit.
 
-<!-- SCAFFOLD-NO-WRITEUP -->
+## The notebook was a cluster all along
 
-Creating a stand-alone cluster ([docs](https://spark.apache.org/docs/latest/spark-standalone.html)):
+When we create a SparkSession with `local[*]` in a notebook, Spark starts
+a local cluster behind the scenes and our notebook connects to it - the
+URL is `local[*]`, and the web UI lives on port 4040. When we shut the
+kernel down, that cluster disappears with it.
+
+That is convenient for experimenting, but it ties the cluster lifetime to
+the notebook. To schedule this job later - for example from Airflow - we
+need a cluster that exists independently of any notebook, and a script we
+can submit to it.
+
+## Starting a master
+
+Spark ships with scripts for running a standalone cluster
+(see the [Spark standalone docs](https://spark.apache.org/docs/latest/spark-standalone.html)).
+From the Spark home directory, start a master:
 
 ```bash
 ./sbin/start-master.sh
 ```
 
-Creating a worker:
+The master has a web UI, but unlike the notebook-created cluster it is not
+on port 4040 - a standalone master listens on port 8080. Open it in the
+browser and you see the master with no workers connected yet:
+
+![The standalone Spark master web UI on port 8080, with no workers yet](images/14-creating-a-local-spark-cluster-01-spark-master-ui.jpg)
+
+The master URL is shown at the top of the UI: `spark://de-zoomcamp...
+:7077`. This is the address that workers and applications use to connect.
+On a cloud virtual machine the hostname looks like
+`spark://de-zoomcamp.europe-west1-b.c.de-zoomcamp-nytaxi.internal:7077`;
+on your laptop it would be `spark://localhost:7077`.
+
+## Connecting to the master
+
+We can point our notebook at this master instead of `local[*]`:
+
+```python
+master = "spark://de-zoomcamp.europe-west1-b.c.de-zoomcamp-nytaxi.internal:7077"
+
+spark = SparkSession.builder \
+    .appName('test') \
+    .master(master) \
+    .getOrCreate()
+```
+
+Running a cell now connects the notebook to the standalone master - the
+application shows up in the master UI.
+
+## Adding a worker
+
+If we run a job now, it hangs with this warning:
+
+```
+Initial job has not accepted any resources; check your cluster UI to
+ensure that workers are registered and have sufficient resources
+```
+
+The reason is simple: we started a master but zero workers. A master only
+coordinates - the actual execution happens in workers, and we have none.
+In another terminal, still in the Spark directory, start one:
 
 ```bash
 URL="spark://de-zoomcamp.europe-west1-b.c.de-zoomcamp-nytaxi.internal:7077"
@@ -27,13 +81,62 @@ URL="spark://de-zoomcamp.europe-west1-b.c.de-zoomcamp-nytaxi.internal:7077"
 #./sbin/start-worker.sh ${URL}
 ```
 
-Turn the notebook into a script:
+Our Spark version is older, where a worker was called a slave - on newer
+versions the script is `start-worker.sh`. After starting it, the worker
+appears in the master UI:
+
+![The worker is registered with the master and picks up the task](images/14-creating-a-local-spark-cluster-02-worker-registered.jpg)
+
+Now the pending job gets resources and executes. The notebook application
+is connected to a real cluster with one worker.
+
+## Turning the notebook into a script
+
+Jupyter can convert a notebook to a plain Python script with nbconvert:
 
 ```bash
 jupyter nbconvert --to=script 06_spark_sql.ipynb
 ```
 
-Edit the script and then run it:
+The generated `06_spark_sql.py` needs a small cleanup: remove the `In
+[...]` comments and the magic lines, keep the imports and the SparkSession
+setup. In the video we also replace the generated column list with an
+explicit `common_columns` list, which reads better in a script.
+
+![The converted script, cleaned up in the editor](images/14-creating-a-local-spark-cluster-03-converted-script.jpg)
+
+If we run the script right away with `python 06_spark_sql.py`, it connects
+to the master and starts executing. But look at the master UI: the job
+sits again at "Initial job has not accepted any resources". This time the
+cause is different - the notebook application is still connected and took
+all the available cores, so there is nothing left for the script. Shutting
+down the notebook kernel frees the cores, and the script runs through.
+
+## Making the script configurable
+
+The script hardcodes its input and output paths. For a job we want to
+schedule - run it for one month, or one year, or a different output -
+those paths should come from the command line. We use `argparse`, the same
+package we used for the ingestion script in module one:
+
+```python
+import argparse
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument('--input_green', required=True)
+parser.add_argument('--input_yellow', required=True)
+parser.add_argument('--output', required=True)
+
+args = parser.parse_args()
+
+input_green = args.input_green
+input_yellow = args.input_yellow
+output = args.output
+```
+
+The parsed arguments replace the hardcoded paths in the script. Now we can
+run the same job for any period, for example 2020 only:
 
 ```bash
 python 06_spark_sql.py \
@@ -42,7 +145,19 @@ python 06_spark_sql.py \
     --output=data/report-2020
 ```
 
-Use `spark-submit` for running the script on the cluster
+![Running the script for 2020 from the terminal](images/14-creating-a-local-spark-cluster-04-running-script-2020.jpg)
+
+It finishes quickly - there is not much 2020 data - and the report lands
+in `data/report-2020`.
+
+## Submitting with spark-submit
+
+Hardcoding the master URL inside the script is still not practical: the
+same script may need to run against a local cluster today and a different
+cluster from Airflow tomorrow. And there are other things we may want to
+configure per-run, like how many executors to use and how much memory
+they get. In practice this configuration lives outside the script, and
+the tool for supplying it is `spark-submit`, which ships with Spark:
 
 ```bash
 URL="spark://de-zoomcamp.europe-west1-b.c.de-zoomcamp-nytaxi.internal:7077"
@@ -55,4 +170,29 @@ spark-submit \
         --output=data/report-2021
 ```
 
-The script is [`code/06_spark_sql.py`](code/06_spark_sql.py).
+Everything before the Python file is the configuration for Spark - the
+master, and optionally things like executor memory or the number of
+cores. Everything after the file name is passed to the job itself, so our
+`argparse` arguments go at the end.
+
+![spark-submit running the 2021 job against the local cluster](images/14-creating-a-local-spark-cluster-05-spark-submit-2021.jpg)
+
+This is the way you submit Spark jobs in practice, and it is also how you
+would wire them into Airflow later. When it finishes, `data/report-2021`
+appears next to the 2020 report - same script, same cluster, different
+parameters.
+
+The full script is [`code/06_spark_sql.py`](code/06_spark_sql.py).
+
+## Stopping the cluster
+
+One thing to remember: when you are done, stop the worker and the master
+with the matching scripts from the same `sbin` directory:
+
+```bash
+./sbin/stop-slave.sh ${URL}   # ./sbin/stop-worker.sh on newer versions
+./sbin/stop-master.sh
+```
+
+After that nothing is running, and trying to connect gives an error - the
+cluster is really gone.

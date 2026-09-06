@@ -3,28 +3,151 @@ video_url: https://www.youtube.com/watch?v=Yyz293hBVcQ
 ---
 # Connecting to Google Cloud Storage
 
-> [!WARNING]
-> **Scaffold — the lesson text for this unit has not been written.**
-> Everything on this page was carried over mechanically: the title, the video
-> and the material that already existed in the repository. Nothing here
-> explains the topic. Watch the video; do not read this page as the lesson.
+So far our Spark jobs read parquet files from the local file system. In
+this unit we move the data to Google Cloud Storage and configure our local
+Spark to read from it. This is the first unit in the running-Spark-in-the-
+cloud section: after this come creating a local Spark cluster and running
+Spark on Dataproc.
 
-<!-- SCAFFOLD-NO-WRITEUP -->
+The setup follows instructions written by Alvin Do - thanks, Alvin! We
+walk through them step by step. The finished configuration is in
+[`code/09_spark_gcs.ipynb`](code/09_spark_gcs.ipynb).
 
-Uploading data to GCS:
+![The Slack post with the original instructions for connecting Spark to GCS](images/13-connecting-to-google-cloud-storage-01-gcs-connector-instructions.jpg)
+
+## Uploading the data to Google Cloud Storage
+
+We already have a bucket from the Terraform setup in module one. The data
+we produced in the previous units - the parquet files in `data/pq` and the
+report - now moves there. `gsutil cp` copies files to Google Cloud
+Storage, and since we are copying a folder with a lot of files, we add two
+flags: `-r` for recursive, and `-m` for multi-threaded (parallel) upload,
+which uses all the CPUs of the machine:
 
 ```bash
 gsutil -m cp -r pq/ gs://dtc_data_lake_de-zoomcamp-nytaxi/pq
 ```
 
-Download the jar for connecting to GCS to any location (e.g. the `lib` folder):
+![Uploading the pq folder to the bucket with gsutil](images/13-connecting-to-google-cloud-storage-02-upload-parquet-to-gcs.jpg)
 
-**Note**: For other versions of GCS connector for Hadoop see [Cloud Storage connector ](https://cloud.google.com/dataproc/docs/concepts/connectors/cloud-storage#connector-setup-on-non-dataproc-clusters).
+Uploading the parquet files takes a while - the folder holds 380 files,
+1.1 GiB in total:
+
+![The upload progresses over 380 objects, 1.1 GiB in total](images/13-connecting-to-google-cloud-storage-03-upload-progress.jpg)
+
+When it finishes, the `pq` folder with the green and yellow parquet files
+sits in the bucket.
+
+## The GCS connector for Hadoop
+
+Spark cannot read a `gs://` URL out of the box. When Spark sees a URI like
+
+```
+gs://dtc_data_lake_de-zoomcamp-nytaxi/pq/green/...
+```
+
+it needs to know how to connect to Google Cloud Storage to fetch the
+files. The piece that knows how to do this is the Cloud Storage connector
+for Hadoop - a jar file, a Java library. You can ignore the Hadoop part of
+the name: we just need to tell Spark where the jar is.
+
+For other versions of the GCS connector for Hadoop see the
+[Cloud Storage connector](https://cloud.google.com/dataproc/docs/concepts/connectors/cloud-storage#connector-setup-on-non-dataproc-clusters)
+documentation.
+
+The connector is hosted on Google Cloud Storage itself, so we download it
+with `gsutil` again. We need the `hadoop3` build - the Spark version we
+installed in the setup unit was built for Hadoop 3 - and version 2.2.5 of
+the connector:
 
 ```bash
+mkdir lib
 gsutil cp gs://hadoop-lib/gcs/gcs-connector-hadoop3-2.2.5.jar ./lib/
 ```
 
-See the notebook with configuration in [`code/09_spark_gcs.ipynb`](code/09_spark_gcs.ipynb)
+The `lib` folder is not a special location - we put the jar there to keep
+it next to the code:
 
-(Thanks Alvin Do for the instructions!)
+![Downloading the connector jar into the lib folder](images/13-connecting-to-google-cloud-storage-04-download-connector-jar.jpg)
+
+## Configuring the Spark session
+
+Now the configuration. The notebook starts with a few extra imports: we
+need `SparkConf` and `SparkContext` in addition to `SparkSession`.
+
+Next we point Spark to our Google Cloud credentials. The path is the same
+service-account key we created with Terraform in module one:
+
+```python
+credentials_location = '/home/alexey/.google/credentials/google_credentials.json'
+```
+
+Then we build the configuration. Instead of letting the session builder
+create everything, we set it up explicitly:
+
+```python
+conf = SparkConf() \
+    .setMaster('local[*]') \
+    .setAppName('test') \
+    .set("spark.jars", "./lib/gcs-connector-hadoop3-2.2.5.jar") \
+    .set("spark.hadoop.google.cloud.auth.service.account.enable", "true") \
+    .set("spark.hadoop.google.cloud.auth.service.account.json.keyfile",
+         credentials_location)
+```
+
+We still run in `local[*]` mode with the app name `test`. The new parts
+are the jar we just downloaded and the two settings that switch on the
+service-account authentication with our key file.
+
+![The SparkConf with the GCS connector jar and the credentials](images/13-connecting-to-google-cloud-storage-05-spark-conf-gcs-connector.jpg)
+
+With the configuration we create a Spark context, and through it we
+configure the Hadoop layer that actually handles the `gs://` file system:
+
+```python
+sc = SparkContext(conf=conf)
+
+hadoop_conf = sc._jsc.hadoopConfiguration()
+
+hadoop_conf.set("fs.AbstractFileSystem.gs.impl",
+                "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS")
+hadoop_conf.set("fs.gs.impl",
+                "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem")
+hadoop_conf.set("fs.gs.auth.service.account.json.keyfile",
+                credentials_location)
+hadoop_conf.set("fs.gs.auth.service.account.enable", "true")
+```
+
+This is the part that says: when you see a file system that starts with
+`gs`, use the implementation that comes from the connector jar, and use
+these credentials.
+
+Finally we create the session from the context - the same builder as
+always, but reusing the configuration we just assembled:
+
+```python
+spark = SparkSession.builder \
+    .config(conf=sc.getConf()) \
+    .getOrCreate()
+```
+
+![Creating the Spark session from the context, then reading from gs://](images/13-connecting-to-google-cloud-storage-06-spark-session-gcs.jpg)
+
+## Testing the connection
+
+Now we read the green parquet files straight from the bucket:
+
+```python
+df_green = spark.read.parquet('gs://dtc_data_lake_de-zoomcamp-nytaxi/pq/green/*/*')
+```
+
+A simple `df_green.count()` confirms that it works - Spark connects to
+Google Cloud Storage, downloads the parquet files and counts the rows:
+
+![Counting the rows of a DataFrame read from gs:// proves the setup works](images/13-connecting-to-google-cloud-storage-07-read-from-gcs-test.jpg)
+
+That is all the configuration takes. Note that we only need this when we
+run Spark ourselves - on a virtual machine or on a laptop. Later in this
+section we use Dataproc, the managed Spark service on Google Cloud, and
+there this configuration is not needed: a Dataproc cluster can already
+talk to Google Cloud Storage out of the box.
