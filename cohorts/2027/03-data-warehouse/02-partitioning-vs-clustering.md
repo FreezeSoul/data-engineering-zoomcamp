@@ -9,8 +9,6 @@ how much less data our queries scanned as a result. This unit goes into
 the detail: the partitioning options BigQuery gives you, how clustering
 sorts your data, and how to decide which of the two to use.
 
-![Partitioned and clustered Stack Overflow questions](images/02-partitioning-vs-clustering-01-partitioned-and-clustered-tables.jpg)
-
 ## Partitioning options
 
 When you create a partitioned table in BigQuery, you choose what the
@@ -37,7 +35,7 @@ partitions.
 Monthly or yearly is for the opposite case: a small amount of data
 spread across a wide range of dates.
 
-![Partitioning options in BigQuery](images/02-partitioning-vs-clustering-02-partitioning-options.jpg)
+![Partitioning options in BigQuery](images/02-partitioning-vs-clustering-01-partitioning-options.jpg)
 
 ## How clustering works
 
@@ -51,7 +49,7 @@ sorted first by a, then by b, then by c.
 Clustering improves filter and aggregate queries, especially when you
 filter or aggregate on the columns you clustered by.
 
-![How clustering works in BigQuery](images/02-partitioning-vs-clustering-03-clustering-basics.jpg)
+![How clustering works in BigQuery](images/02-partitioning-vs-clustering-02-clustering-basics.jpg)
 
 Partitioning and clustering are not free, though. If your table is
 small - less than 1 GB - neither shows a significant improvement in
@@ -91,7 +89,7 @@ Cardinality. Use clustering when the number of distinct values in a
 column or group of columns is large. That cardinality is a hindrance
 for partitioning, because of the 4000-partition limit.
 
-![Partitioning vs clustering](images/02-partitioning-vs-clustering-04-partitioning-vs-clustering.jpg)
+![Partitioning vs clustering](images/02-partitioning-vs-clustering-03-partitioning-vs-clustering.jpg)
 
 ## When clustering beats partitioning
 
@@ -105,7 +103,7 @@ should choose clustering over partitioning:
 - Your mutation operations would modify the majority of the partitions
   frequently - for example, writing to the table every few minutes.
 
-![When to choose clustering over partitioning](images/02-partitioning-vs-clustering-05-clustering-over-partitioning.jpg)
+![When to choose clustering over partitioning](images/02-partitioning-vs-clustering-04-clustering-over-partitioning.jpg)
 
 ## Automatic reclustering
 
@@ -123,7 +121,7 @@ partition.
 Reclustering does not impact query performance, and it does not cost
 you anything - BigQuery takes care of it.
 
-![Automatic reclustering](images/02-partitioning-vs-clustering-06-automatic-reclustering.jpg)
+![Automatic reclustering](images/02-partitioning-vs-clustering-05-automatic-reclustering.jpg)
 
 ## Summary
 

@@ -102,6 +102,6 @@ reading — some cover Dremel internals, others BigQuery internals in
 general:
 
 - [BigQuery documentation: how-to](https://cloud.google.com/bigquery/docs/how-to)
-- [Dremel paper on Google Research](https://research.google/pubs/pub36332/)
+- [Dremel paper on Google Research](https://research.google/pubs/pub36632/)
 - [BigQuery architecture guide on Panoply](https://panoply.io/data-warehouse-guide/bigquery-architecture/)
 - [A look at Dremel](http://www.goldsborough.me/distributed-systems/2019/05/18/21-09-00-a_look_at_dremel/)

@@ -1,15 +1,5 @@
 # Data Warehousing
 
-> [!WARNING]
-> **This module is scaffolded, not written.** The six units below are real —
-> correct titles, correct videos, and the links, SQL and slides that already
-> existed — but none of them has a lesson write-up. Every one carries a visible
-> warning and the marker `SCAFFOLD-NO-WRITEUP`; find them all with
-> `grep -rln SCAFFOLD-NO-WRITEUP --include='[0-9][0-9]-*.md' .`.
-> Until someone who has watched the
-> recordings writes them, the videos are the lesson and these pages are an
-> index. The 2027 cohort stays unpublished for exactly this reason.
-
 ## Units
 
 1. [Data Warehouse and BigQuery](01-data-warehouse-and-bigquery.md)

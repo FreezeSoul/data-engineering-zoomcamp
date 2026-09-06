@@ -1,9 +1,6 @@
 schema_version: 1
 content_id: 51468846-f65c-4245-884b-1946e600940d
 title: "Data Warehousing"
-# Scaffolded module: every unit below has its title, video and existing
-# materials, and none of them has a written lesson. Grep SCAFFOLD-NO-WRITEUP.
-# The cohort must stay unpublished until they are authored.
 units:
   - content_id: a1fd26ed-1b90-4b0a-ab68-e7da1baa93e9
     title: "Data Warehouse and BigQuery"

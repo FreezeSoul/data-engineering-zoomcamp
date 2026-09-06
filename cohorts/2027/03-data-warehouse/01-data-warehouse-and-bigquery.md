@@ -114,8 +114,8 @@ open source public data you can query out of the box.
 One example is the New York City Citi Bike stations data. You can
 search any dataset by table name in the search bar, and open the table
 to see its columns: station id, name, short name, latitude, longitude
-and others. This table has only 1,584 rows and its size is a couple of
-hundred KB — a very small dataset. You can also do a quick preview to
+and others. This table has only 1,584 rows and its size is just a few
+KB — a very small dataset. You can also do a quick preview to
 see how the data is arranged.
 
 Let's query it:
