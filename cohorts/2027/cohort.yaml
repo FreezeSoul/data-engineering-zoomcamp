@@ -10,12 +10,11 @@ format: modules
 # Draft: the cohort is unpublished and the dates below are placeholders
 # until the schedule is confirmed.
 #
-# Do not flip this to true yet. Modules 03 and 06 are scaffolded: their units
-# carry the right titles, videos and materials but no lesson text, and every
-# one of them is marked SCAFFOLD-NO-WRITEUP. There is no per-module or per-unit
-# publish flag, so this line is the only thing keeping them off the site.
-# Before publishing, this must find nothing:
-#   grep -rln SCAFFOLD-NO-WRITEUP --include='[0-9][0-9]-*.md' cohorts/2027
+# Do not flip this to true yet — that is a publishing decision to make after
+# the schedule is confirmed. The module 03 and 06 lesson notes were authored
+# on 2026-09-06 (previously they were bare scaffolds marked SCAFFOLD-NO-WRITEUP;
+# that grep now finds nothing). There is no per-module or per-unit publish
+# flag, so this line is the only thing keeping the cohort off the site.
 published: false
 start_date: 2027-01-11
 end_date: 2027-04-05
