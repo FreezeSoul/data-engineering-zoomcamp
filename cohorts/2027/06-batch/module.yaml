@@ -1,9 +1,6 @@
 schema_version: 1
 content_id: 5c4f5904-5f37-4c41-bded-d3afbdc8fb31
 title: "Batch Processing"
-# Scaffolded module: every unit below has its title, video and existing
-# materials, and none of them has a written lesson. Grep SCAFFOLD-NO-WRITEUP.
-# The cohort must stay unpublished until they are authored.
 units:
   - content_id: cee38c6b-a7f3-4b34-b294-38109a3a2445
     title: "Introduction to Batch Processing"

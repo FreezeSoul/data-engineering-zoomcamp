@@ -1,16 +1,5 @@
 # Batch Processing
 
-> [!WARNING]
-> **This module is scaffolded, not written.** The sixteen units below are real —
-> correct titles, correct videos, and the setup guides, notebooks, scripts and
-> cloud commands that already existed in the repository — but none of them has a
-> lesson write-up. Every one carries a visible warning and the marker
-> `SCAFFOLD-NO-WRITEUP`; find them all with
-> `grep -rln SCAFFOLD-NO-WRITEUP --include='[0-9][0-9]-*.md' .`.
-> Until someone who has watched the recordings writes them, the videos are the
-> lesson and these pages are an index over the code. The 2027 cohort stays
-> unpublished for exactly this reason.
-
 ## Units
 
 1. [Introduction to Batch Processing](01-introduction-to-batch-processing.md)
