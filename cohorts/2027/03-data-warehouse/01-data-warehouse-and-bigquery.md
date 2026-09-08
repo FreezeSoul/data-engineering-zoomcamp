@@ -195,7 +195,7 @@ once BigQuery understands it only needs the data for 2 March 2018, it
 will not read or process the data for 1 March or 3 March. Processing
 less data reduces cost.
 
-![Partitioning a Stack Overflow questions table by creation date](images/01-data-warehouse-and-bigquery-05-partitioning-diagram.jpg)
+![Partitioning a Stack Overflow questions table by creation date](images/01-data-warehouse-and-bigquery-05-partitioning-diagram-cropped.png)
 
 Back to the taxi data. Until now we only had the external table, which
 is not partitioned. First let's create a plain, non-partitioned table

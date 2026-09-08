@@ -52,6 +52,26 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 01-data-warehouse-and-bigquery-05-partitioning-diagram.jpg
+
+- Source: `01-data-warehouse-and-bigquery.md`, partitioning section.
+- Rubric: 11/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the before/after table relationship teaches how
+  `Creation_date` becomes date partitions, and exact sample rows must remain
+  trustworthy.
+- Preparation: deterministic crop `(x=20, y=18, width=600, height=335)`;
+  resized 2x with a light unsharp mask. Imagegen was rejected for this
+  table-heavy asset because it could alter exact rows or dates.
+- Method: deterministic PNG sibling
+  `01-data-warehouse-and-bigquery-05-partitioning-diagram-cropped.png`.
+- Invariants checked: source and partitioned table headings, `Creation_date`,
+  partition keys `20180301`, `20180302`, `20180303`, sample rows, and the
+  partition arrow are unchanged; no face, camera tile, cursor, or overlay was
+  present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-04-external-table-details.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, external-table section.
