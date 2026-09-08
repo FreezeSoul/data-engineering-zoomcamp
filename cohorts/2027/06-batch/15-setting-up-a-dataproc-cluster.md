@@ -71,7 +71,7 @@ it finishes, the result is in the bucket: a `report-2021` folder with the
 parquet files of the monthly revenue report - computed by the cluster we
 just created.
 
-![The finished job and the report folder in the bucket](images/15-setting-up-a-dataproc-cluster-03-job-finished-report.jpg)
+![The finished job and the report folder in the bucket](images/15-setting-up-a-dataproc-cluster-03-job-finished-report-cropped.png)
 
 ## Submitting a job with gcloud
 

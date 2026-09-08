@@ -92,6 +92,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 72 | `14-creating-a-local-spark-cluster-05-spark-submit-2021.jpg` | keep | deterministic crop `x=60,y=48,w=475,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the exact Spark executor/scheduler log evidence for the 2021 run while removing browser/terminal chrome and webcam; the source frame is already scrolled past the command line. |
 | 73 | `15-setting-up-a-dataproc-cluster-01-create-cluster.jpg` | keep | deterministic crop `x=0,y=30,w=535,h=330`, 2x Lanczos/sharpen | 10/12 | Preserves the Google Cloud Dataproc cluster setup steps and selected Jupyter/Docker components while removing browser chrome and webcam; the right side is intentionally excluded to avoid the face overlay. |
 | 74 | `15-setting-up-a-dataproc-cluster-02-submit-job-form.jpg` | keep | deterministic crop `x=280,y=95,w=360,h=265`, 2x Lanczos/sharpen | 9/12 | Preserves the exact green/yellow input and report-output arguments while removing browser chrome and webcam; the source-safe crop focuses on the arguments panel rather than the script field above. |
+| 75 | `15-setting-up-a-dataproc-cluster-03-job-finished-report.jpg` | keep | deterministic crop `x=0,y=30,w=535,h=320`, 2x Lanczos/sharpen | 10/12 | Preserves the bucket identity, object tabs, and `code/`, `pq/`, and `report-2021/` folders while removing browser chrome, webcam, and bottom hover/status UI. |
 
 ## Validation
 
