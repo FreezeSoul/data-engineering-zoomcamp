@@ -90,8 +90,6 @@ workflow tools like Airflow. A typical workflow could look like this:
 Each step is a batch job. They use different technologies, and Airflow
 orchestrates the whole pipeline.
 
-![alt text](images/01-introduction-to-batch-processing-05-batch-workflow.jpg)
-
 ## Advantages and disadvantages of batch
 
 Batch jobs are convenient and easy to manage. Workflow tools let us
