@@ -29,7 +29,7 @@ There are multiple ways of processing data. The two main ones are batch
 processing and streaming. This week is about batch; streaming is the
 next module.
 
-![alt text](images/01-introduction-to-batch-processing-01-batch-vs-streaming.jpg)
+![Batch processes a complete day's data in one job, while streaming processes events continuously](images/01-introduction-to-batch-processing-01-batch-vs-streaming-imagegen.png)
 
 With batch, imagine we have a database with our taxi trip data. We take
 the entire dataset for one day - say, all of January 15, from 00:00 to
