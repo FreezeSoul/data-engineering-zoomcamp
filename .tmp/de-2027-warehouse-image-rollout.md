@@ -155,6 +155,23 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 03-bigquery-best-practices-02-query-performance.jpg
+
+- Source: `03-bigquery-best-practices.md`, query-performance slide.
+- Rubric: 10/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 1, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the consolidated performance checklist adds a
+  durable reference to the prose and code examples.
+- Preparation: deterministic crop `(x=20, y=20, width=600, height=245)`;
+  resized 2x with a light unsharp mask. Exact wording was retained.
+- Method: deterministic PNG sibling
+  `03-bigquery-best-practices-02-query-performance-cropped.png`.
+- Invariants checked: all eight performance bullets, including JOIN, WITH,
+  external-source, and oversharding guidance, remain unchanged; no face,
+  camera tile, cursor, or overlay was present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.

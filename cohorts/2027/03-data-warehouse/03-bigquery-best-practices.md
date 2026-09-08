@@ -41,7 +41,7 @@ query, it can serve the cached result instead of recomputing it.
 
 The second group of best practices is about making queries fast.
 
-![The query performance slide: filter on partitioned columns, denormalizing data, nested or repeated columns, external data sources, reduce data before a JOIN, WITH clauses, oversharding](images/03-bigquery-best-practices-02-query-performance.jpg)
+![The query performance slide: filter on partitioned columns, denormalizing data, nested or repeated columns, external data sources, reduce data before a JOIN, WITH clauses, oversharding](images/03-bigquery-best-practices-02-query-performance-cropped.png)
 
 - Always filter on the partitioned column, or on the clustered column.
   Otherwise the partitioning and clustering you set up do you no good.
