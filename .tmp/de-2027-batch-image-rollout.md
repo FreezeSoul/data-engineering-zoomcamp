@@ -23,6 +23,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 3 | `01-introduction-to-batch-processing-03-batch-job-frequencies.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 9/12 | Crisp list preserves the three schedule frequencies in order; removed presenter, webcam tile, toolbar, and borders. |
 | 4 | `01-introduction-to-batch-processing-04-technologies.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Two-column diagram preserves batch frequencies and the Python/SQL/Spark/Flink technology list; removed recording artifacts. |
 | 5 | `01-introduction-to-batch-processing-05-batch-workflow.jpg` | remove | — | 2/12 | Hard-gate failure: the source is an advantages list, not the workflow described by the surrounding text; it is also redundant with the adjacent advantages image. Original preserved. |
+| 6 | `01-introduction-to-batch-processing-06-advantages.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Clean comparison preserves the three advantages and the delay disadvantage; removed recording artifacts. |
 
 ## Validation
 

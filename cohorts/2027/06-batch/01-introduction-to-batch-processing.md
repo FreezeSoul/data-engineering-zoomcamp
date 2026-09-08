@@ -103,7 +103,7 @@ bigger file, we get a bigger machine. If Spark struggles, we get a
 bigger cluster or add more machines to the existing one. We can scale
 up and down when we need to.
 
-![alt text](images/01-introduction-to-batch-processing-06-advantages.jpg)
+![Batch advantages are easy management, retryability, and scale; the tradeoff is delay](images/01-introduction-to-batch-processing-06-advantages-imagegen.png)
 
 The main disadvantage is delay. Because we run things at regular
 intervals, we always wait. Say we process data hourly, and executing
