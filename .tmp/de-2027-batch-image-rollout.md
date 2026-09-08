@@ -53,6 +53,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 33 | `06-preparing-taxi-data-08-tree-pq.jpg` | keep | deterministic crop `x=20,y=32,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the parquet directory hierarchy, `_SUCCESS` markers, and part files while removing editor/browser chrome and webcam. |
 | 34 | `07-sql-with-spark-01-read-parquet.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact parquet read commands and resulting data evidence while removing notebook chrome and webcam. |
 | 35 | `07-sql-with-spark-02-common-columns.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact shared-column set and its relation to the two DataFrames while removing notebook chrome and webcam. |
+| 36 | `08-anatomy-of-a-spark-cluster-01-spark-submit-master.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Clean diagram preserves driver → `SPARK SUBMIT` → `MASTER` inside the cluster and the source's `4040` label; removed presenter and recording UI. |
 
 ## Validation
 

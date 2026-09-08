@@ -47,7 +47,7 @@ They are called executors. When we submit a job to the Spark master, it
 coordinates between the executors: it decides which of them will work on
 our job and sends them instructions.
 
-![Whiteboard: the driver sends the code with spark-submit to the Spark master](images/08-anatomy-of-a-spark-cluster-01-spark-submit-master.jpg)
+![The driver submits a Spark job to the master inside the cluster](images/08-anatomy-of-a-spark-cluster-01-spark-submit-master-imagegen.png)
 
 The master needs to be up and running all the time. If one of the executors
 goes away for whatever reason, the master knows about it and assigns the
