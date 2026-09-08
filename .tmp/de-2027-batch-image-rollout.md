@@ -87,6 +87,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 67 | `13-connecting-to-google-cloud-storage-07-read-from-gcs-test.jpg` | keep | deterministic crop `x=20,y=184,w=600,h=48`, 2x Lanczos/sharpen | 9/12 | Preserves the exact `df_green.count()` call and Spark stage progress while removing notebook/browser chrome, webcam, and cursor; the source frame does not show the final count output. |
 | 68 | `14-creating-a-local-spark-cluster-01-spark-master-ui.jpg` | keep | deterministic crop `x=0,y=30,w=640,h=105`, 2x Lanczos/sharpen | 10/12 | Preserves the Spark Master URL, alive-worker count, and core usage while removing browser chrome, webcam, and source text-selection overlay; the lower worker table is intentionally omitted. |
 | 69 | `14-creating-a-local-spark-cluster-02-worker-registered.jpg` | keep | deterministic crop `x=0,y=30,w=640,h=160`, 2x Lanczos/sharpen | 11/12 | Preserves the exact worker count, address, ALIVE state, cores, memory, and resources table while removing browser chrome and webcam. |
+| 70 | `14-creating-a-local-spark-cluster-03-converted-script.jpg` | keep | deterministic crop `x=180,y=75,w=360,h=260`, 2x Lanczos/sharpen plus blank-area cursor mask | 9/12 | Preserves the converted Python/Spark imports, session builder, and parquet read while removing VS Code chrome, sidebar, webcam, status bar, and cursor; the source's long master URL remains horizontally clipped. |
 
 ## Validation
 

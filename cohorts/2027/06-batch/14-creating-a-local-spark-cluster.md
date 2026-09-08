@@ -103,7 +103,7 @@ The generated `06_spark_sql.py` needs a small cleanup: remove the `In
 setup. In the video we also replace the generated column list with an
 explicit `common_columns` list, which reads better in a script.
 
-![The converted script, cleaned up in the editor](images/14-creating-a-local-spark-cluster-03-converted-script.jpg)
+![The converted script, cleaned up in the editor](images/14-creating-a-local-spark-cluster-03-converted-script-cropped.png)
 
 If we run the script right away with `python 06_spark_sql.py`, it connects
 to the master and starts executing. But look at the master UI: the job
