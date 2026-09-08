@@ -140,7 +140,7 @@ FROM `taxi-rides-ny.nytaxi.yellow_tripdata_partitioned` WHERE fare_amount != 0
 Running this processed about 6.5 GB of data and produced a table with the
 correct types for our machine learning model:
 
-![Query result after creating the yellow_tripdata_ml table](images/05-machine-learning-in-bigquery-02-feature-table.jpg)
+![Query result after creating the yellow_tripdata_ml table](images/05-machine-learning-in-bigquery-02-feature-table-cropped.png)
 
 ## Creating the model
 
