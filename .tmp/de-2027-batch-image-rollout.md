@@ -79,6 +79,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 59 | `12-spark-rdd-mappartition-06-model-and-yield.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the exact model prediction, predicted-duration column, and yielded-row code while removing notebook chrome and webcam; adjacent `infinite_seq` context remains in the source capture. |
 | 60 | `12-spark-rdd-mappartition-07-predicted-duration.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the exact `mapPartitions`/`toDF` pipeline and predicted-duration query while removing notebook chrome and webcam; the source capture clips the output table below the visible frame. |
 | 61 | `13-connecting-to-google-cloud-storage-01-gcs-connector-instructions.jpg` | remove | — | 5/12 | A transient Slack post with a presenter avatar and browser/chat chrome is largely redundant with the lesson's reproduced setup steps; it adds no durable evidence beyond attribution, so the reference is removed and the original preserved. |
+| 62 | `13-connecting-to-google-cloud-storage-02-upload-parquet-to-gcs.jpg` | keep | deterministic crop `x=60,y=48,w=475,h=285`, 2x Lanczos/sharpen | 10/12 | Preserves the exact terminal directory listing and `gsutil -m cp -r pq/ gs://.../pq` command while removing browser/terminal tabs and the webcam. |
 
 ## Validation
 

@@ -27,7 +27,7 @@ which uses all the CPUs of the machine:
 gsutil -m cp -r pq/ gs://dtc_data_lake_de-zoomcamp-nytaxi/pq
 ```
 
-![Uploading the pq folder to the bucket with gsutil](images/13-connecting-to-google-cloud-storage-02-upload-parquet-to-gcs.jpg)
+![Uploading the pq folder to the bucket with gsutil](images/13-connecting-to-google-cloud-storage-02-upload-parquet-to-gcs-cropped.png)
 
 Uploading the parquet files takes a while - the folder holds 380 files,
 1.1 GiB in total:
