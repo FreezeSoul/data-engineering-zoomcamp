@@ -107,7 +107,7 @@ We can point to a folder (or even use `*` to read the whole year) - Spark
 will read all files in it. If we print the schema now, we see the column
 names, but everything is a string:
 
-![alt text](images/06-preparing-taxi-data-06-schema-strings.jpg)
+![Spark infers the raw taxi CSV columns as strings](images/06-preparing-taxi-data-06-schema-strings-cropped.png)
 
 The way we inferred types before: read the same file with pandas, which
 figures out the types for us. Because pandas can read gzipped files directly,
