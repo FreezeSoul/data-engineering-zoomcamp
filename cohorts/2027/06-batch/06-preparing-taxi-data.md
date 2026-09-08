@@ -87,7 +87,7 @@ zcat data/raw/yellow/2021/01/yellow_tripdata_2021_01.csv.gz | head -n 10
 And `tree` shows us the folder structure we ended up with: for each taxi
 type and year, one folder per month with a compressed CSV inside:
 
-![alt text](images/06-preparing-taxi-data-05-tree-raw.jpg)
+![tree shows the raw taxi files organized by taxi type, year, and month](images/06-preparing-taxi-data-05-tree-raw-cropped.png)
 
 ## Defining the schema
 
