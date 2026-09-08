@@ -145,7 +145,7 @@ python 06_spark_sql.py \
     --output=data/report-2020
 ```
 
-![Running the script for 2020 from the terminal](images/14-creating-a-local-spark-cluster-04-running-script-2020.jpg)
+![Running the script for 2020 from the terminal](images/14-creating-a-local-spark-cluster-04-running-script-2020-cropped.png)
 
 It finishes quickly - there is not much 2020 data - and the report lands
 in `data/report-2020`.
