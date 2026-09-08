@@ -37,7 +37,7 @@ The output is no longer a folder but a BigQuery table, passed as
 `schema.table` from the command line, and we do not need `coalesce(1)`
 to merge the output files - BigQuery takes care of that.
 
-![The tutorial example for saving Spark results to BigQuery](images/16-connecting-spark-to-bigquery-01-connector-tutorial.jpg)
+![The tutorial example for saving Spark results to BigQuery](images/16-connecting-spark-to-bigquery-01-connector-tutorial-cropped.png)
 
 The connector needs a temporary bucket: Spark first writes the results to
 Google Cloud Storage and then loads them into BigQuery. We configure it
