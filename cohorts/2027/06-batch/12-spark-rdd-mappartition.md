@@ -74,8 +74,6 @@ def apply_model_in_batch(partition):
 
 Applying it and collecting the result gives a list of four ones:
 
-![mapPartitions applied with a function that returns [1]: the result is [1, 1, 1, 1]](images/12-spark-rdd-mappartition-03-one-result-per-partition-crisp.png)
-
 The function ran once per partition, and the RDD has four partitions.
 Spark then flattened the four one-element lists into one list. Note that
 the function must return something iterable: if you return just `1`, Spark
@@ -100,8 +98,6 @@ duration_rdd.mapPartitions(apply_model_in_batch).collect()
 
 This takes a while, because Spark has to go through every record of every
 partition:
-
-![Counting rows per partition shows the partitions are unbalanced](images/12-spark-rdd-mappartition-04-partition-sizes-crisp.png)
 
 The result is `[1141148, 436983, 433476, 292910]`. Our partitions are not
 very balanced: the first one is three times larger than the next ones.
@@ -173,8 +169,6 @@ def apply_model_in_batch(rows):
     predictions = model_predict(df)
     df['predicted_duration'] = predictions
 ```
-
-![The model predicts the duration from the trip distance](images/12-spark-rdd-mappartition-06-model-and-yield-crisp.png)
 
 ## Yielding the rows back
 
