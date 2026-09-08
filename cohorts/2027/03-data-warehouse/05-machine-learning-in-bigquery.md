@@ -140,8 +140,6 @@ FROM `taxi-rides-ny.nytaxi.yellow_tripdata_partitioned` WHERE fare_amount != 0
 Running this processed about 6.5 GB of data and produced a table with the
 correct types for our machine learning model:
 
-![Query result after creating the yellow_tripdata_ml table](images/05-machine-learning-in-bigquery-02-feature-table-crisp.png)
-
 ## Creating the model
 
 Now the actual model. We name it `tip_model` and use linear regression as
@@ -169,8 +167,6 @@ temporary training dataset with a temporary evaluation dataset. The
 evaluation tab shows the error metrics of the training run - the mean
 squared error is around 8 and the mean absolute error is around 1:
 
-![Evaluation tab of the tip_model page](images/05-machine-learning-in-bigquery-03-model-evaluation-tab-crisp.png)
-
 That is not very optimal, but for a simple model and dataset it is perfectly
 fine - the aim here is the workflow, not the most optimal model.
 
@@ -181,8 +177,6 @@ fine - the aim here is the workflow, not the most optimal model.
 ```sql
 SELECT * FROM ML.FEATURE_INFO(MODEL `taxi-rides-ny.nytaxi.tip_model`);
 ```
-
-![ML.FEATURE_INFO output for tip_model](images/05-machine-learning-in-bigquery-04-feature-info-crisp.png)
 
 The numeric columns - passenger count, trip distance, fare amount, tolls
 amount - come with min, max and mean values, which are used for
@@ -209,8 +203,6 @@ tip_amount IS NOT NULL
 ));
 ```
 
-![ML.EVALUATE output for tip_model](images/05-machine-learning-in-bigquery-05-ml-evaluate-crisp.png)
-
 Here we see the mean absolute error is 1 and the mean squared error is
 around 150. These evaluation metrics are what we would use for optimizing
 the model later on.
@@ -234,8 +226,6 @@ WHERE
 tip_amount IS NOT NULL
 ));
 ```
-
-![ML.PREDICT output with the predicted_tip_amount column](images/05-machine-learning-in-bigquery-06-ml-predict-crisp.png)
 
 Every row now carries a `predicted_tip_amount` column next to the actual
 `tip_amount`. With both side by side, we can also do a manual evaluation of
@@ -262,8 +252,6 @@ WHERE
 tip_amount IS NOT NULL
 ), STRUCT(3 as top_k_features));
 ```
-
-![ML.EXPLAIN_PREDICT output with per-feature attributions](images/05-machine-learning-in-bigquery-07-explain-predict-crisp.png)
 
 Looking at the top three features, all our categorical features are there -
 pickup location, dropoff location and payment type are what the model relies
@@ -294,8 +282,6 @@ FROM
 WHERE
 tip_amount IS NOT NULL;
 ```
-
-![CREATE MODEL with hyperparameter tuning options](images/05-machine-learning-in-bigquery-08-hyperparameter-tuning-crisp.png)
 
 This is a rich set. The same `CREATE MODEL` documentation lists many more
 options - learning rate strategy, early stopping, minimum relative progress,
