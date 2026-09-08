@@ -33,7 +33,7 @@ df_green = spark.read.parquet('data/pq/green/*/*')
 df_yellow = spark.read.parquet('data/pq/yellow/*/*')
 ```
 
-![The notebook reads the green and yellow parquet datasets](images/07-sql-with-spark-01-read-parquet-cropped.png)
+![The notebook reads the green and yellow parquet datasets](images/07-sql-with-spark-01-read-parquet-crisp.png)
 
 The two schemas are similar but not the same. Some fields are shared, like
 `fare_amount` and `congestion_surcharge`, but green has fields that yellow
@@ -47,7 +47,7 @@ sets:
 set(df_green.columns) & set(df_yellow.columns)
 ```
 
-![The notebook lists the columns shared by the green and yellow DataFrames](images/07-sql-with-spark-02-common-columns-cropped.png)
+![The notebook lists the columns shared by the green and yellow DataFrames](images/07-sql-with-spark-02-common-columns-crisp.png)
 
 One problem: the pickup and dropoff time columns are named differently -
 `lpep_pickup_datetime` in green and `tpep_pickup_datetime` in yellow. We

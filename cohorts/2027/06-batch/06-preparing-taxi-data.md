@@ -41,12 +41,12 @@ borrowed it:
 FMONTH=`printf "%02d" ${MONTH}`
 ```
 
-![The shell formats the month number with printf before building URLs](images/06-preparing-taxi-data-03-printf-cropped.png)
+![The shell formats the month number with printf before building URLs](images/06-preparing-taxi-data-03-printf-crisp.png)
 
 With that we can assemble the URL for each month and check it with `echo`
 before actually downloading anything:
 
-![The generated download script lists the monthly TLC URLs](images/06-preparing-taxi-data-02-url-list-cropped.png)
+![The generated download script lists the monthly TLC URLs](images/06-preparing-taxi-data-02-url-list-crisp.png)
 
 For each file we also build the local path: `data/raw/<taxi type>/<year>/<month>`,
 so every month gets its own folder. We create the folder with `mkdir -p`
@@ -82,12 +82,12 @@ with `zcat` - the same as `cat`, but for gzipped files:
 zcat data/raw/yellow/2021/01/yellow_tripdata_2021_01.csv.gz | head -n 10
 ```
 
-![zcat prints the first rows of the compressed yellow taxi CSV](images/06-preparing-taxi-data-04-zcat-cropped.png)
+![zcat prints the first rows of the compressed yellow taxi CSV](images/06-preparing-taxi-data-04-zcat-crisp.png)
 
 And `tree` shows us the folder structure we ended up with: for each taxi
 type and year, one folder per month with a compressed CSV inside:
 
-![tree shows the raw taxi files organized by taxi type, year, and month](images/06-preparing-taxi-data-05-tree-raw-cropped.png)
+![tree shows the raw taxi files organized by taxi type, year, and month](images/06-preparing-taxi-data-05-tree-raw-crisp.png)
 
 ## Defining the schema
 
@@ -107,7 +107,7 @@ We can point to a folder (or even use `*` to read the whole year) - Spark
 will read all files in it. If we print the schema now, we see the column
 names, but everything is a string:
 
-![Spark infers the raw taxi CSV columns as strings](images/06-preparing-taxi-data-06-schema-strings-cropped.png)
+![Spark infers the raw taxi CSV columns as strings](images/06-preparing-taxi-data-06-schema-strings-crisp.png)
 
 The way we inferred types before: read the same file with pandas, which
 figures out the types for us. Because pandas can read gzipped files directly,
@@ -172,7 +172,7 @@ them. We can watch this in the Spark UI: first only one task runs (one
 executor going through the CSV file), which then writes the results to four
 temporary files that end up on disk:
 
-![Spark UI shows the one-task read and parquet write job](images/06-preparing-taxi-data-07-spark-ui-one-task-cropped.png)
+![Spark UI shows the one-task read and parquet write job](images/06-preparing-taxi-data-07-spark-ui-one-task-crisp.png)
 
 We run this for all four combinations: green and yellow, 2020 and 2021.
 
@@ -181,7 +181,7 @@ We run this for all four combinations: green and yellow, 2020 and 2021.
 Looking at `data/pq` with `tree`, each month now has four parquet part-files
 (the result of the repartition) plus a `_SUCCESS` marker:
 
-![tree shows the parquet output partitioned by taxi type and month](images/06-preparing-taxi-data-08-tree-pq-cropped.png)
+![tree shows the parquet output partitioned by taxi type and month](images/06-preparing-taxi-data-08-tree-pq-crisp.png)
 
 Comparing sizes with `ls -lh`: the compressed yellow CSV for January 2020 is
 111 MB, and the parquet version is actually slightly bigger - gzip compresses
