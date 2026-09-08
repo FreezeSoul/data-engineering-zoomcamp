@@ -64,7 +64,7 @@ Open the cluster, click submit job, and fill in the form:
 * `--input_yellow=gs://dtc_data_lake_de-zoomcamp-nytaxi/pq/yellow/2021/*/`
 * `--output=gs://dtc_data_lake_de-zoomcamp-nytaxi/report-2021`
 
-![The submit job form with the PySpark script and its arguments](images/15-setting-up-a-dataproc-cluster-02-submit-job-form.jpg)
+![The submit job form with the PySpark script and its arguments](images/15-setting-up-a-dataproc-cluster-02-submit-job-form-cropped.png)
 
 Submit and wait. The job page shows the driver output while it runs; when
 it finishes, the result is in the bucket: a `report-2021` folder with the
