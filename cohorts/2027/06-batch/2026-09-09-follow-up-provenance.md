@@ -37,8 +37,22 @@ ffmpeg -i 15-setting-up-a-dataproc-cluster-01-create-cluster.jpg \
   15-setting-up-a-dataproc-cluster-01-create-cluster-cropped.png
 ```
 
-The command documents the crop geometry; the retained PNG hash above remains
-the authoritative record of the historical reference bytes.
+The command documents the crop geometry only; it is not claimed to reproduce
+the historical reference bytes. A 2026-09-09 reproduction with FFmpeg
+`6.1.1-3ubuntu5` produced a `1070×660` PNG with SHA-256
+`d9d0114afa7f7ff1ebc7dee963e94226a97ee3682f9234ec305cefc749d1e18e`.
+Comparing that file with the retained crop gives `AE=265712` and
+`MAE=710.214`, so the historical sharpening/raster step is still missing.
+The retained crop hash above remains the authoritative record of the
+historical reference bytes, and the published crisp image was not changed.
+
+The earlier batch rollout describes this operation only as “2x
+Lanczos/sharpen”; it does not record the sharpening filter, radius, sigma,
+amount, threshold, or tool version. This is the exact remaining provenance
+task: recover those parameters from the original worker run, or regenerate
+the bounded reference from the original JPG and imagegen input, then record
+the complete command, tool versions, crop/output hashes, and pixel comparison
+before changing any published asset.
 
 ## Dataproc reports in bucket
 
