@@ -105,7 +105,7 @@ Type `F.` and hit tab - there are quite a lot of them. The one we want
 is `to_date`: it takes a datetime and keeps only the date, discarding
 the hour, minutes and seconds.
 
-![Importing pyspark.sql.functions as F and browsing the built-in functions](images/05-spark-dataframes-03-built-in-functions.jpg)
+![Importing pyspark.sql.functions as F and browsing the built-in functions](images/05-spark-dataframes-03-built-in-functions-cropped.png)
 
 To apply it, we use `withColumn`, which adds a new column to a
 DataFrame - also a transformation:
