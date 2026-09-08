@@ -37,6 +37,24 @@ ffmpeg -i 15-setting-up-a-dataproc-cluster-01-create-cluster.jpg \
   15-setting-up-a-dataproc-cluster-01-create-cluster-cropped.png
 ```
 
+The command documents the crop geometry; the retained PNG hash above remains
+the authoritative record of the historical reference bytes.
+
+## Dataproc reports in bucket
+
+| Published target | Original JPG SHA-256 | Bounded crop SHA-256 | Published output SHA-256 | Imagegen output | Validation |
+|---|---|---|---|---|---|
+| `images/15-setting-up-a-dataproc-cluster-05-reports-in-bucket-crisp.png` | `01a1cc28707c611321086bfd4de3be9db38cbf0b6ad74ec32ef8bc953f459cf6` | `c5812061eddc30c2e933e501445c53f79f13a92e201b3d67b9e7e226e811cffb` | `0458cb6048aec80f359e4dfe5fe99f9f8b348e97d13ef1564525f2b59ccd21b5` | Generation artifact was not retained separately; the published PNG contains `gpt-image`/OpenAI C2PA metadata. | Published output unchanged. The retained `535×330` crop keeps the bucket context and both `report-2020/` and `report-2021/` folders; native `1672×941` output hash is recorded. |
+
+The canonical bounded crop is now retained at
+`images/15-setting-up-a-dataproc-cluster-05-reports-in-bucket-cropped.png`.
+It represents `x=0,y=30,w=535,h=330` in the original `640×360` JPG. The
+former `290×660` crop had hash
+`244ed5e315d675c9724fa6633c5a6e4ab6617b51e7e1b3ad65a8f6c878f2bab0` and is
+retained only as
+`images/15-setting-up-a-dataproc-cluster-05-reports-in-bucket-narrow-crop-superseded.png`;
+it is not the crop used for provenance or generation.
+
 ## Dataproc submit-job form
 
 | Published target | Original JPG SHA-256 | Bounded crop SHA-256 | Published output SHA-256 | Imagegen output | Validation |
