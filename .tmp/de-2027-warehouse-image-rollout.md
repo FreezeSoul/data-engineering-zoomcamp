@@ -172,6 +172,24 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 03-bigquery-best-practices-03-join-patterns.jpg
+
+- Source: `03-bigquery-best-practices.md`, join-patterns slide.
+- Rubric: 10/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 1, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the image makes the ordering and join-size
+  optimization rule concrete and easy to revisit.
+- Preparation: deterministic crop `(x=20, y=20, width=600, height=250)`;
+  resized 2x with a light unsharp mask. Exact wording and `HyperLogLog++`
+  were retained.
+- Method: deterministic PNG sibling
+  `03-bigquery-best-practices-03-join-patterns-cropped.png`.
+- Invariants checked: JavaScript UDF, approximate aggregation, ordering,
+  join-pattern, and largest-to-smallest table guidance remain unchanged; no
+  face, camera tile, cursor, or overlay was present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.

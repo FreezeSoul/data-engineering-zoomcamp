@@ -67,7 +67,7 @@ The second group of best practices is about making queries fast.
 
 A few more things that speed up queries:
 
-![The second query performance slide: avoid JavaScript user-defined functions, approximate aggregation functions with HyperLogLog++, order last, optimize join patterns](images/03-bigquery-best-practices-03-join-patterns.jpg)
+![The second query performance slide: avoid JavaScript user-defined functions, approximate aggregation functions with HyperLogLog++, order last, optimize join patterns](images/03-bigquery-best-practices-03-join-patterns-cropped.png)
 
 - Avoid JavaScript user-defined functions (UDFs, functions you write
   yourself in SQL).
