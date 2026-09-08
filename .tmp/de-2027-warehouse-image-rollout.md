@@ -370,6 +370,24 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 05-machine-learning-in-bigquery-08-hyperparameter-tuning.jpg
+
+- Source: `05-machine-learning-in-bigquery.md`, hyperparameter-tuning section.
+- Rubric: 10/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 1, caption/accessibility 2).
+- Decision: `crop/replace`; the SQL visibly shows the tuning options and
+  candidate ranges used to create the model.
+- Preparation: deterministic crop `(x=28, y=35, width=612, height=325)`;
+  resized 2x with a light unsharp mask. Exact SQL and option values were
+  retained.
+- Method: deterministic PNG sibling
+  `05-machine-learning-in-bigquery-08-hyperparameter-tuning-cropped.png`.
+- Invariants checked: model type, `NUM_TRIALS`, `MAX_PARALLEL_TRIALS`,
+  hyperparameter range, candidate list, and query context remain unchanged;
+  browser tab chrome, faces, camera tiles, and cursors are absent.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.

@@ -295,7 +295,7 @@ WHERE
 tip_amount IS NOT NULL;
 ```
 
-![CREATE MODEL with hyperparameter tuning options](images/05-machine-learning-in-bigquery-08-hyperparameter-tuning.jpg)
+![CREATE MODEL with hyperparameter tuning options](images/05-machine-learning-in-bigquery-08-hyperparameter-tuning-cropped.png)
 
 This is a rich set. The same `CREATE MODEL` documentation lists many more
 options - learning rate strategy, early stopping, minimum relative progress,
