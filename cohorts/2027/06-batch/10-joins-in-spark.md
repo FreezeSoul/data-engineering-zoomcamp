@@ -58,7 +58,7 @@ data and does the group by - that's green (or yellow, doesn't matter). The
 second one does the same for the other taxi type. And the third stage
 combines the two - the join itself.
 
-![The join DAG in the Spark UI: two scan stages feeding the SortMergeJoin stage](images/10-joins-in-spark-02-sort-merge-join-stages.jpg)
+![Spark UI shows two scan stages feeding the sort-merge join DAG](images/10-joins-in-spark-02-sort-merge-join-stages-cropped.png)
 
 ## How a join of two large tables works
 

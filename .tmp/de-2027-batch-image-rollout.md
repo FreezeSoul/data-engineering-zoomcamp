@@ -62,6 +62,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 42 | `09-groupby-in-spark-02-three-stages.jpg` | keep | deterministic crop `x=0,y=28,w=480,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the Spark UI's three-stage DAG evidence while removing browser chrome and webcam. |
 | 43 | `09-groupby-in-spark-04-shuffle-read-write.jpg` | keep | deterministic crop `x=0,y=28,w=480,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact completed-stage counts, task totals, and shuffle-read evidence while removing browser chrome and webcam. |
 | 44 | `10-joins-in-spark-01-outer-join.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact outer-join code and join keys while removing notebook chrome and webcam. |
+| 45 | `10-joins-in-spark-02-sort-merge-join-stages.jpg` | keep | deterministic crop `x=0,y=28,w=500,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the two scan stages, exchanges, and downstream join DAG while removing browser chrome and webcam; the source edge still truncates the far-right UI. |
 
 ## Validation
 
