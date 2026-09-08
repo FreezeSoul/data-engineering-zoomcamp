@@ -89,7 +89,7 @@ Cardinality. Use clustering when the number of distinct values in a
 column or group of columns is large. That cardinality is a hindrance
 for partitioning, because of the 4000-partition limit.
 
-![Partitioning vs clustering](images/02-partitioning-vs-clustering-03-partitioning-vs-clustering.jpg)
+![Partitioning vs clustering](images/02-partitioning-vs-clustering-03-partitioning-vs-clustering-cropped.png)
 
 ## When clustering beats partitioning
 

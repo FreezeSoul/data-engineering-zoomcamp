@@ -87,6 +87,23 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 02-partitioning-vs-clustering-03-partitioning-vs-clustering.jpg
+
+- Source: `02-partitioning-vs-clustering.md`, comparison table section.
+- Rubric: 11/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the side-by-side table exposes trade-offs that
+  are difficult to scan in prose, so it is retained with exact text.
+- Preparation: deterministic crop `(x=20, y=20, width=600, height=300)`;
+  resized 2x with a light unsharp mask. Imagegen was rejected because this
+  is an exact comparison table.
+- Method: deterministic PNG sibling
+  `02-partitioning-vs-clustering-03-partitioning-vs-clustering-cropped.png`.
+- Invariants checked: both headings, all four rows, and every cell value
+  remain unchanged; no face, camera tile, cursor, or overlay was present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.
