@@ -172,7 +172,7 @@ them. We can watch this in the Spark UI: first only one task runs (one
 executor going through the CSV file), which then writes the results to four
 temporary files that end up on disk:
 
-![alt text](images/06-preparing-taxi-data-07-spark-ui-one-task.jpg)
+![Spark UI shows the one-task read and parquet write job](images/06-preparing-taxi-data-07-spark-ui-one-task-cropped.png)
 
 We run this for all four combinations: green and yellow, 2020 and 2021.
 
