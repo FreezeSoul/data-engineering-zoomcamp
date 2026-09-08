@@ -40,7 +40,7 @@ df.select('pickup_datetime', 'dropoff_datetime',
           'PULocationID', 'DOLocationID')
 ```
 
-![Selecting four columns from the FHV DataFrame](images/05-spark-dataframes-02-select.jpg)
+![Selecting four columns from the FHV DataFrame](images/05-spark-dataframes-02-select-cropped.png)
 
 This DataFrame now contains only these four columns. We can also
 filter rows:
