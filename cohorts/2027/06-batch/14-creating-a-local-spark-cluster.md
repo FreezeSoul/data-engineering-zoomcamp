@@ -36,7 +36,7 @@ The master has a web UI, but unlike the notebook-created cluster it is not
 on port 4040 - a standalone master listens on port 8080. Open it in the
 browser and you see the master with no workers connected yet:
 
-![The standalone Spark master web UI on port 8080, with no workers yet](images/14-creating-a-local-spark-cluster-01-spark-master-ui-cropped.png)
+![The standalone Spark master web UI on port 8080, with no workers yet](images/14-creating-a-local-spark-cluster-01-spark-master-ui-crisp.png)
 
 The master URL is shown at the top of the UI: `spark://de-zoomcamp...
 :7077`. This is the address that workers and applications use to connect.
@@ -85,7 +85,7 @@ Our Spark version is older, where a worker was called a slave - on newer
 versions the script is `start-worker.sh`. After starting it, the worker
 appears in the master UI:
 
-![The worker is registered with the master and picks up the task](images/14-creating-a-local-spark-cluster-02-worker-registered-cropped.png)
+![The worker is registered with the master and picks up the task](images/14-creating-a-local-spark-cluster-02-worker-registered-crisp.png)
 
 Now the pending job gets resources and executes. The notebook application
 is connected to a real cluster with one worker.
@@ -103,7 +103,7 @@ The generated `06_spark_sql.py` needs a small cleanup: remove the `In
 setup. In the video we also replace the generated column list with an
 explicit `common_columns` list, which reads better in a script.
 
-![The converted script, cleaned up in the editor](images/14-creating-a-local-spark-cluster-03-converted-script-cropped.png)
+![The converted script, cleaned up in the editor](images/14-creating-a-local-spark-cluster-03-converted-script-crisp.png)
 
 If we run the script right away with `python 06_spark_sql.py`, it connects
 to the master and starts executing. But look at the master UI: the job
@@ -145,7 +145,7 @@ python 06_spark_sql.py \
     --output=data/report-2020
 ```
 
-![Running the script for 2020 from the terminal](images/14-creating-a-local-spark-cluster-04-running-script-2020-cropped.png)
+![Running the script for 2020 from the terminal](images/14-creating-a-local-spark-cluster-04-running-script-2020-crisp.png)
 
 It finishes quickly - there is not much 2020 data - and the report lands
 in `data/report-2020`.
@@ -175,7 +175,7 @@ master, and optionally things like executor memory or the number of
 cores. Everything after the file name is passed to the job itself, so our
 `argparse` arguments go at the end.
 
-![spark-submit running the 2021 job against the local cluster](images/14-creating-a-local-spark-cluster-05-spark-submit-2021-cropped.png)
+![spark-submit running the 2021 job against the local cluster](images/14-creating-a-local-spark-cluster-05-spark-submit-2021-crisp.png)
 
 This is the way you submit Spark jobs in practice, and it is also how you
 would wire them into Airflow later. When it finishes, `data/report-2021`

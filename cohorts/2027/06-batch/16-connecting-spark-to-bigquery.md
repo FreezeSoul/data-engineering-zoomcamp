@@ -37,7 +37,7 @@ The output is no longer a folder but a BigQuery table, passed as
 `schema.table` from the command line, and we do not need `coalesce(1)`
 to merge the output files - BigQuery takes care of that.
 
-![The tutorial example for saving Spark results to BigQuery](images/16-connecting-spark-to-bigquery-01-connector-tutorial-cropped.png)
+![The tutorial example for saving Spark results to BigQuery](images/16-connecting-spark-to-bigquery-01-connector-tutorial-crisp.png)
 
 The connector needs a temporary bucket: Spark first writes the results to
 Google Cloud Storage and then loads them into BigQuery. We configure it
@@ -72,7 +72,7 @@ course - we never gave Spark the connector. Unlike Google Cloud Storage,
 the BigQuery connector does not ship with every cluster, and Dataproc
 cannot guess that we want it.
 
-![The job fails because the BigQuery data source is not found](images/16-connecting-spark-to-bigquery-02-failed-to-find-bigquery-cropped.png)
+![The job fails because the BigQuery data source is not found](images/16-connecting-spark-to-bigquery-02-failed-to-find-bigquery-crisp.png)
 
 ## Adding the connector jar
 
@@ -110,7 +110,7 @@ creates it. Open BigQuery, refresh, and there is `reports-2020` in the
 `trips_data_all` dataset - with a preview of the monthly revenue rows our
 job computed on the cluster.
 
-![The reports table in BigQuery, created and filled by the Spark job](images/16-connecting-spark-to-bigquery-03-bigquery-table-cropped.png)
+![The reports table in BigQuery, created and filled by the Spark job](images/16-connecting-spark-to-bigquery-03-bigquery-table-crisp.png)
 
 That closes the section on running Spark in the cloud: we connected a
 local Spark to Google Cloud Storage, created a managed Dataproc cluster,

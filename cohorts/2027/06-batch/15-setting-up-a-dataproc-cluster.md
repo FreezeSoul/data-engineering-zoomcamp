@@ -25,7 +25,7 @@ enable the API - one click. Then click create cluster and configure it:
   lets you run experiments right on the cluster - and Docker, which we
   will use in a later section.
 
-![Creating the Dataproc cluster in the Google Cloud console](images/15-setting-up-a-dataproc-cluster-01-create-cluster-cropped.png)
+![Creating the Dataproc cluster in the Google Cloud console](images/15-setting-up-a-dataproc-cluster-01-create-cluster-crisp.png)
 
 Everything else - the machine types of the master and the workers - stays
 at the defaults. Click create, and after a few minutes the cluster is
@@ -64,14 +64,14 @@ Open the cluster, click submit job, and fill in the form:
 * `--input_yellow=gs://dtc_data_lake_de-zoomcamp-nytaxi/pq/yellow/2021/*/`
 * `--output=gs://dtc_data_lake_de-zoomcamp-nytaxi/report-2021`
 
-![The submit job form with the PySpark script and its arguments](images/15-setting-up-a-dataproc-cluster-02-submit-job-form-cropped.png)
+![The submit job form with the PySpark script and its arguments](images/15-setting-up-a-dataproc-cluster-02-submit-job-form-crisp.png)
 
 Submit and wait. The job page shows the driver output while it runs; when
 it finishes, the result is in the bucket: a `report-2021` folder with the
 parquet files of the monthly revenue report - computed by the cluster we
 just created.
 
-![The finished job and the report folder in the bucket](images/15-setting-up-a-dataproc-cluster-03-job-finished-report-cropped.png)
+![The finished job and the report folder in the bucket](images/15-setting-up-a-dataproc-cluster-03-job-finished-report-crisp.png)
 
 ## Submitting a job with gcloud
 
@@ -124,7 +124,7 @@ we saw in the web UI, and it finishes. Run it once more for a different
 year to see the parameterization at work - the 2020 report lands next to
 the 2021 one in the bucket.
 
-![Both reports in the bucket, computed by the Dataproc cluster](images/15-setting-up-a-dataproc-cluster-05-reports-in-bucket-cropped.png)
+![Both reports in the bucket, computed by the Dataproc cluster](images/15-setting-up-a-dataproc-cluster-05-reports-in-bucket-crisp.png)
 
 When we wire this into Airflow later, the simplest possible approach is a
 BashOperator that runs exactly this `gcloud` command; there are also

@@ -35,7 +35,7 @@ this with `spark.sql`. The result has a row for each hour and zone: how
 much money taxi drivers got in total, and how many trips started in this
 location during this hour.
 
-![The notebook builds the revenue query grouped by hour and zone](images/09-groupby-in-spark-01-revenue-query-cropped.png)
+![The notebook builds the revenue query grouped by hour and zone](images/09-groupby-in-spark-01-revenue-query-crisp.png)
 
 Two small fixes along the way. First, in this notebook we did not rename
 the columns, so the green pickup time is still `lpep_pickup_datetime` - not
@@ -53,7 +53,7 @@ With the `ORDER BY` there are three stages. Without it - two:
 - the first stage is the preparation for the group by
 - the second stage is the actual group by
 
-![Spark UI shows the scan, exchange, and final reduce stages](images/09-groupby-in-spark-02-three-stages-cropped.png)
+![Spark UI shows the scan, exchange, and final reduce stages](images/09-groupby-in-spark-02-three-stages-crisp.png)
 
 Let's unpack what these two stages mean.
 
@@ -157,7 +157,7 @@ have 20 files each. With `ls -lhR` we see the yellow report is about 15 MB
 and the green one about 6 MB - a small dataset, but 20 files is still
 better than 200 tiny ones.
 
-![Spark stage details show the repartition stage and shuffle-read evidence](images/09-groupby-in-spark-04-shuffle-read-write-cropped.png)
+![Spark stage details show the repartition stage and shuffle-read evidence](images/09-groupby-in-spark-04-shuffle-read-write-crisp.png)
 
 ## Summary
 

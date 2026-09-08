@@ -27,12 +27,12 @@ which uses all the CPUs of the machine:
 gsutil -m cp -r pq/ gs://dtc_data_lake_de-zoomcamp-nytaxi/pq
 ```
 
-![Uploading the pq folder to the bucket with gsutil](images/13-connecting-to-google-cloud-storage-02-upload-parquet-to-gcs-cropped.png)
+![Uploading the pq folder to the bucket with gsutil](images/13-connecting-to-google-cloud-storage-02-upload-parquet-to-gcs-crisp.png)
 
 Uploading the parquet files takes a while - the folder holds 380 files,
 1.1 GiB in total:
 
-![The upload progresses over 380 objects, 1.1 GiB in total](images/13-connecting-to-google-cloud-storage-03-upload-progress-cropped.png)
+![The upload progresses over 380 objects, 1.1 GiB in total](images/13-connecting-to-google-cloud-storage-03-upload-progress-crisp.png)
 
 When it finishes, the `pq` folder with the green and yellow parquet files
 sits in the bucket.
@@ -67,7 +67,7 @@ gsutil cp gs://hadoop-lib/gcs/gcs-connector-hadoop3-2.2.5.jar ./lib/
 The `lib` folder is not a special location - we put the jar there to keep
 it next to the code:
 
-![Downloading the connector jar into the lib folder](images/13-connecting-to-google-cloud-storage-04-download-connector-jar-cropped.png)
+![Downloading the connector jar into the lib folder](images/13-connecting-to-google-cloud-storage-04-download-connector-jar-crisp.png)
 
 ## Configuring the Spark session
 
@@ -98,7 +98,7 @@ We still run in `local[*]` mode with the app name `test`. The new parts
 are the jar we just downloaded and the two settings that switch on the
 service-account authentication with our key file.
 
-![The SparkConf with the GCS connector jar and the credentials](images/13-connecting-to-google-cloud-storage-05-spark-conf-gcs-connector-cropped.png)
+![The SparkConf with the GCS connector jar and the credentials](images/13-connecting-to-google-cloud-storage-05-spark-conf-gcs-connector-crisp.png)
 
 With the configuration we create a Spark context, and through it we
 configure the Hadoop layer that actually handles the `gs://` file system:
@@ -130,7 +130,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 ```
 
-![Creating the Spark session from the context, then reading from gs://](images/13-connecting-to-google-cloud-storage-06-spark-session-gcs-cropped.png)
+![Creating the Spark session from the context, then reading from gs://](images/13-connecting-to-google-cloud-storage-06-spark-session-gcs-crisp.png)
 
 ## Testing the connection
 
@@ -143,7 +143,7 @@ df_green = spark.read.parquet('gs://dtc_data_lake_de-zoomcamp-nytaxi/pq/green/*/
 A simple `df_green.count()` confirms that it works - Spark connects to
 Google Cloud Storage, downloads the parquet files and counts the rows:
 
-![Counting the rows of a DataFrame read from gs:// proves the setup works](images/13-connecting-to-google-cloud-storage-07-read-from-gcs-test-cropped.png)
+![Counting the rows of a DataFrame read from gs:// proves the setup works](images/13-connecting-to-google-cloud-storage-07-read-from-gcs-test-crisp.png)
 
 That is all the configuration takes. Note that we only need this when we
 run Spark ourselves - on a virtual machine or on a laptop. Later in this

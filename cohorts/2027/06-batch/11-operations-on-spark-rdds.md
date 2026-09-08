@@ -57,7 +57,7 @@ rdd = df_green \
     .rdd
 ```
 
-![The green DataFrame is exposed as an RDD of Row objects](images/11-operations-on-spark-rdds-01-rdd-of-rows-cropped.png)
+![The green DataFrame is exposed as an RDD of Row objects](images/11-operations-on-spark-rdds-01-rdd-of-rows-crisp.png)
 
 ## filter: the WHERE clause
 
@@ -178,7 +178,7 @@ rdd \
     .take(5)
 ```
 
-![The RDD chain applies filter, map, and reduceByKey](images/11-operations-on-spark-rdds-03-reducebykey-chain-cropped.png)
+![The RDD chain applies filter, map, and reduceByKey](images/11-operations-on-spark-rdds-03-reducebykey-chain-crisp.png)
 
 The result follows the same format as before - composite key, composite
 value - except the value is now aggregated: the sum of all amounts, and the
@@ -199,7 +199,7 @@ If we call `toDF()` on it and `show()`, we get a DataFrame - but the column
 names are gone (we see `_1`, `_2` and so on), and Spark had to figure out
 the schema by going through the records.
 
-![Calling toDF without a schema produces generic numbered columns](images/11-operations-on-spark-rdds-04-todf-lost-names-cropped.png)
+![Calling toDF without a schema produces generic numbered columns](images/11-operations-on-spark-rdds-04-todf-lost-names-crisp.png)
 
 To get the names back we can use a named tuple:
 
@@ -232,7 +232,7 @@ result_schema = types.StructType([
     types.StructField('count', types.IntegerType(), True)
 ])
 
-![The named tuple and explicit schema restore meaningful result columns](images/11-operations-on-spark-rdds-05-namedtuple-schema-cropped.png)
+![The named tuple and explicit schema restore meaningful result columns](images/11-operations-on-spark-rdds-05-namedtuple-schema-crisp.png)
 
 df_result = rdd \
     .filter(filter_outliers) \
@@ -253,7 +253,7 @@ the plan boxes look a bit different because of our maps. The reason there
 are two stages is `reduceByKey`: it needs the shuffle we know from the
 group by unit.
 
-![Spark UI shows the RDD job's two-stage DAG with partitionBy and mapPartitions](images/11-operations-on-spark-rdds-06-dag-two-stages-cropped.png)
+![Spark UI shows the RDD job's two-stage DAG with partitionBy and mapPartitions](images/11-operations-on-spark-rdds-06-dag-two-stages-crisp.png)
 
 ```text
 partition 1     partition 2     partition 3

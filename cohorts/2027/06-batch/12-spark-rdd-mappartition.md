@@ -48,7 +48,7 @@ these columns:
 
 We select the columns and look at the result:
 
-![Selecting the feature columns from the green taxi dataset](images/12-spark-rdd-mappartition-02-feature-columns-cropped.png)
+![Selecting the feature columns from the green taxi dataset](images/12-spark-rdd-mappartition-02-feature-columns-crisp.png)
 
 In practice, the pre-processing would happen in SQL, and by the time the
 data reaches this point it would already contain only the prepared
@@ -74,7 +74,7 @@ def apply_model_in_batch(partition):
 
 Applying it and collecting the result gives a list of four ones:
 
-![mapPartitions applied with a function that returns [1]: the result is [1, 1, 1, 1]](images/12-spark-rdd-mappartition-03-one-result-per-partition-cropped.png)
+![mapPartitions applied with a function that returns [1]: the result is [1, 1, 1, 1]](images/12-spark-rdd-mappartition-03-one-result-per-partition-crisp.png)
 
 The function ran once per partition, and the RDD has four partitions.
 Spark then flattened the four one-element lists into one list. Note that
@@ -101,7 +101,7 @@ duration_rdd.mapPartitions(apply_model_in_batch).collect()
 This takes a while, because Spark has to go through every record of every
 partition:
 
-![Counting rows per partition shows the partitions are unbalanced](images/12-spark-rdd-mappartition-04-partition-sizes-cropped.png)
+![Counting rows per partition shows the partitions are unbalanced](images/12-spark-rdd-mappartition-04-partition-sizes-crisp.png)
 
 The result is `[1141148, 436983, 433476, 292910]`. Our partitions are not
 very balanced: the first one is three times larger than the next ones.
@@ -174,7 +174,7 @@ def apply_model_in_batch(rows):
     df['predicted_duration'] = predictions
 ```
 
-![The model predicts the duration from the trip distance](images/12-spark-rdd-mappartition-06-model-and-yield-cropped.png)
+![The model predicts the duration from the trip distance](images/12-spark-rdd-mappartition-06-model-and-yield-crisp.png)
 
 ## Yielding the rows back
 
@@ -232,7 +232,7 @@ df_predicts.select('predicted_duration').show()
 We drop the `Index` column that `itertuples` added, and since we do not
 specify a schema, Spark infers it:
 
-![The predicted duration for each trip, computed partition by partition](images/12-spark-rdd-mappartition-07-predicted-duration-cropped.png)
+![The predicted duration for each trip, computed partition by partition](images/12-spark-rdd-mappartition-07-predicted-duration-crisp.png)
 
 For every row of our data we now have a predicted duration in minutes -
 something we could show to a passenger who wants to know how long the

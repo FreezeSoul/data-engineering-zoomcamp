@@ -21,7 +21,7 @@ df_join = df_green_revenue_temp \
     .join(df_yellow_revenue_temp, on=['hour', 'zone'], how='outer')
 ```
 
-![The notebook performs an outer join of the green and yellow revenue tables](images/10-joins-in-spark-01-outer-join-cropped.png)
+![The notebook performs an outer join of the green and yellow revenue tables](images/10-joins-in-spark-01-outer-join-crisp.png)
 
 The join type is `outer`: when a record exists in green but not in yellow,
 we still want it in the result - with nulls in the yellow columns - and the
@@ -58,7 +58,7 @@ data and does the group by - that's green (or yellow, doesn't matter). The
 second one does the same for the other taxi type. And the third stage
 combines the two - the join itself.
 
-![Spark UI shows two scan stages feeding the sort-merge join DAG](images/10-joins-in-spark-02-sort-merge-join-stages-cropped.png)
+![Spark UI shows two scan stages feeding the sort-merge join DAG](images/10-joins-in-spark-02-sort-merge-join-stages-crisp.png)
 
 ## How a join of two large tables works
 
@@ -138,7 +138,7 @@ the first videos by loading the zones CSV and writing it as parquet:
 df_zones = spark.read.parquet('zones/')
 ```
 
-![The notebook displays the zones lookup table with location and service-zone fields](images/10-joins-in-spark-03-zones-lookup-cropped.png)
+![The notebook displays the zones lookup table with location and service-zone fields](images/10-joins-in-spark-03-zones-lookup-crisp.png)
 
 It's a small lookup table: location ID, borough, zone name and service
 zone. Now the join - this time the column names are different in the two
@@ -161,7 +161,7 @@ executor. Each executor processes its partition of the big table and does
 the join in memory: for each revenue record, it looks up the zone by ID and
 appends the zone information.
 
-![Spark UI shows the broadcast-exchange jobs](images/10-joins-in-spark-04-broadcast-exchange-cropped.png)
+![Spark UI shows the broadcast-exchange jobs](images/10-joins-in-spark-04-broadcast-exchange-crisp.png)
 
 No data needs to be shuffled - only the small table is sent around once.
 This is much, much faster than a sort merge join.
