@@ -3,6 +3,10 @@
 Now let's do something our plain Python consumer can't easily do - windowed
 aggregation. We'll count taxi trips and sum revenue by pickup location per hour.
 
+![Taxi events fill fixed one-hour buckets, a watermark closes a bucket after a patience gap, and an upsert-ready result reaches PostgreSQL](images/10-tumbling-window-watermark-imagegen.png)
+
+*The window chooses the bucket, the watermark decides when it is ready, and the keyed sink can replace a result when a late event changes it.*
+
 First, cancel any running jobs. Then create the aggregation table in PostgreSQL:
 
 ```sql

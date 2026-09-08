@@ -4,6 +4,10 @@ The CSV producer sends events in order, so the watermark never has to
 handle late arrivals. Let's use a real-time producer that generates
 synthetic events with occasional delays to see what happens.
 
+![A delayed event arrives after a window is published and updates one existing sink row instead of creating a duplicate](images/11-late-events-upsert-imagegen.png)
+
+*A primary-key upsert lets a late event correct the published aggregate in place.*
+
 Download and run the real-time producer:
 
 ```bash
