@@ -244,6 +244,25 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: generated output visually inspected at lesson size; Markdown
   reference resolves and `git diff --check` passes.
 
+### 05-machine-learning-in-bigquery-01-model-choice.jpg
+
+- Source: `05-machine-learning-in-bigquery.md`, model-selection overview.
+- Rubric: 10/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 2, caption/accessibility 1).
+- Decision: `crop/replace`; the flow maps task types to BigQuery ML models and
+  is useful as a durable overview, but its many exact labels rule out
+  generated text.
+- Preparation: deterministic crop `(x=20, y=0, width=600, height=350)`;
+  resized 2x with a light unsharp mask. Imagegen was rejected because it
+  could alter algorithm names or decision branches.
+- Method: deterministic PNG sibling
+  `05-machine-learning-in-bigquery-01-model-choice-cropped.png`.
+- Invariants checked: legend, task branches, example descriptions, PCA,
+  autoencoder, K-Means, ARIMA-plus, and model names remain unchanged; no
+  face, camera tile, cursor, or overlay was present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.

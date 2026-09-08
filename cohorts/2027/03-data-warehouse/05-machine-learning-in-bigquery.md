@@ -63,7 +63,7 @@ the trained model using a Docker image - that is the next unit.
 Which algorithm fits which use case? The BigQuery documentation answers this
 with a decision diagram:
 
-![BigQuery ML diagram mapping use cases to algorithms](images/05-machine-learning-in-bigquery-01-model-choice.jpg)
+![BigQuery ML diagram mapping use cases to algorithms](images/05-machine-learning-in-bigquery-01-model-choice-cropped.png)
 
 Predicting a number - sales figures, stock prices - calls for linear
 regression, boosted trees, AutoML, a DNN regressor or wide-and-deep
