@@ -88,7 +88,7 @@ curl -d '{"instances": [{"passenger_count":1, "trip_distance":12.2, "PULocationI
 
 For this ride, the model predicts a tip of around 3.2 dollars:
 
-![Postman POST predicting a tip of about 3.2 dollars](images/06-deploying-a-machine-learning-model-05-predict.jpg)
+![Postman POST predicting a tip of about 3.2 dollars](images/06-deploying-a-machine-learning-model-05-predict-cropped.png)
 
 If we change the payment type to 2 and send the request again, the predicted
 tip amount goes drastically down - to about 0.26 dollars:
