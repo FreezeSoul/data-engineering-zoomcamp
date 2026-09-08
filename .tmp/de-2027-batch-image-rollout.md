@@ -50,6 +50,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 30 | `06-preparing-taxi-data-05-tree-raw.jpg` | keep | deterministic crop `x=20,y=32,w=465,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the raw directory hierarchy and monthly files while removing editor/browser chrome and webcam. |
 | 31 | `06-preparing-taxi-data-06-schema-strings.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact inferred all-StringType schema, which is the lesson's evidence for defining a schema, while removing notebook chrome and webcam. |
 | 32 | `06-preparing-taxi-data-07-spark-ui-one-task.jpg` | keep | deterministic crop `x=0,y=30,w=480,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the Spark UI's one-task/active-job evidence while removing browser chrome and webcam. |
+| 33 | `06-preparing-taxi-data-08-tree-pq.jpg` | keep | deterministic crop `x=20,y=32,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the parquet directory hierarchy, `_SUCCESS` markers, and part files while removing editor/browser chrome and webcam. |
 
 ## Validation
 

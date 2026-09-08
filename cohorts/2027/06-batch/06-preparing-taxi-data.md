@@ -181,7 +181,7 @@ We run this for all four combinations: green and yellow, 2020 and 2021.
 Looking at `data/pq` with `tree`, each month now has four parquet part-files
 (the result of the repartition) plus a `_SUCCESS` marker:
 
-![alt text](images/06-preparing-taxi-data-08-tree-pq.jpg)
+![tree shows the parquet output partitioned by taxi type and month](images/06-preparing-taxi-data-08-tree-pq-cropped.png)
 
 Comparing sizes with `ls -lh`: the compressed yellow CSV for January 2020 is
 111 MB, and the parquet version is actually slightly bigger - gzip compresses
