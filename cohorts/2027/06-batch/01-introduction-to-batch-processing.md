@@ -59,8 +59,6 @@ You can go to a finer granularity - three times per hour, or every five
 minutes - but these are less typical. Daily and hourly are what you
 will see most of the time.
 
-![Common batch-job schedules: weekly, daily, and hourly](images/01-introduction-to-batch-processing-03-batch-job-frequencies-imagegen.png)
-
 ## Technologies for batch jobs
 
 The tools we use for batch jobs are often just Python scripts. Remember
@@ -74,8 +72,6 @@ SQL is popular for this because it is convenient and people know it.
 
 Then there is Spark, which is the topic of this week, and other tools
 like Flink.
-
-![Common batch-job frequencies and technologies used to run them](images/01-introduction-to-batch-processing-04-technologies-imagegen.png)
 
 A note on Python scripts: they can run anywhere - in Kubernetes, in a
 batch service, wherever. For orchestrating all these jobs we use
@@ -102,8 +98,6 @@ Batch is also easier to scale. If a Python script struggles with a
 bigger file, we get a bigger machine. If Spark struggles, we get a
 bigger cluster or add more machines to the existing one. We can scale
 up and down when we need to.
-
-![Batch advantages are easy management, retryability, and scale; the tradeoff is delay](images/01-introduction-to-batch-processing-06-advantages-imagegen.png)
 
 The main disadvantage is delay. Because we run things at regular
 intervals, we always wait. Say we process data hourly, and executing
