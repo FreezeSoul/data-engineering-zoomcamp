@@ -11,10 +11,6 @@ Flink is a stream processing framework that handles all the hard parts:
 Flink can also connect to sources beyond Kafka - REST APIs, websockets,
 filesystems, and more. But Kafka is the most common source in stream processing.
 
-![Flink replaces hand-built streaming plumbing with built-in windowing, checkpointing, parallelism, connectors, and SQL](images/06-why-flink-imagegen.png)
-
-*Flink adds infrastructure to manage, but it pays off when streaming jobs need state, scale, resilience, or multiple sinks.*
-
 The trade-off is infrastructure complexity - we need the JobManager and
 TaskManager containers. A streaming job is more like owning a server than
 running a batch pipeline - it runs 24/7 and needs monitoring. But for anything
