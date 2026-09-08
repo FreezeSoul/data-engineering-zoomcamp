@@ -48,7 +48,7 @@ these columns:
 
 We select the columns and look at the result:
 
-![Selecting the feature columns from the green taxi dataset](images/12-spark-rdd-mappartition-02-feature-columns.jpg)
+![Selecting the feature columns from the green taxi dataset](images/12-spark-rdd-mappartition-02-feature-columns-cropped.png)
 
 In practice, the pre-processing would happen in SQL, and by the time the
 data reaches this point it would already contain only the prepared
