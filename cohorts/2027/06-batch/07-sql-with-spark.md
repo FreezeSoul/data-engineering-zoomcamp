@@ -33,7 +33,7 @@ df_green = spark.read.parquet('data/pq/green/*/*')
 df_yellow = spark.read.parquet('data/pq/yellow/*/*')
 ```
 
-![alt text](images/07-sql-with-spark-01-read-parquet.jpg)
+![The notebook reads the green and yellow parquet datasets](images/07-sql-with-spark-01-read-parquet-cropped.png)
 
 The two schemas are similar but not the same. Some fields are shared, like
 `fare_amount` and `congestion_surcharge`, but green has fields that yellow
