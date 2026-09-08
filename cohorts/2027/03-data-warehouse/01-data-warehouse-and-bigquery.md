@@ -312,7 +312,7 @@ still says 1.1 GB — the approximation cannot know what clustering will
 skip. But the actual run processes less: 843.5 MB instead of 1.1 GB.
 That is the clustering effect.
 
-![The clustered table actually processes 843.5 MB, below the 1.1 GB estimate](images/01-data-warehouse-and-bigquery-08-cluster-pruning.jpg)
+![The clustered table actually processes 843.5 MB, below the 1.1 GB estimate](images/01-data-warehouse-and-bigquery-08-cluster-pruning-cropped.png)
 
 When to prefer partitioning, when clustering, and when both — that is
 the topic of [the next unit](02-partitioning-vs-clustering.md).

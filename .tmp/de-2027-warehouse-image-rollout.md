@@ -52,6 +52,24 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
+
+- Source: `01-data-warehouse-and-bigquery.md`, clustering query result.
+- Rubric: 11/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the image supplies the query and measured
+  `843.5 MB` result needed to compare with the `1.1 GB` estimate.
+- Preparation: deterministic crop `(x=28, y=27, width=612, height=325)`;
+  resized 2x with a light unsharp mask. Exact SQL and result values were
+  retained rather than generated.
+- Method: deterministic PNG sibling
+  `01-data-warehouse-and-bigquery-08-cluster-pruning-cropped.png`.
+- Invariants checked: clustered table selection, query text, bytes processed,
+  and result row remain visible and unchanged; no face, camera tile, cursor,
+  or unrelated browser chrome is present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-07-clustering-diagram.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering section.
