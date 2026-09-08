@@ -226,6 +226,24 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: generated output visually inspected at lesson size; Markdown
   reference resolves and `git diff --check` passes.
 
+### 04-internals-of-bigquery-03-dremel-tree.jpg
+
+- Source: `04-internals-of-bigquery.md`, Dremel serving-tree explanation.
+- Rubric: 11/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the multi-level tree, query rewrite, and storage
+  fan-out are central to the lesson and were too small in the source capture.
+- Preparation: deterministic crop `(x=15, y=10, width=590, height=330)`;
+  resized 2x before generation.
+- Method: built-in imagegen, `scientific-educational`; generated sibling
+  `04-internals-of-bigquery-03-dremel-tree-imagegen.png`.
+- Invariants checked: root server, mixers, leaf nodes, query/result labels,
+  `R11`–`R24` branches, modified-query annotations, Colossus, arrows, and
+  figure caption are retained; no extra node, person, chrome, cursor, or
+  watermark appears.
+- Validation: generated output visually inspected at lesson size; Markdown
+  reference resolves and `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.

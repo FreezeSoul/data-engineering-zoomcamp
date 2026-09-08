@@ -71,7 +71,7 @@ Dremel is the query execution engine. It takes your query and divides it
 into a tree structure, in such a way that each node executes an individual
 subset of the query.
 
-![The Dremel serving tree: a root server rewrites SELECT A, COUNT(B) as SELECT A, SUM(C) and distributes it through mixers to leaf nodes, which read from Colossus](images/04-internals-of-bigquery-03-dremel-tree.jpg)
+![The Dremel serving tree: a root server rewrites SELECT A, COUNT(B) as SELECT A, SUM(C) and distributes it through mixers to leaf nodes, which read from Colossus](images/04-internals-of-bigquery-03-dremel-tree-imagegen.png)
 
 Let's walk through the example in the diagram. Assume a query like
 `SELECT A, COUNT(B) FROM T GROUP BY A` — count the rows per group of
