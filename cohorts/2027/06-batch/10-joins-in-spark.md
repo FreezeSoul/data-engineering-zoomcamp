@@ -161,7 +161,7 @@ executor. Each executor processes its partition of the big table and does
 the join in memory: for each revenue record, it looks up the zone by ID and
 appends the zone information.
 
-![The broadcast exchange jobs in the Spark UI](images/10-joins-in-spark-04-broadcast-exchange.jpg)
+![Spark UI shows the broadcast-exchange jobs](images/10-joins-in-spark-04-broadcast-exchange-cropped.png)
 
 No data needs to be shuffled - only the small table is sent around once.
 This is much, much faster than a sort merge join.

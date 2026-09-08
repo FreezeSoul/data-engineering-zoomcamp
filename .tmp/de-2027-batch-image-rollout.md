@@ -64,6 +64,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 44 | `10-joins-in-spark-01-outer-join.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact outer-join code and join keys while removing notebook chrome and webcam. |
 | 45 | `10-joins-in-spark-02-sort-merge-join-stages.jpg` | keep | deterministic crop `x=0,y=28,w=500,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the two scan stages, exchanges, and downstream join DAG while removing browser chrome and webcam; the source edge still truncates the far-right UI. |
 | 46 | `10-joins-in-spark-03-zones-lookup.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact zones lookup schema and sample rows while removing notebook chrome and webcam. |
+| 47 | `10-joins-in-spark-04-broadcast-exchange.jpg` | keep | deterministic crop `x=0,y=28,w=480,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the broadcast-exchange job evidence while removing browser chrome and webcam; native row-selection highlight remains because it is inside the exact UI capture. |
 
 ## Validation
 
