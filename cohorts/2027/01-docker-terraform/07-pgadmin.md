@@ -4,6 +4,9 @@
 
 It's possible to run pgAdmin as a container along with the Postgres container, but both containers will have to be in the same _virtual network_ so that they can find each other.
 
+![pgAdmin and PostgreSQL run in separate containers connected through one Docker network and a persistent volume](images/07-pgadmin-docker-network-imagegen.png)
+*A shared Docker network lets the management client reach the database without placing them in one container.*
+
 ## Run pgAdmin Container
 
 ```bash

@@ -2,6 +2,9 @@
 
 We will now create a Jupyter Notebook `notebook.ipynb` file which we will use to read a CSV file and export it to Postgres.
 
+![NYC taxi CSV data is explored, cleaned and typed in chunks, then loaded into a PostgreSQL table](images/05-taxi-data-ingestion-flow-imagegen.png)
+*The ingestion path from raw taxi records to structured database rows.*
+
 ## Setting up Jupyter
 
 Install Jupyter:
