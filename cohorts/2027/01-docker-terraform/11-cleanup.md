@@ -2,8 +2,6 @@
 
 When you're done with the workshop, clean up Docker resources to free up disk space.
 
-![Docker cleanup groups containers, images, volumes, and networks into an inspect-and-remove workflow](images/11-docker-cleanup-workflow-imagegen.png)
-*Inspect resources first, then remove only what is no longer needed.*
 
 ## Stop All Running Containers
 

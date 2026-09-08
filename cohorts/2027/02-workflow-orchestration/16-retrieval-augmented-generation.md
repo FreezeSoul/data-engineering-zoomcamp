@@ -13,7 +13,6 @@ To further learn how to provide context to your prompts, this bonus section demo
 
 This solves the hallucination problem by ensuring the AI has access to current, accurate information at query time.
 
-![RAG ingests documents, creates embeddings in a vector store, retrieves relevant context for a query, and produces a grounded answer](images/16-rag-imagegen.png)
 
 *RAG adds a retrieval path between the question and the model so answers can be grounded in current source material.*
 

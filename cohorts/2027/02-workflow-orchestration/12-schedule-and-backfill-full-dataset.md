@@ -7,7 +7,5 @@ We can now schedule the same pipeline shown above to run daily at 9 AM UTC for t
 
 Since we now process data in a cloud environment with infinitely scalable storage and compute, we can backfill the entire dataset for both the yellow and green taxi data without the risk of running out of resources on our local machine.
 
-![Separate yellow and green schedules and a historical backfill feed shared cloud storage and a warehouse](images/12-cloud-schedule-backfill-imagegen.png)
-*Cloud storage and elastic compute let the same pipeline replay a broad historical range.*
 
 The flow code: [`09_gcp_taxi_scheduled.yaml`](flows/09_gcp_taxi_scheduled.yaml).

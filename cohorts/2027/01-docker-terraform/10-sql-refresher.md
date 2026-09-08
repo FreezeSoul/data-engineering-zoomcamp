@@ -10,8 +10,6 @@ Don't forget to Right Click on the server or database to refresh it in case you 
 
 Now start querying!
 
-![Taxi trips and zones pass through JOIN, FILTER, GROUP BY, and ORDER BY steps into an analysis result](images/10-sql-analysis-flow-imagegen.png)
-*A visual map of the relational operations used throughout the SQL refresher.*
 
 ## Inner Joins
 

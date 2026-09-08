@@ -11,8 +11,6 @@ Kestra is a great choice for workflow orchestration:
 - Support for any programming language - pick the right tool for the job
 - Schedule or Event Based Triggers - have your workflows respond to data
 
-![A Kestra flow feeds a visual workflow engine with tasks, plugins, Python, SQL, and schedule or event triggers](images/02-kestra-platform-imagegen.png)
-*A flow definition connects orchestration logic to the tools and triggers a pipeline needs.*
 
 ## Resources
 - [Quickstart Guide](https://go.kestra.io/de-zoomcamp/quickstart)

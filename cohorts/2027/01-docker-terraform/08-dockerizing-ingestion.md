@@ -2,8 +2,6 @@
 
 Now let's containerize the ingestion script so we can run it in Docker.
 
-![Lock files and dependencies are cached before application code is added to an ingestion image](images/08-reproducible-ingestion-imagegen.png)
-*Copying lock files first makes dependency installation reusable across later application-code changes.*
 
 ## The Dockerfile
 

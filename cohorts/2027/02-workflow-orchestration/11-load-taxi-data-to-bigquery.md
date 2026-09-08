@@ -5,8 +5,6 @@ video_url: https://www.youtube.com/watch?v=52u9X_bfTAo
 
 Now that Google Cloud is set up with a storage bucket, we can start the ELT process.
 
-![CSV taxi data uploads to Cloud Storage, passes through external and monthly tables, and merges into yellow and green BigQuery tables](images/11-cloud-taxi-bigquery-flow-imagegen.png)
-*The cloud flow uses temporary external and monthly tables before merging into the main tables.*
 
 ```mermaid
 graph LR

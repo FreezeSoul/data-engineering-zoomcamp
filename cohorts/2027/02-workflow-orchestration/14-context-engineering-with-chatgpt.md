@@ -3,7 +3,6 @@ video_url: https://www.youtube.com/watch?v=LmnfjGKwnVU
 ---
 # Context Engineering with ChatGPT
 
-![Missing context can produce outdated or incorrect workflow details, while documentation and examples help produce a validated flow](images/14-context-engineering-imagegen.png)
 
 *The comparison is about grounding: relevant versions, documentation, and examples turn a vague prompt into a reviewable workflow.*
 

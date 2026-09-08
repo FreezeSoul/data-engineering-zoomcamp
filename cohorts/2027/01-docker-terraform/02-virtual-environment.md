@@ -11,8 +11,6 @@ graph LR
     style B fill:#4CAF50,stroke:#333,stroke-width:2px,color:#fff
 ```
 
-![A reproducible Python pipeline inside a virtual environment, reading, transforming, and writing data](images/02-virtual-environment-reproducible-pipeline-imagegen.png)
-*A project keeps its Python runtime and dependencies together while data moves through the pipeline.*
 
 In this workshop, we'll build pipelines that:
 - Download CSV data from the web

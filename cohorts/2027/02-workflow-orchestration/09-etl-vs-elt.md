@@ -15,8 +15,6 @@ While this is very standard across the industry, sometimes it makes sense to cha
 
 The reason for loading into the data warehouse before transforming means we can utilize the cloud's performance benefits for transforming large datasets. What might take a lot longer for a local machine, can take a fraction of the time in the cloud.
 
-![ETL transforms before loading to a local database, while ELT loads raw data to cloud storage before transforming in a warehouse](images/09-etl-vs-elt-imagegen.png)
-*The key distinction is where the transformation work happens.*
 
 Over the next few videos, we'll look at setting up BigQuery and transforming the Yellow Taxi dataset.
 

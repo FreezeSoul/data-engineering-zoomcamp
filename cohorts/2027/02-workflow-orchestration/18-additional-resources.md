@@ -7,7 +7,6 @@
 - Join our [Slack community](https://go.kestra.io/de-zoomcamp/slack) if you have any questions
 - Find all the videos in this [YouTube Playlist](https://go.kestra.io/de-zoomcamp/yt-playlist)
 
-![A learning hub connects Kestra documentation, blueprints, plugins, videos, community help, and troubleshooting resources](images/18-additional-resources-imagegen.png)
 
 *The resource set is a map for continuing beyond the lesson: reference material, examples, tools, and help channels serve different needs.*
 

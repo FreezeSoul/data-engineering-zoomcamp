@@ -4,8 +4,6 @@ Docker is a _containerization software_ that allows us to isolate software in a 
 
 A Docker image is a _snapshot_ of a container that we can define to run our software, or in this case our data pipelines. By exporting our Docker images to Cloud providers such as Amazon Web Services or Google Cloud Platform we can run our containers there.
 
-![Dockerfile builds an image that runs as an isolated container with a persistent volume for data](images/01-introduction-docker-mental-model-imagegen.png)
-*The Dockerfile-to-image-to-container relationship, with a volume for data that must outlive a container.*
 
 ## Why Docker?
 

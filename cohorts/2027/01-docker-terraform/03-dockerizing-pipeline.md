@@ -2,8 +2,6 @@
 
 Now let's containerize the script. Create the following `Dockerfile` file:
 
-![A Dockerfile becomes cached dependency layers, an image, and a running pipeline container](images/03-dockerizing-pipeline-layers-imagegen.png)
-*The build separates reusable dependency layers from application code before the container runs.*
 
 ## Simple Dockerfile with pip
 

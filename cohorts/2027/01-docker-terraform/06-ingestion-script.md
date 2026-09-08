@@ -2,8 +2,6 @@
 
 Now let's convert the notebook to a Python script.
 
-![A notebook becomes a parameterized Python ingestion script that loads data into a database](images/06-notebook-to-ingestion-script-imagegen.png)
-*Turning exploratory notebook steps into a repeatable command-line job.*
 
 ## Convert Notebook to Script
 

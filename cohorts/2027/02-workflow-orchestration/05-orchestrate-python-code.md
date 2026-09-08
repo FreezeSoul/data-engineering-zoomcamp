@@ -9,8 +9,6 @@ While Kestra has a huge variety of plugins available for building your workflows
 
 In our example Python workflow, [`02_python.yaml`](flows/02_python.yaml), our code fetches the number of Docker image pulls from DockerHub and returns it as an output to Kestra. This is useful as we can access this output with other tasks, even though it was generated inside of our Python script.
 
-![A Kestra trigger runs a Python task inside a flow and passes its output to the next task](images/05-orchestrate-python-output-imagegen.png)
-*User code can compute a value inside the flow while later tasks consume the resulting output.*
 
 ## Resources
 - [How-to Guide: Python](https://go.kestra.io/de-zoomcamp/python)

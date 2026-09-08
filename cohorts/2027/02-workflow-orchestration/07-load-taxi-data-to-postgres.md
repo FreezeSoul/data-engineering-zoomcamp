@@ -5,8 +5,6 @@ video_url: https://www.youtube.com/watch?v=Z9ZmmwtXDcU
 
 Before we start loading data to GCP, we'll first play with the Yellow and Green Taxi data using a local Postgres database running in a Docker container. We will use the same database from Module 1 which should be in the same Docker Compose file as Kestra.
 
-![A local taxi flow selects a month, extracts CSV data, branches into yellow and green loads, and merges final PostgreSQL tables](images/07-local-taxi-postgres-flow-imagegen.png)
-*The local flow keeps the two taxi datasets on parallel paths before writing final tables.*
 
 The flow will extract CSV data partitioned by year and month, create tables, load data to the monthly table, and finally merge the data to the final destination table.
 

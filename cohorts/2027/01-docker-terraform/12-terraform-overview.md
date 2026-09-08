@@ -3,8 +3,6 @@ video_url: https://www.youtube.com/watch?v=18jIzE41fJ4
 ---
 # Terraform Overview
 
-![Terraform compares configuration with state, previews a plan, applies changes, and manages cloud resources](images/12-terraform-plan-apply-state-imagegen.png)
-*The infrastructure-as-code loop connects versioned configuration to real resources through plan, apply, and state.*
 
 ## Concepts
 ### Introduction

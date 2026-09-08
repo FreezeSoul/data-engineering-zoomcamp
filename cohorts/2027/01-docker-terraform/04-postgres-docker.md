@@ -4,8 +4,6 @@ Now we want to do real data engineering. Let's use a Postgres database for that.
 
 You can run a containerized version of Postgres that doesn't require any installation steps. You only need to provide a few _environment variables_ to it as well as a _volume_ for storing data.
 
-![A client connects to PostgreSQL in a disposable container backed by a persistent volume](images/04-postgres-container-volume-imagegen.png)
-*The container can be recreated while the mounted volume keeps the database data durable.*
 
 ## Running PostgreSQL in a Container
 

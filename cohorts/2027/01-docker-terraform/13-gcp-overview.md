@@ -3,8 +3,6 @@ video_url: https://www.youtube.com/watch?v=18jIzE41fJ4
 ---
 # GCP Overview
 
-![A local setup authenticates through IAM before Terraform provisions Cloud Storage as a data lake and BigQuery as a warehouse](images/13-gcp-data-platform-setup-imagegen.png)
-*The course platform connects local authentication and infrastructure code to storage and analytics services in the cloud.*
 
 ## Project infrastructure modules in GCP:
 * Google Cloud Storage (GCS): Data Lake

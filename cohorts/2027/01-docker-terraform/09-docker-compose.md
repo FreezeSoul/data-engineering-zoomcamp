@@ -2,8 +2,6 @@
 
 `docker-compose` allows us to launch multiple containers using a single configuration file, so that we don't have to run multiple complex `docker run` commands separately.
 
-![One Docker Compose file brings up PostgreSQL and pgAdmin on a shared network with named volumes](images/09-docker-compose-services-imagegen.png)
-*Compose coordinates the services and their supporting network and storage from one declaration.*
 
 Docker compose makes use of YAML files. Here's the `docker-compose.yaml` file:
 
