@@ -96,6 +96,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 76 | `15-setting-up-a-dataproc-cluster-04-iam-dataproc-role.jpg` | remove | — | 4/12 | The caption claims the Dataproc Administrator role is being added, but the capture only shows the IAM table and no such role or add action; the reference is removed and the original preserved. |
 | 77 | `15-setting-up-a-dataproc-cluster-05-reports-in-bucket.jpg` | keep | deterministic crop `x=0,y=30,w=145,h=330`, 2x Lanczos/sharpen | 9/12 | Preserves the exact `report-2020/` and `report-2021/` folder evidence while removing browser chrome, webcam, and the source cursor by focusing on the bucket's name column; the source's clipped bucket title/right columns are not needed for the teaching point. |
 | 78 | `16-connecting-spark-to-bigquery-01-connector-tutorial.jpg` | keep | deterministic crop `x=180,y=52,w=430,h=278`, 2x Lanczos/sharpen | 10/12 | Preserves the exact Dataproc submission command, GCS arguments, and BigQuery connector tutorial URL while removing VS Code/sidebar chrome and webcam; the source's URL text-selection highlight remains because the exact technical text cannot be reconstructed safely. |
+| 79 | `16-connecting-spark-to-bigquery-02-failed-to-find-bigquery.jpg` | keep | deterministic crop `x=60,y=100,w=540,h=240`, 2x Lanczos/sharpen | 9/12 | Preserves the exact `ClassNotFoundException`, missing `bigquery` data-source message, and Spark/Py4J stack evidence while removing VS Code/terminal chrome and webcam; long stack lines remain source-clipped. |
 
 ## Validation
 

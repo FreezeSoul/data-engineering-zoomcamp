@@ -72,7 +72,7 @@ course - we never gave Spark the connector. Unlike Google Cloud Storage,
 the BigQuery connector does not ship with every cluster, and Dataproc
 cannot guess that we want it.
 
-![The job fails because the BigQuery data source is not found](images/16-connecting-spark-to-bigquery-02-failed-to-find-bigquery.jpg)
+![The job fails because the BigQuery data source is not found](images/16-connecting-spark-to-bigquery-02-failed-to-find-bigquery-cropped.png)
 
 ## Adding the connector jar
 
