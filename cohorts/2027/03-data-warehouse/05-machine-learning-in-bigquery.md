@@ -263,7 +263,7 @@ tip_amount IS NOT NULL
 ), STRUCT(3 as top_k_features));
 ```
 
-![ML.EXPLAIN_PREDICT output with per-feature attributions](images/05-machine-learning-in-bigquery-07-explain-predict.jpg)
+![ML.EXPLAIN_PREDICT output with per-feature attributions](images/05-machine-learning-in-bigquery-07-explain-predict-cropped.png)
 
 Looking at the top three features, all our categorical features are there -
 pickup location, dropoff location and payment type are what the model relies
