@@ -235,7 +235,7 @@ tip_amount IS NOT NULL
 ));
 ```
 
-![ML.PREDICT output with the predicted_tip_amount column](images/05-machine-learning-in-bigquery-06-ml-predict.jpg)
+![ML.PREDICT output with the predicted_tip_amount column](images/05-machine-learning-in-bigquery-06-ml-predict-cropped.png)
 
 Every row now carries a `predicted_tip_amount` column next to the actual
 `tip_amount`. With both side by side, we can also do a manual evaluation of
