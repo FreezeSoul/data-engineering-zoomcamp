@@ -70,3 +70,31 @@ the lesson image paths.
 | Docker running | `0b0266a6417fc628c06e317b42d4c114c0228667f913bcdf5837198910050998` | `0790349ec4b1994707d4faa3174028766adca031fdb541a08b91fa1577945360` |
 | Spark built-in functions | `e446434b8e919d2e3ad53c34939e0cef2ff017fa6f8cb6fd9f3c4e0e422597e0` | `01b1a8bbce7f46b75a8405fd1b718e2d0ae35dcae5d25c4afb46a43c3068cdd2` |
 | Spark RDD two-stage DAG | `a248d024dc20af56290836e8697ce8c7b3af950123323ea5012659b56666fabf` | `af5174e5a8e790ca18755d4c1e974e0e3b596b039a925c512d7c633f9c69b4ca` |
+
+## Follow-up correction: Docker output readability
+
+The strict audit of the previous Docker output found that its genuine redraw
+was still too panoramic: at 2206×713, the single-line `docker ps` table became
+unreadable at the 608px lesson width. The target was regenerated with the
+built-in imagegen tool using only the original JPG and bounded crop above. The
+previous crisp PNG was not used as an imagegen source.
+
+The replacement reflows the same exact `docker ps` facts into a compact
+terminal card with large monospace text. It preserves the container ID,
+`tensorflow/serving` image, command, created time, status, both port mappings,
+and `great_crazy` name. Camera/browser artifacts, cursor, selection, prior
+commands, and overlays are absent.
+
+The replacement is `1672×941`; a proportional `608×342` render was inspected
+and remains readable. The generated output is stored under
+`/home/alexey/.codex/generated_images/01a0830b-f2a1-7200-ba75-3712b4d99f0f/`.
+
+| Published target | Original JPG source | Bounded crop | Imagegen output | Correction and validation |
+|---|---|---|---|---|
+| `cohorts/2027/03-data-warehouse/images/06-deploying-a-machine-learning-model-03-docker-running-crisp.png` | `06-deploying-a-machine-learning-model-03-docker-running.jpg` (`0b0266a6417fc628c06e317b42d4c114c0228667f913bcdf5837198910050998`) | `06-deploying-a-machine-learning-model-03-docker-running-cropped.png` (`0790349ec4b1994707d4faa3174028766adca031fdb541a08b91fa1577945360`) | `exec-04ac4351-0ce9-46e3-9113-506b31eb5cf4.png` | Replaced the unreadable panoramic layout with a focused stacked terminal card; exact `docker ps` facts retained; native and 608px checks passed. |
+
+### Latest published hash
+
+| File | SHA-256 |
+|---|---|
+| `06-deploying-a-machine-learning-model-03-docker-running-crisp.png` | `bcbf293e5febb408c19e329dd9bbb6c75f628dadd20bc7220636b449b7bbc686` |
