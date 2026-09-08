@@ -75,7 +75,7 @@ SQL is popular for this because it is convenient and people know it.
 Then there is Spark, which is the topic of this week, and other tools
 like Flink.
 
-![alt text](images/01-introduction-to-batch-processing-04-technologies.jpg)
+![Common batch-job frequencies and technologies used to run them](images/01-introduction-to-batch-processing-04-technologies-imagegen.png)
 
 A note on Python scripts: they can run anywhere - in Kubernetes, in a
 batch service, wherever. For orchestrating all these jobs we use
