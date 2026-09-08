@@ -37,8 +37,6 @@ The output is no longer a folder but a BigQuery table, passed as
 `schema.table` from the command line, and we do not need `coalesce(1)`
 to merge the output files - BigQuery takes care of that.
 
-![The tutorial example for saving Spark results to BigQuery](images/16-connecting-spark-to-bigquery-01-connector-tutorial-crisp.png)
-
 The connector needs a temporary bucket: Spark first writes the results to
 Google Cloud Storage and then loads them into BigQuery. We configure it
 in the script:
@@ -110,7 +108,15 @@ creates it. Open BigQuery, refresh, and there is `reports-2020` in the
 `trips_data_all` dataset - with a preview of the monthly revenue rows our
 job computed on the cluster.
 
-![The reports table in BigQuery, created and filled by the Spark job](images/16-connecting-spark-to-bigquery-03-bigquery-table-crisp.png)
+The table has the expected grouping fields and revenue measures. The first
+fields in its schema are:
+
+| Field | Type | Mode |
+| --- | --- | --- |
+| `revenue_zone` | INTEGER | NULLABLE |
+| `revenue_month` | TIMESTAMP | NULLABLE |
+| `service_type` | STRING | REQUIRED |
+| `revenue_monthly_fare` | FLOAT | NULLABLE |
 
 That closes the section on running Spark in the cloud: we connected a
 local Spark to Google Cloud Storage, created a managed Dataproc cluster,
