@@ -12,7 +12,7 @@ improving query performance.
 Most of our effort goes into cost reduction or query performance, and the
 two are related: the cheaper query is usually the one that reads less data.
 
-![The cost reduction slide: avoid SELECT *, price your queries before running them, use clustered or partitioned tables, use streaming inserts with caution, materialize query results in stages](images/03-bigquery-best-practices-01-cost-reduction.jpg)
+![The cost reduction slide: avoid SELECT *, price your queries before running them, use clustered or partitioned tables, use streaming inserts with caution, materialize query results in stages](images/03-bigquery-best-practices-01-cost-reduction-cropped.png)
 
 The slide lists five habits:
 

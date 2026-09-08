@@ -138,6 +138,23 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 03-bigquery-best-practices-01-cost-reduction.jpg
+
+- Source: `03-bigquery-best-practices.md`, cost-reduction slide.
+- Rubric: 10/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 1, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the checklist is a useful visual summary of
+  concrete cost controls, while the original contains excess frame margin.
+- Preparation: deterministic crop `(x=20, y=20, width=600, height=200)`;
+  resized 2x with a light unsharp mask. Exact wording was retained.
+- Method: deterministic PNG sibling
+  `03-bigquery-best-practices-01-cost-reduction-cropped.png`.
+- Invariants checked: `SELECT *`, query pricing, clustered/partitioned tables,
+  streaming inserts, and staged materialization bullets remain unchanged; no
+  face, camera tile, cursor, or overlay was present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.
