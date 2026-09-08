@@ -10,7 +10,7 @@ and partitioning and clustering are enough for day-to-day work. But
 understanding how a data warehouse like this is built will help you when
 you design data products of your own.
 
-![BigQuery architecture: clients talk to a client interface, below it the Dremel query execution tree running on Borg, connected over the Jupiter network to Colossus storage](images/04-internals-of-bigquery-01-architecture.jpg)
+![BigQuery architecture: clients talk to a client interface, below it the Dremel query execution tree running on Borg, connected over the Jupiter network to Colossus storage](images/04-internals-of-bigquery-01-architecture-imagegen.png)
 
 The diagram above is the high-level architecture. Three names to remember:
 

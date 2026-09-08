@@ -190,6 +190,23 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 04-internals-of-bigquery-01-architecture.jpg
+
+- Source: `04-internals-of-bigquery.md`, architecture introduction.
+- Rubric: 11/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the architecture is the lesson's central visual
+  relationship and the original small slide capture is difficult to read.
+- Preparation: deterministic crop `(x=15, y=10, width=590, height=330)`;
+  resized 2x before generation.
+- Method: built-in imagegen, `scientific-educational`; generated sibling
+  `04-internals-of-bigquery-01-architecture-imagegen.png`.
+- Invariants checked: clients, client interface, Borg, root/intermediate/leaf
+  nodes, Dremel, Jupiter, Colossus, query tree, arrows, and the figure caption
+  are retained; no extra service, person, cursor, chrome, or watermark appears.
+- Validation: generated output visually inspected at lesson size; Markdown
+  reference resolves and `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.
