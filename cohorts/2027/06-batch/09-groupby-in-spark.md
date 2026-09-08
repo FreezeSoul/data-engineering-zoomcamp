@@ -157,7 +157,7 @@ have 20 files each. With `ls -lhR` we see the yellow report is about 15 MB
 and the green one about 6 MB - a small dataset, but 20 files is still
 better than 200 tiny ones.
 
-![The stage details: 200 tasks in stage two, the repartition stage, and 28.7 MB of shuffle read](images/09-groupby-in-spark-04-shuffle-read-write.jpg)
+![Spark stage details show the repartition stage and shuffle-read evidence](images/09-groupby-in-spark-04-shuffle-read-write-cropped.png)
 
 ## Summary
 
