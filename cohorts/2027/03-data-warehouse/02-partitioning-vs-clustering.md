@@ -121,7 +121,7 @@ partition.
 Reclustering does not impact query performance, and it does not cost
 you anything - BigQuery takes care of it.
 
-![Automatic reclustering](images/02-partitioning-vs-clustering-05-automatic-reclustering.jpg)
+![Automatic reclustering](images/02-partitioning-vs-clustering-05-automatic-reclustering-cropped.png)
 
 ## Summary
 

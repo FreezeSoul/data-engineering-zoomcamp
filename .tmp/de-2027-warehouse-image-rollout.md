@@ -121,6 +121,23 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 02-partitioning-vs-clustering-05-automatic-reclustering.jpg
+
+- Source: `02-partitioning-vs-clustering.md`, automatic-reclustering section.
+- Rubric: 10/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 1, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the slide explains why newly written blocks can
+  weaken sort order and how background reclustering restores it.
+- Preparation: deterministic crop `(x=20, y=20, width=600, height=300)`;
+  resized 2x with a light unsharp mask. Exact wording was retained.
+- Method: deterministic PNG sibling
+  `02-partitioning-vs-clustering-05-automatic-reclustering-cropped.png`.
+- Invariants checked: both explanatory paragraphs, all bullets, and the
+  partition-scope qualification remain unchanged; no face, camera tile,
+  cursor, or overlay was present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.
