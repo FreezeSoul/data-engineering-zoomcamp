@@ -52,6 +52,24 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 01-data-warehouse-and-bigquery-04-external-table-details.jpg
+
+- Source: `01-data-warehouse-and-bigquery.md`, external-table section.
+- Rubric: 10/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 1, caption/accessibility 2).
+- Decision: `crop/replace`; the UI state proves the table is external and
+  shows its zero-byte size, source URIs, and CSV format, but the original
+  includes a thin capture frame and small text.
+- Preparation: deterministic crop `(x=28, y=25, width=612, height=330)`;
+  resized 2x with a light unsharp mask. The exact UI was not regenerated.
+- Method: deterministic PNG sibling
+  `01-data-warehouse-and-bigquery-04-external-table-details-cropped.png`.
+- Invariants checked: Explorer context, table details, source URI rows,
+  `0 B` size, `CSV` source format, and external-data heading remain visible;
+  no face, camera tile, cursor, or unrelated browser chrome is present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-03-bigquery-cost.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, BigQuery pricing section.

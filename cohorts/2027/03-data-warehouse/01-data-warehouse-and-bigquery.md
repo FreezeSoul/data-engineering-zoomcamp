@@ -167,7 +167,7 @@ external table, BigQuery cannot determine its rows or size — the data
 is not inside BigQuery, it is in an external system, Google Cloud
 Storage.
 
-![External table details: 0 bytes, source URIs in Cloud Storage, CSV format](images/01-data-warehouse-and-bigquery-04-external-table-details.jpg)
+![External table details: 0 bytes, source URIs in Cloud Storage, CSV format](images/01-data-warehouse-and-bigquery-04-external-table-details-cropped.png)
 
 Querying it works like any other table:
 
