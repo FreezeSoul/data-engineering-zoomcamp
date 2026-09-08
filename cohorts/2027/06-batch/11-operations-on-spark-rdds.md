@@ -199,7 +199,7 @@ If we call `toDF()` on it and `show()`, we get a DataFrame - but the column
 names are gone (we see `_1`, `_2` and so on), and Spark had to figure out
 the schema by going through the records.
 
-![Calling toDF without a schema: the columns are named _1, _2, _3, _4](images/11-operations-on-spark-rdds-04-todf-lost-names.jpg)
+![Calling toDF without a schema produces generic numbered columns](images/11-operations-on-spark-rdds-04-todf-lost-names-cropped.png)
 
 To get the names back we can use a named tuple:
 
