@@ -41,7 +41,7 @@ borrowed it:
 FMONTH=`printf "%02d" ${MONTH}`
 ```
 
-![alt text](images/06-preparing-taxi-data-03-printf.jpg)
+![The shell formats the month number with printf before building URLs](images/06-preparing-taxi-data-03-printf-cropped.png)
 
 With that we can assemble the URL for each month and check it with `echo`
 before actually downloading anything:
