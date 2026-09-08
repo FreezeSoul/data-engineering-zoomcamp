@@ -59,11 +59,85 @@ URL, numeric, logo, and plot-like assets remain deterministic or unchanged.
 - Method: retained exact source; no imagegen because this is a live UI whose
   labels are the source of truth. The source contains no face or camera tile.
 
-## Audit record
+## Final inventory and disposition
 
-The remaining source-by-source dispositions and scores will be recorded here
-before the final validation commit. Video thumbnails are intentionally audited
-as navigation assets, not regenerated as lesson illustrations; their presenter
-faces and play buttons are part of the thumbnail role. Clean explanatory
-diagrams and exact technical screenshots are retained when they already meet
-the rubric, with the reason and source dimensions recorded in the final audit.
+- 94 local Markdown image references were audited.
+- The initial inventory had 92 unique path strings: 91 existing source files
+  plus the broken IAM path. After the focused repairs and the shared homework
+  replacement, the active references use 91 unique, resolving source paths.
+- Retained: 94 references. Removed: 0. No image failed the instructional or
+  navigation-value hard gates.
+- Content changes: 1 imagegen replacement, 1 deterministic crop reused by 3
+  references, and 1 repaired relative path. The remaining 89 references keep
+  their original pixels and source assets.
+- Originals remain in place, including both duplicate homework originals and
+  the original incremental-loading diagram.
+
+### Video-thumbnail inventory
+
+All 80 thumbnail references were inspected in a contact sheet. They are
+navigation assets linking to the corresponding videos, so the presenter faces,
+play buttons, and designed thumbnail graphics are intentional rather than
+unwanted webcam/capture overlays. They were retained at 8/12 as navigation
+images (the surrounding lesson heading and linked video provide the caption
+and context), with no imagegen or deterministic rewrite.
+
+| Scope | References / unique sources | Source dimensions | Disposition |
+| --- | ---: | --- | --- |
+| `01-docker-terraform/**` (including `docker-sql`) | 8 / 8 | 480x360 JPEG | keep, video navigation |
+| `02-workflow-orchestration/**` | 16 / 16 | 480x360 JPEG | keep, video navigation |
+| `05-data-platforms/**` | 10 / 10 | 480x360 JPEG | keep, video navigation |
+| `06-batch/**` | 16 / 16 | 480x360 JPEG | keep, video navigation |
+| `cohorts/2024` workflow/workshop Markdown | 17 / 17 | 480x360 JPEG | keep, video navigation |
+| `cohorts/2025` workflow/workshop Markdown | 13 / 13 | 480x360 JPEG | keep, video navigation |
+
+The inventory paths are the `thumbnail-*.jpg` files referenced by those exact
+Markdown scopes; no unreferenced thumbnails were changed.
+
+### Instructional-image inventory
+
+| Active source | Refs | Score | Decision and method |
+| --- | ---: | ---: | --- |
+| `cohorts/2022/week_2_data_ingestion/airflow/docs/arch-diag-airflow.png` | 1 | 12/12 | Keep. Clean architecture diagram with exact component relationships and readable labels. |
+| `cohorts/2022/week_2_data_ingestion/airflow/docs/gcs_ingestion_dag.png` | 1 | 10/12 | Keep. Exact Airflow graph state is the teaching evidence; labels and task arrows are clear, with no webcam or browser chrome. |
+| `images/aws/iam.png` | 1 | 8/12 | Keep exact UI. It demonstrates searching for IAM; only the broken Markdown path was repaired. |
+| `cohorts/2022/week_3_data_warehouse/airflow/docs/gcs_2_bq_dag_graph_view.png` | 1 | 10/12 | Keep. Exact Airflow graph showing yellow/green branches and task relationships. |
+| `cohorts/2022/week_3_data_warehouse/airflow/docs/gcs_2_bq_dag_tree_view.png` | 1 | 9/12 | Keep. Exact tree-view execution state; compact but legible at source resolution. |
+| `cohorts/2024/workshops/dlt_resources/incremental_loading-imagegen.png` | 1 | 11/12 | Accepted imagegen replacement; see the accepted-change record above. |
+| `02-workflow-orchestration/images/homework-cropped.png` | 3 | 10/12 | Accepted deterministic crop; see the accepted-change record above. |
+| `cohorts/2025/04-analytics-engineering/homework_q2.png` | 1 | 11/12 | Keep. Crisp lineage/data-flow diagram; exact project labels and relationships are readable. |
+| `cohorts/2025/workshops/dlt/img/pipes.jpg` | 1 | 10/12 | Keep. Crisp pipeline overview with a clear collect/ingest/store/compute/consume flow and required product labels. |
+| `cohorts/2025/workshops/dlt/img/Rest_API.png` | 1 | 11/12 | Keep. Clean explanatory API-challenges diagram; authentication, pagination, memory, and rate-limit relationships are readable. |
+| `cohorts/2025/workshops/dlt/img/dlt.png` | 2 | 11/12 | Keep. Crisp dlt source/normalize/load mapping with exact product logos and labels; do not entrust these to imagegen. |
+
+### Method totals
+
+- Imagegen: 1 bounded explanatory decision tree, inspected before and after;
+  all exact labels and branch directions passed review.
+- Deterministic: 1 exact UI screenshot crop, reused by 3 homework references;
+  browser address bars and reaction controls were removed without changing
+  filenames, dates, sizes, highlights, or teaching annotations.
+- Retained unchanged: 80 video thumbnails and 9 other instructional sources,
+  plus the IAM source after its path repair.
+- Removed: none. Every retained image contributes either navigational value,
+  exact technical evidence, or a distinct explanatory relationship.
+
+## Validation
+
+- The source inventory was rerun after the edits: 94 local references, 91
+  unique active paths, 0 missing paths.
+- `git diff --check` passes for every focused commit and the final audit state.
+- The generated and cropped assets were inspected with `view_image` at source
+  resolution; originals were not overwritten.
+
+## Limitations
+
+- Airflow and AWS images preserve exact historical UI labels and dates because
+  those pixels are the instructional evidence; they were not regenerated.
+- The homework crop preserves the original purple annotations because they
+  explain which 2021 assets the learner must ingest. Only browser framing and
+  reaction controls were removed.
+- Video-thumbnail faces are intentional presenter artwork/navigation content,
+  not recording webcam tiles; removing them would damage the video-link role.
+- The imagegen decision tree uses a clean white background rather than the
+  source's transparent canvas; all text and relationships remain unchanged.
