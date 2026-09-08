@@ -6,9 +6,9 @@ and cohort Markdown paths (`cohorts/2022`, `cohorts/2024`, `cohorts/2025`,
 
 The initial inventory contains 94 local references to 92 unique source paths.
 The audit includes video thumbnails, exact Airflow/UI captures, explanatory
-diagrams, workshop assets, and homework evidence. The missing 2022 IAM
-reference is tracked in the audit below; its source exists at the repository
-root but the original relative path is wrong.
+diagrams, workshop assets, and homework evidence. The 2022 IAM reference
+originally used the wrong relative path; it is corrected to the existing
+repository-root source in a focused commit.
 
 Imagegen capability was available and the skill was read in full. Imagegen was
 used only for the bounded incremental-loading decision tree after inspecting
@@ -47,6 +47,17 @@ URL, numeric, logo, and plot-like assets remain deterministic or unchanged.
 - Replacement: `02-workflow-orchestration/images/homework-cropped.png`
 - No imagegen: exact UI text, filenames, dates, and numeric sizes are the
   source of truth.
+
+### 2022 IAM search screen
+
+- Source: `images/aws/iam.png`
+- Reference: `cohorts/2022/week_2_data_ingestion/transfer_service/README.md`
+- Disposition: `keep`, score 8/12. The screenshot directly supports the
+  instruction to search for IAM before creating an access key, and its exact
+  AWS labels are readable. The original relative reference was broken and was
+  corrected to `../../../images/aws/iam.png`.
+- Method: retained exact source; no imagegen because this is a live UI whose
+  labels are the source of truth. The source contains no face or camera tile.
 
 ## Audit record
 
