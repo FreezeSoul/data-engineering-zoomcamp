@@ -13,8 +13,6 @@ multi-language engine for executing data engineering, data science and
 machine learning on single-node machines or clusters. The simpler way
 to think about it: Spark is an engine for large-scale data processing.
 
-![Searching Google for Apache Spark: a unified engine for large-scale data analytics](images/02-introduction-to-spark-01-spark-google-search.jpg)
-
 Engine is the important word here. Say we have data in a database or a
 data lake. Spark pulls this data to its own machines - the executors -
 does something with it, and writes the result back to a data lake or a
