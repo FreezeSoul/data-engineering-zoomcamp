@@ -1,0 +1,41 @@
+# DE legacy/current image rollout
+
+Scope: every local Markdown image reference in the assigned module directories
+and cohort Markdown paths (`cohorts/2022`, `cohorts/2024`, `cohorts/2025`,
+`cohorts/2026`, and `cohorts/2027/02-workflow-orchestration`).
+
+The initial inventory contains 94 local references to 92 unique source paths.
+The audit includes video thumbnails, exact Airflow/UI captures, explanatory
+diagrams, workshop assets, and homework evidence. The missing 2022 IAM
+reference is tracked in the audit below; its source exists at the repository
+root but the original relative path is wrong.
+
+Imagegen capability was available and the skill was read in full. Imagegen was
+used only for the bounded incremental-loading decision tree after inspecting
+the source and verifying every required label and branch. Exact UI, code,
+URL, numeric, logo, and plot-like assets remain deterministic or unchanged.
+
+## Accepted image changes
+
+### Incremental-loading decision tree
+
+- Source: `cohorts/2024/workshops/dlt_resources/incremental_loading.png`
+- Reference: `cohorts/2024/workshops/dlt_resources/data_ingestion_workshop.md`
+- Disposition: `crop/replace`, score 11/12. The tree teaches the choice among
+  append, replace, and merge/upsert; the generated replacement preserves all
+  labels, branch directions, and outcomes while making the typography and
+  lines crisp.
+- Method: built-in imagegen edit after local inspection; no face, camera tile,
+  browser chrome, cursor, watermark, or extra component was present or added.
+- Required invariants checked: `Is it stateful data?`, `NO`/`YES` branch order,
+  `Can you request it incrementally?`, and the exact three dispositions.
+- Replacement: `incremental_loading-imagegen.png`
+
+## Audit record
+
+The remaining source-by-source dispositions and scores will be recorded here
+before the final validation commit. Video thumbnails are intentionally audited
+as navigation assets, not regenerated as lesson illustrations; their presenter
+faces and play buttons are part of the thumbnail role. Clean explanatory
+diagrams and exact technical screenshots are retained when they already meet
+the rubric, with the reason and source dimensions recorded in the final audit.
