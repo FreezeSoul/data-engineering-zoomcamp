@@ -59,7 +59,7 @@ You can go to a finer granularity - three times per hour, or every five
 minutes - but these are less typical. Daily and hourly are what you
 will see most of the time.
 
-![alt text](images/01-introduction-to-batch-processing-03-batch-job-frequencies.jpg)
+![Common batch-job schedules: weekly, daily, and hourly](images/01-introduction-to-batch-processing-03-batch-job-frequencies-imagegen.png)
 
 ## Technologies for batch jobs
 
