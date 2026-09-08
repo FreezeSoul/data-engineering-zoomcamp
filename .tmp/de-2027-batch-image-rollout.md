@@ -81,6 +81,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 61 | `13-connecting-to-google-cloud-storage-01-gcs-connector-instructions.jpg` | remove | — | 5/12 | A transient Slack post with a presenter avatar and browser/chat chrome is largely redundant with the lesson's reproduced setup steps; it adds no durable evidence beyond attribution, so the reference is removed and the original preserved. |
 | 62 | `13-connecting-to-google-cloud-storage-02-upload-parquet-to-gcs.jpg` | keep | deterministic crop `x=60,y=48,w=475,h=285`, 2x Lanczos/sharpen | 10/12 | Preserves the exact terminal directory listing and `gsutil -m cp -r pq/ gs://.../pq` command while removing browser/terminal tabs and the webcam. |
 | 63 | `13-connecting-to-google-cloud-storage-03-upload-progress.jpg` | keep | deterministic crop `x=60,y=48,w=475,h=305`, 2x Lanczos/sharpen | 10/12 | Preserves the exact object-copy stream and bottom progress status while removing browser/terminal tabs and the webcam. |
+| 64 | `13-connecting-to-google-cloud-storage-04-download-connector-jar.jpg` | keep | deterministic crop `x=60,y=200,w=540,h=108`, 2x Lanczos/sharpen | 11/12 | Preserves the exact `gsutil` connector download, completion status, and jar filename while removing Google Cloud/browser chrome, webcam, and cursor/selection UI. |
 
 ## Validation
 

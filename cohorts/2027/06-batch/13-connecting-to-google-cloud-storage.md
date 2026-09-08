@@ -67,7 +67,7 @@ gsutil cp gs://hadoop-lib/gcs/gcs-connector-hadoop3-2.2.5.jar ./lib/
 The `lib` folder is not a special location - we put the jar there to keep
 it next to the code:
 
-![Downloading the connector jar into the lib folder](images/13-connecting-to-google-cloud-storage-04-download-connector-jar.jpg)
+![Downloading the connector jar into the lib folder](images/13-connecting-to-google-cloud-storage-04-download-connector-jar-cropped.png)
 
 ## Configuring the Spark session
 
