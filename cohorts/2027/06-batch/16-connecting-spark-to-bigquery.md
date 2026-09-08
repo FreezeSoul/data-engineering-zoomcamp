@@ -110,7 +110,7 @@ creates it. Open BigQuery, refresh, and there is `reports-2020` in the
 `trips_data_all` dataset - with a preview of the monthly revenue rows our
 job computed on the cluster.
 
-![The reports table in BigQuery, created and filled by the Spark job](images/16-connecting-spark-to-bigquery-03-bigquery-table.jpg)
+![The reports table in BigQuery, created and filled by the Spark job](images/16-connecting-spark-to-bigquery-03-bigquery-table-cropped.png)
 
 That closes the section on running Spark in the cloud: we connected a
 local Spark to Google Cloud Storage, created a managed Dataproc cluster,
