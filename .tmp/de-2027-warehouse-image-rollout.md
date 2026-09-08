@@ -51,3 +51,21 @@ Postman chrome is removed only where it is outside the instructional UI.
   present.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
+
+### 01-data-warehouse-and-bigquery-03-bigquery-cost.jpg
+
+- Source: `01-data-warehouse-and-bigquery.md`, BigQuery pricing section.
+- Rubric: 10/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 1, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the slide makes the on-demand/flat-rate cost
+  distinction and the concrete `$5`, `100 slots`, `$2,000/month`, and `400 TB`
+  figures scannable, while the original has unnecessary whitespace.
+- Preparation: deterministic crop `(x=20, y=20, width=560, height=220)`;
+  resized 2x with a light unsharp mask. Exact text and numbers were retained.
+- Method: deterministic PNG sibling
+  `01-data-warehouse-and-bigquery-03-bigquery-cost-cropped.png`.
+- Invariants checked: pricing headings, bullets, slot count, dollar amounts,
+  and data-volume statement are unchanged; no face, camera tile, cursor, or
+  overlay was present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
