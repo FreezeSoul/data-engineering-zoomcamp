@@ -56,6 +56,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 36 | `08-anatomy-of-a-spark-cluster-01-spark-submit-master.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Clean diagram preserves driver → `SPARK SUBMIT` → `MASTER` inside the cluster and the source's `4040` label; removed presenter and recording UI. |
 | 37 | `08-anatomy-of-a-spark-cluster-02-executors-failure.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Clean diagram preserves master-to-executor coordination and one failed executor with reassignment; removed presenter and recording UI. |
 | 38 | `08-anatomy-of-a-spark-cluster-03-executors-pull-partitions.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Clean diagram preserves four DataFrame partitions flowing to executors in the Spark cluster; removed presenter and recording UI. |
+| 39 | `08-anatomy-of-a-spark-cluster-04-s3-gcs-instead-of-hdfs.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 11/12 | Clean diagram preserves S3/GCS as active storage, HADOOP/HDFS de-emphasis, and executor partition pulls; removed presenter and recording UI. |
 
 ## Validation
 

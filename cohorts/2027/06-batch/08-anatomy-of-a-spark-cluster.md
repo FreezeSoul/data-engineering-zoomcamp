@@ -91,7 +91,7 @@ but not significantly slower. So instead of keeping the data on the
 executors, they can just pull it from S3 or Google Cloud Storage, process
 it, and save the results back to the data lake.
 
-![Whiteboard: with S3 or GCS, the executors pull the partitions over the network](images/08-anatomy-of-a-spark-cluster-04-s3-gcs-instead-of-hdfs.jpg)
+![Executors pull DataFrame partitions from S3 or GCS instead of HDFS](images/08-anatomy-of-a-spark-cluster-04-s3-gcs-instead-of-hdfs-imagegen.png)
 
 This is why Hadoop and HDFS became less popular: they add overhead, and the
 preferred way now is simply keeping the files on S3. You don't need HDFS,
