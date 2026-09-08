@@ -239,7 +239,7 @@ partitioned one, and the estimate drops to about 106 MB. If you run
 this query over and over, you process 106 MB each time instead of
 1.6 GB, which directly reduces your cost.
 
-![The partitioned variant of the same query processes only 105.9 MB](images/01-data-warehouse-and-bigquery-06-partition-pruning.jpg)
+![The partitioned variant of the same query processes only 105.9 MB](images/01-data-warehouse-and-bigquery-06-partition-pruning-cropped.png)
 
 You can also inspect the partitions themselves. Every dataset has an
 `INFORMATION_SCHEMA` with a `PARTITIONS` view:

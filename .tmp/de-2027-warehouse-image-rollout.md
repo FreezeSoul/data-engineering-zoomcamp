@@ -52,6 +52,24 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 01-data-warehouse-and-bigquery-06-partition-pruning.jpg
+
+- Source: `01-data-warehouse-and-bigquery.md`, partition-pruning query.
+- Rubric: 11/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the query, highlighted date filter, and processed
+  bytes provide execution evidence that prose alone does not show.
+- Preparation: deterministic crop `(x=28, y=27, width=612, height=325)`;
+  resized 2x with a light unsharp mask. Exact SQL and result metadata were
+  retained rather than generated.
+- Method: deterministic PNG sibling
+  `01-data-warehouse-and-bigquery-06-partition-pruning-cropped.png`.
+- Invariants checked: selected partitioned table, highlighted date range,
+  query-result status, and the `105.9 MB` processed result remain visible;
+  no face, camera tile, cursor, or unrelated browser chrome is present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-05-partitioning-diagram.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, partitioning section.
