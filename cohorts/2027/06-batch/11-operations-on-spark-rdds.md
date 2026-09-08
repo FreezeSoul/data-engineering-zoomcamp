@@ -253,7 +253,7 @@ the plan boxes look a bit different because of our maps. The reason there
 are two stages is `reduceByKey`: it needs the shuffle we know from the
 group by unit.
 
-![The DAG of the RDD job: scan and map in one stage, partitionBy and mapPartitions in the other](images/11-operations-on-spark-rdds-06-dag-two-stages.jpg)
+![Spark UI shows the RDD job's two-stage DAG with partitionBy and mapPartitions](images/11-operations-on-spark-rdds-06-dag-two-stages-cropped.png)
 
 ```text
 partition 1     partition 2     partition 3

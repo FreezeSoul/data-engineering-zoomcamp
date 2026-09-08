@@ -70,6 +70,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 50 | `11-operations-on-spark-rdds-03-reducebykey-chain.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact filter/map/reduceByKey chain and aggregated output while removing notebook chrome and webcam. |
 | 51 | `11-operations-on-spark-rdds-04-todf-lost-names.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the generic `_1`–`_4` columns and the surrounding toDF chain while removing notebook chrome and webcam. |
 | 52 | `11-operations-on-spark-rdds-05-namedtuple-schema.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact RevenueRow/namedtuple and explicit StructType schema while removing notebook chrome and webcam. |
+| 53 | `11-operations-on-spark-rdds-06-dag-two-stages.jpg` | keep | deterministic crop `x=0,y=28,w=480,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact two-stage Spark DAG and partitionBy/mapPartitions evidence while removing browser chrome and webcam; source edge truncation remains. |
 
 ## Validation
 
