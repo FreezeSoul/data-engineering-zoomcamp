@@ -57,8 +57,6 @@ rdd = df_green \
     .rdd
 ```
 
-![The green DataFrame is exposed as an RDD of Row objects](images/11-operations-on-spark-rdds-01-rdd-of-rows-crisp.png)
-
 ## filter: the WHERE clause
 
 The first RDD operation is `filter`. It takes a function that returns true
