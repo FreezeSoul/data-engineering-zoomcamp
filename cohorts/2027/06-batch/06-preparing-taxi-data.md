@@ -22,8 +22,6 @@ here we will run similar computations on them with Spark.
 The data lives on the NYC TLC (Taxi and Limousine Commission) website, which
 lists trip records per month:
 
-![alt text](images/06-preparing-taxi-data-01-tlc-website.jpg)
-
 The URLs follow the same pattern - only the taxi type, the year and the month
 change. That makes them easy to generate in a loop.
 

@@ -43,6 +43,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 23 | `05-spark-dataframes-02-select.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact selected columns and resulting DataFrame schema while removing notebook chrome and webcam. |
 | 24 | `05-spark-dataframes-03-built-in-functions.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact `F.` completion list and `to_date` context while removing notebook chrome and webcam. |
 | 25 | `05-spark-dataframes-04-udf.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact filter/show output and `crazy_stuff` function context while removing notebook chrome and webcam. |
+| 26 | `06-preparing-taxi-data-01-tlc-website.jpg` | remove | — | 4/12 | The page capture is navigational, the open browser context menu obscures the links, and the surrounding prose already gives the source; original preserved. |
 
 ## Validation
 
