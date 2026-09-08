@@ -117,7 +117,6 @@ so on. To keep the course simple we just add a role to the same service
 account: open IAM & admin, find the account, and add the Dataproc
 Administrator role.
 
-![Adding the Dataproc Administrator role to the service account](images/15-setting-up-a-dataproc-cluster-04-iam-dataproc-role.jpg)
 
 With the policy updated, run the same `gcloud` command again. Now it goes
 through: the job is submitted, the terminal shows the same driver output

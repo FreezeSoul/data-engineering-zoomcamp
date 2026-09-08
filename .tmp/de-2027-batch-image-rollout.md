@@ -93,6 +93,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 73 | `15-setting-up-a-dataproc-cluster-01-create-cluster.jpg` | keep | deterministic crop `x=0,y=30,w=535,h=330`, 2x Lanczos/sharpen | 10/12 | Preserves the Google Cloud Dataproc cluster setup steps and selected Jupyter/Docker components while removing browser chrome and webcam; the right side is intentionally excluded to avoid the face overlay. |
 | 74 | `15-setting-up-a-dataproc-cluster-02-submit-job-form.jpg` | keep | deterministic crop `x=280,y=95,w=360,h=265`, 2x Lanczos/sharpen | 9/12 | Preserves the exact green/yellow input and report-output arguments while removing browser chrome and webcam; the source-safe crop focuses on the arguments panel rather than the script field above. |
 | 75 | `15-setting-up-a-dataproc-cluster-03-job-finished-report.jpg` | keep | deterministic crop `x=0,y=30,w=535,h=320`, 2x Lanczos/sharpen | 10/12 | Preserves the bucket identity, object tabs, and `code/`, `pq/`, and `report-2021/` folders while removing browser chrome, webcam, and bottom hover/status UI. |
+| 76 | `15-setting-up-a-dataproc-cluster-04-iam-dataproc-role.jpg` | remove | — | 4/12 | The caption claims the Dataproc Administrator role is being added, but the capture only shows the IAM table and no such role or add action; the reference is removed and the original preserved. |
 
 ## Validation
 
