@@ -74,6 +74,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 54 | `12-spark-rdd-mappartition-01-map-partitions-diagram.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 11/12 | Clean diagram preserves the RDD → Partition → `mapPartitions` → Partition relationship and partitioned-data teaching point; removed presenter, webcam, drawing toolbar, and recording chrome. |
 | 55 | `12-spark-rdd-mappartition-02-feature-columns.jpg` | keep | deterministic crop `x=20,y=32,w=600,h=210`, 2x Lanczos/sharpen | 9/12 | Preserves the exact feature-selection code, all output column headers, and sample values while removing browser chrome and the webcam; the source's horizontally clipped input line remains. |
 | 56 | `12-spark-rdd-mappartition-03-one-result-per-partition.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the `mapPartitions` function, collect call, and exact `[1, 1, 1, 1]` result while removing notebook chrome and webcam. |
+| 57 | `12-spark-rdd-mappartition-04-partition-sizes.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the counting function, `mapPartitions` call, and exact unbalanced partition counts while removing notebook chrome and webcam. |
 
 ## Validation
 

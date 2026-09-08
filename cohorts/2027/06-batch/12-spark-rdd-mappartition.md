@@ -101,7 +101,7 @@ duration_rdd.mapPartitions(apply_model_in_batch).collect()
 This takes a while, because Spark has to go through every record of every
 partition:
 
-![Counting rows per partition shows the partitions are unbalanced](images/12-spark-rdd-mappartition-04-partition-sizes.jpg)
+![Counting rows per partition shows the partitions are unbalanced](images/12-spark-rdd-mappartition-04-partition-sizes-cropped.png)
 
 The result is `[1141148, 436983, 433476, 292910]`. Our partitions are not
 very balanced: the first one is three times larger than the next ones.
