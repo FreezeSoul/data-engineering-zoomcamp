@@ -12,6 +12,10 @@ Each asset file contains two parts:
 1. **Definition** (Configuration) - Metadata, name, type, connection
 2. **Content** (Code) - The actual SQL, Python, or R code to execute
 
+![Bruin assets combine Python, SQL, YAML seed, or R inputs with a definition, executable code, materialization strategy, and lineage](images/08-bruin-asset-concepts-imagegen.png)
+
+*An asset joins a file type to its definition, execution behavior, materialization, and dependency relationships.*
+
 ## Asset Types
 
 | Type | Description | Use Case |

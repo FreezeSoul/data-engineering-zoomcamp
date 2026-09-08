@@ -7,6 +7,10 @@ video_url: https://www.youtube.com/watch?v=XCx0nDmhhxA
 
 **Variables** are dynamically initialized each time a pipeline run is created. They allow you to parameterize your pipelines and pass dynamic values at runtime.
 
+![A scheduled interval and custom controls feed a pipeline run, which passes variables to SQL templates and Python environment variables before filtering output](images/09-bruin-runtime-variables-imagegen.png)
+
+*Runtime variables let the same pipeline select a time interval and custom parameters for each run without rewriting the asset logic.*
+
 ## Variable Types
 
 ### 1. Built-in Variables
