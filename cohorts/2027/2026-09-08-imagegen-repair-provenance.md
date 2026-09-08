@@ -21,6 +21,33 @@ before publication. Original JPGs and bounded crops remain preserved.
 The imagegen outputs are stored in the local generated-image directory under
 `/home/alexey/.codex/generated_images/01a08261-323e-7721-9a78-009063449c6c/`.
 
+## Follow-up correction after independent review of `04f9c77`
+
+Independent review rejected the two warehouse candidates from the original
+batch: the partition-pruning candidate retained a red editor marker and the
+wrong `9.4 GB` result, while the cluster-pruning candidate annotated the
+clustered query as `864.5 MB`. Both were regenerated with the built-in
+imagegen tool from the original JPG and bounded crop. The previous crisp PNG
+was supplied only as a layout/composition reference. No enlarged or sharpened
+derivative was used as an imagegen source.
+
+The replacement outputs were inspected at native `1672×941` resolution and at
+an 800px lesson-size render before copying them over the published paths.
+Original JPGs and bounded crops remain unchanged. The new outputs are stored
+under `/home/alexey/.codex/generated_images/01a0827f-adb1-7a43-8316-5dbbd14a2493/`.
+
+| Published target | Original JPG source | Bounded crop | Previous published layout reference | Imagegen output | Correction and validation |
+|---|---|---|---|---|---|
+| `cohorts/2027/03-data-warehouse/images/01-data-warehouse-and-bigquery-06-partition-pruning-crisp.png` | `01-data-warehouse-and-bigquery-06-partition-pruning.jpg` (`11bcbf8c5cc5afb7945dba804c3bfbb78c8b2d90f6a0a2ca0a2a3c2ffaa3b875`) | `01-data-warehouse-and-bigquery-06-partition-pruning-cropped.png` (`7388943c58f6a1b3e56f747ad4c5d8615b1367958512af55873311e71e3d3c1c`) | Previous PNG (`3069ee3763028ad1945d423326d8829c9267b557f3125a1e327db2b3865ec245`) | `exec-01586364-5aab-4927-aba8-f15067fb3a9d.png` | Removed the red marker; preserved the partitioned table and June 2019 filter; corrected the visible result to `105.9 MB processed` (not `9.4 GB`). Native and 800px checks passed. |
+| `cohorts/2027/03-data-warehouse/images/01-data-warehouse-and-bigquery-08-cluster-pruning-crisp.png` | `01-data-warehouse-and-bigquery-08-cluster-pruning.jpg` (`9e30b6dfe4881a55f9188a144b5d0e50edc25e6e844d847c0aff8d2bb5046aec`) | `01-data-warehouse-and-bigquery-08-cluster-pruning-cropped.png` (`60e175234f7690c56c33a1d5b586bd0ec4180a2f9edad15332a75b5b4faddd5d`) | Previous PNG (`5a87b8362f5234d3dcf9120ad8f66cd2bf3d248aa2ee81ea16dac8b22df836b5`) | `exec-5a660938-2b76-41ff-868b-87dd2f4e57e0.png` | Corrected the annotation to `-- Query scans 843.5 MB` (not `864.5 MB`); preserved the `1.1 GB` estimate, query, table, dates, `VendorID=1`, result count, and `843.5 MB processed` row. Native and 800px checks passed. |
+
+### Follow-up published hashes
+
+| File | SHA-256 |
+|---|---|
+| `01-data-warehouse-and-bigquery-06-partition-pruning-crisp.png` | `1f67d0c174ba5e2d8235af2b7c124b9a41058d79584296520d067d06a6cf5130` |
+| `01-data-warehouse-and-bigquery-08-cluster-pruning-crisp.png` | `0f68a2acc9369537068f066b97091c8556f4dfad5fb532ab9074b5ec830430fa` |
+
 ## Published hashes
 
 These hashes make the selected imagegen output auditable after copying it into
