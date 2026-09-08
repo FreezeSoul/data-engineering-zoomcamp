@@ -68,7 +68,7 @@ archive, and the download has to be redone from a different mirror.
 After unpacking we get a `spark-3.0.3-bin-hadoop3.2` directory, and we
 do the same as with Java:
 
-![The Spark download page: release 3.0.3, pre-built for Apache Hadoop 3.2 and later](images/03-installing-spark-03-spark-download-page.jpg)
+![The Spark download page with release 3.0.3 pre-built for Apache Hadoop 3.2 and later](images/03-installing-spark-03-spark-download-page-cropped.png)
 
 ```bash
 tar xzf spark-3.0.3-bin-hadoop3.2.tgz
