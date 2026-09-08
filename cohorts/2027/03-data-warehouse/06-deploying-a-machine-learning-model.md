@@ -93,7 +93,7 @@ For this ride, the model predicts a tip of around 3.2 dollars:
 If we change the payment type to 2 and send the request again, the predicted
 tip amount goes drastically down - to about 0.26 dollars:
 
-![Postman POST with payment type 2 predicting about 0.26 dollars](images/06-deploying-a-machine-learning-model-06-predict-payment-type-2.jpg)
+![Postman POST with payment type 2 predicting about 0.26 dollars](images/06-deploying-a-machine-learning-model-06-predict-payment-type-2-cropped.png)
 
 And that is the whole loop: a model trained with SQL inside BigQuery,
 exported, and served as a REST service from a Docker container on our own
