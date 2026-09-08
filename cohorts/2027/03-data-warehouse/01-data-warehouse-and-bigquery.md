@@ -37,7 +37,7 @@ The two types differ in almost every aspect:
   OLAP users are knowledge workers: data analysts, business analysts
   and executives.
 
-![OLTP vs OLAP comparison table from the slides](images/01-data-warehouse-and-bigquery-01-olap-vs-oltp.jpg)
+![OLTP vs OLAP comparison table from the slides](images/01-data-warehouse-and-bigquery-01-olap-vs-oltp-cropped.png)
 
 ## What is a data warehouse
 

@@ -33,3 +33,21 @@ Postman chrome is removed only where it is outside the instructional UI.
   chrome, cursor, watermark, or extra component appears.
 - Validation: output visually inspected at 1680px wide; Markdown reference
   resolves and `git diff --check` passes.
+
+### 01-data-warehouse-and-bigquery-01-olap-vs-oltp.jpg
+
+- Source: `01-data-warehouse-and-bigquery.md`, OLTP/OLAP comparison section.
+- Rubric: 11/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the table gives a compact comparison that is
+  useful beyond the surrounding prose, but the source is soft and has excess
+  frame margin.
+- Preparation: deterministic crop `(x=20, y=10, width=600, height=340)`;
+  resized 2x with a light unsharp mask. No exact text was regenerated.
+- Method: deterministic PNG sibling
+  `01-data-warehouse-and-bigquery-01-olap-vs-oltp-cropped.png`.
+- Invariants checked: OLTP/OLAP headings, all four comparison rows, and every
+  table value remain unchanged; no face, camera tile, cursor, or overlay was
+  present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
