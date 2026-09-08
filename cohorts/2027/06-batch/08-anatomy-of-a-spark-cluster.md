@@ -53,7 +53,7 @@ The master needs to be up and running all the time. If one of the executors
 goes away for whatever reason, the master knows about it and assigns the
 tasks that this executor had to some other executor.
 
-![Whiteboard: the master coordinates the executors - and reassigns the work when one fails](images/08-anatomy-of-a-spark-cluster-02-executors-failure.jpg)
+![The Spark master coordinates executors and redirects work when one fails](images/08-anatomy-of-a-spark-cluster-02-executors-failure-imagegen.png)
 
 ## How executors get the data
 
