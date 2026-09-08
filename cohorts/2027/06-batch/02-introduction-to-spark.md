@@ -84,7 +84,7 @@ Then there is often another flow: a second Spark job takes the trained
 model and applies it to the data. The results go back to the data lake,
 and from there they can make it into a data warehouse.
 
-![Whiteboard: a typical workflow - SQL for preparation, Spark and Python to train a model, Spark to apply it](images/02-introduction-to-spark-04-typical-workflow-whiteboard.jpg)
+![Typical workflow: SQL prepares data, Spark and Python train a model, and Spark applies it](images/02-introduction-to-spark-04-typical-workflow-whiteboard-imagegen.png)
 
 So the recommendation is: use SQL when you can, and use Spark for the
 cases where you cannot. In the next video we install Spark locally and
