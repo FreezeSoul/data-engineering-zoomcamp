@@ -21,7 +21,6 @@ Why Redpanda instead of Kafka?
 For this workshop, every time we say "Kafka" we mean the Kafka protocol
 and concepts. Redpanda is the actual broker running underneath.
 
-![Redpanda runs as one Kafka-compatible broker in Docker, serving external laptop clients and internal Flink services through separate paths](images/02-redpanda-kafka-broker-imagegen.png)
 
 *The key topology distinction is where the client runs: both paths use Kafka clients, but Docker services and the laptop need different network routes.*
 

@@ -8,8 +8,6 @@ video_url: https://www.youtube.com/watch?v=UqoWyMjcqrA
 
 The models are built. Now it's time to make sure other people can actually understand what they do. This video covers how dbt's documentation system works — what you write, where you write it, and what dbt does with it.
 
-![YAML metadata is generated into a dbt catalog and lineage view, then served as abstract report cards](images/08-dbt-documentation-catalog-imagegen.png)
-*Documentation turns project metadata into a catalog and lineage that downstream readers can use.*
 
 ---
 

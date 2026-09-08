@@ -3,7 +3,6 @@
 When Flink connects to Kafka, it needs to know where to start reading. This
 is the `scan.startup.mode` setting:
 
-![Three startup choices begin reading the same topic at its oldest event, at the live edge, or at a chosen point marked by time](images/09-offset-startup-modes-imagegen.png)
 
 *The starting position controls whether a new job replays history, waits for new events, or begins from a selected point in the log.*
 

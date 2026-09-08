@@ -8,8 +8,6 @@ video_url: https://www.youtube.com/watch?v=JQYz-8sl1aQ
 
 Staging is done. From here on out it's not just typing SQL behind a computer — you need to actually **explore the data**, understand what's in it, and get some **business context**. In a real org that means querying exhaustively until you understand the common data quality issues, what a normal row looks like, and talking to people about what the codes mean and when rows trigger. All of that understanding eventually gets encoded as SQL.
 
-![Yellow and green taxi sources flow through staging and intermediate models into facts, dimensions, and reports using source and ref links](images/06-dbt-model-lineage-imagegen.png)
-*Model lineage turns raw source data into reusable, business-facing datasets.*
 
 ---
 

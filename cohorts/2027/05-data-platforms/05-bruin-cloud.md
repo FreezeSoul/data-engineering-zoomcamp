@@ -13,7 +13,6 @@ Bruin Cloud is a fully managed infrastructure for your data pipelines. It is pow
 - Data governance
 - AI-powered features (automatic metadata generation, conversational data analysis)
 
-![A Git repository is validated and deployed into a Bruin Cloud project with secure connections, schedules, runs, and monitoring](images/05-bruin-cloud-deployment-imagegen.png)
 
 *Cloud deployment keeps repository code, scoped connections, scheduled runs, and operational monitoring connected.*
 

@@ -8,8 +8,6 @@ video_url: https://www.youtube.com/watch?v=uF76d5EmdtU
 
 This is the kickoff video for Module 4. No hands-on coding here — it's all about setting the stage. Why does analytics engineering exist, what does it actually do, and what are the data modeling concepts we'll be leaning on for the rest of the module. Worth sitting with before diving into the dbt stuff.
 
-![Analytics engineering bridges data engineering and business users through staging, transformation, presentation, and dimensional modeling](images/01-analytics-engineering-bridge-imagegen.png)
-*The analytics engineer connects engineering practice with understandable, business-ready data.*
 
 ---
 

@@ -8,8 +8,6 @@ video_url: https://www.youtube.com/watch?v=2dYDS4OQbT0
 
 When you run `dbt init`, dbt automatically creates a set of files and folders. This video walks through each one and explains its purpose. The structure below applies to both dbt Core and dbt Cloud (the DuckDB database file and `data/` folder are local-only artifacts and can be ignored here).
 
-![A dbt project centers on models layered as staging, intermediate, and marts, with macros, seeds, snapshots, tests, and analysis around them](images/04-dbt-project-structure-imagegen.png)
-*The project structure separates the main model path from supporting project resources.*
 
 ---
 

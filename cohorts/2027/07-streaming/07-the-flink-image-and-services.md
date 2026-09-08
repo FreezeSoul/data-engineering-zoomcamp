@@ -3,7 +3,6 @@
 Flink doesn't come with Python support out of the box. We need a custom
 Docker image with Python, PyFlink, and connector JARs.
 
-![A custom layered Flink runtime feeds one coordinator service and one worker service with six parallel task slots](images/07-flink-cluster-services-imagegen.png)
 
 *The image packages the workshop dependencies; the JobManager coordinates work while TaskManager slots execute it in parallel.*
 

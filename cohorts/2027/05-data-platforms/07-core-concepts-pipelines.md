@@ -7,7 +7,6 @@ video_url: https://www.youtube.com/watch?v=uzp_DiR4Sok
 
 A **Pipeline** is a grouping mechanism for organizing assets based on their execution schedule and configuration requirements. Within a project, you can have multiple pipelines.
 
-![A Bruin pipeline groups assets under one schedule and scoped connections, then executes them in dependency order with lineage](images/07-bruin-pipeline-concepts-imagegen.png)
 
 *A pipeline is the operational grouping: shared schedule and connection scope around a dependency graph of assets.*
 

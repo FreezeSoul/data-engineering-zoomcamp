@@ -3,7 +3,6 @@
 Questions and answers from the
 [2025 stream with Zach Wilson](https://www.youtube.com/watch?v=P2loELMUUeI).
 
-![A central streaming engine connects recovery, consumer-versus-Flink tradeoffs, late-event corrections, and real-time deployment decisions](images/14-streaming-qa-imagegen.png)
 
 *The Q&A revisits the operational and architectural decisions around recovery, stateful processing, lateness, latency, and production delivery.*
 

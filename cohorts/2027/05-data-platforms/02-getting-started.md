@@ -3,7 +3,6 @@ video_url: https://www.youtube.com/watch?v=JJwHKSidX_c
 ---
 # Getting Started with Bruin
 
-![A Bruin project starts from the CLI or an IDE with MCP, then connects typed assets into a validated lineage graph](images/02-bruin-project-setup-imagegen.png)
 
 *The setup path connects the developer tools to a project whose assets, dependencies, and validation form one graph.*
 

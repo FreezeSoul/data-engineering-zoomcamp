@@ -1,7 +1,5 @@
 # dbt Core vs dbt Cloud
 
-![dbt Core provides a local CLI while dbt Cloud provides managed jobs, docs, environments, and collaboration](images/03-dbt-core-vs-cloud-imagegen.png)
-*Core and Cloud share transformation fundamentals while differing in where setup and operations live.*
 
 > 📄 Official feature comparison: [dbt Core vs dbt Cloud](https://www.getdbt.com/product/dbt-core-vs-dbt-cloud)
 

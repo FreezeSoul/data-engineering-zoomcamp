@@ -2,7 +2,6 @@
 
 We used tumbling windows above. Flink supports three types:
 
-![Three lanes compare non-overlapping tumbling windows, overlapping sliding windows, and session windows separated by inactivity gaps](images/12-window-types-imagegen.png)
 
 *The window type determines whether an event belongs to one fixed bucket, several overlapping buckets, or a burst bounded by inactivity.*
 

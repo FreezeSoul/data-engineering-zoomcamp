@@ -7,7 +7,6 @@ video_url: https://www.youtube.com/watch?v=3nykPEs_V7E
 
 Commands are how you interact with your Bruin project - running pipelines, validating configurations, querying data, and more.
 
-![A Bruin project feeds four CLI actions: validate checks dependencies, lineage maps the graph, query inspects data, and run executes a selected scope](images/10-bruin-cli-commands-imagegen.png)
 
 *Use the commands as a loop: check the project, understand dependencies, inspect data, then execute the required scope.*
 

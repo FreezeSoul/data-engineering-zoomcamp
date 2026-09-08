@@ -7,7 +7,6 @@ video_url: https://www.youtube.com/watch?v=YWDjnSxbBtY
 
 A **Project** is the root directory where you create your entire Bruin data pipeline. It serves as the foundation for organizing all your data assets, configurations, and connections.
 
-![A Bruin project contains local configuration and secrets, then separates development and production connections and destinations](images/06-bruin-project-concepts-imagegen.png)
 
 *The project is the boundary for configuration: local secrets stay out of version control while environments select their own connections.*
 

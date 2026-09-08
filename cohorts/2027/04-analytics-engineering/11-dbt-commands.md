@@ -8,8 +8,6 @@ video_url: https://www.youtube.com/watch?v=t4OeWHW3SsA
 
 We've been using dbt commands throughout the series without really stopping to talk about all of them. This video is the full tour — every command you'll actually use, plus the flags that make them powerful. Good one to bookmark.
 
-![A dbt command map groups setup and feature commands around compile, run, test, build, and retry with upstream and downstream selection](images/11-dbt-commands-map-imagegen.png)
-*The command groups support inspection, materialization, validation, dependency-aware builds, and recovery.*
 
 ---
 

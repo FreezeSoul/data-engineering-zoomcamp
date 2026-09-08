@@ -20,7 +20,6 @@ A typical data stack involves several components:
 
 Bruin brings all of these together so you don't need to be a DevOps person, data infrastructure engineer, and data architect just to build a pipeline.
 
-![Bruin combines ingestion, transformations, orchestration, quality checks, metadata, and lineage in one project](images/01-bruin-unified-platform-imagegen.png)
 
 *Bruin brings the core data-platform capabilities into one project instead of scattering them across separate tools.*
 
