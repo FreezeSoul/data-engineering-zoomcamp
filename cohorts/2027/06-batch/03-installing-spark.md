@@ -77,7 +77,7 @@ export SPARK_HOME=$HOME/spark/spark-3.0.3-bin-hadoop3.2
 export PATH=$SPARK_HOME/bin:$PATH
 ```
 
-![Unpacking Spark and exporting SPARK_HOME](images/03-installing-spark-04-spark-home.jpg)
+![The terminal shows Spark unpacking and the SPARK_HOME export](images/03-installing-spark-04-spark-home-cropped.png)
 
 ## Testing with spark-shell
 
