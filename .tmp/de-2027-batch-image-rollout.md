@@ -89,6 +89,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 69 | `14-creating-a-local-spark-cluster-02-worker-registered.jpg` | keep | deterministic crop `x=0,y=30,w=640,h=160`, 2x Lanczos/sharpen | 11/12 | Preserves the exact worker count, address, ALIVE state, cores, memory, and resources table while removing browser chrome and webcam. |
 | 70 | `14-creating-a-local-spark-cluster-03-converted-script.jpg` | keep | deterministic crop `x=180,y=75,w=360,h=260`, 2x Lanczos/sharpen plus blank-area cursor mask | 9/12 | Preserves the converted Python/Spark imports, session builder, and parquet read while removing VS Code chrome, sidebar, webcam, status bar, and cursor; the source's long master URL remains horizontally clipped. |
 | 71 | `14-creating-a-local-spark-cluster-04-running-script-2020.jpg` | keep | deterministic crop `x=60,y=60,w=475,h=280`, 2x Lanczos/sharpen | 10/12 | Preserves the exact 2020 command, Spark warnings, and stage progress while removing VS Code/terminal chrome and webcam; long log lines remain clipped by the source-safe crop. |
+| 72 | `14-creating-a-local-spark-cluster-05-spark-submit-2021.jpg` | keep | deterministic crop `x=60,y=48,w=475,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the exact Spark executor/scheduler log evidence for the 2021 run while removing browser/terminal chrome and webcam; the source frame is already scrolled past the command line. |
 
 ## Validation
 

@@ -175,7 +175,7 @@ master, and optionally things like executor memory or the number of
 cores. Everything after the file name is passed to the job itself, so our
 `argparse` arguments go at the end.
 
-![spark-submit running the 2021 job against the local cluster](images/14-creating-a-local-spark-cluster-05-spark-submit-2021.jpg)
+![spark-submit running the 2021 job against the local cluster](images/14-creating-a-local-spark-cluster-05-spark-submit-2021-cropped.png)
 
 This is the way you submit Spark jobs in practice, and it is also how you
 would wire them into Airflow later. When it finishes, `data/report-2021`
