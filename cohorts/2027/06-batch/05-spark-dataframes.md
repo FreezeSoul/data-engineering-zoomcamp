@@ -166,7 +166,7 @@ function, a UDF:
 crazy_stuff_udf = F.udf(crazy_stuff, returnType=types.StringType())
 ```
 
-![The filter, the show, and the crazy_stuff function about to become a UDF](images/05-spark-dataframes-04-udf.jpg)
+![The notebook shows the filter output and the crazy_stuff function before it becomes a UDF](images/05-spark-dataframes-04-udf-cropped.png)
 
 By default the return type is string; if we returned an integer, we
 would need to say so explicitly. Now we can use it in `withColumn`:
