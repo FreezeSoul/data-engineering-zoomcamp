@@ -8,6 +8,9 @@ video_url: https://www.youtube.com/watch?v=gsKuETFJr54
 
 This is the big-picture overview of dbt before we start building anything. What it is, what problems it solves, and how we'll be using it in the course. No hands-on work yet — just the framing.
 
+![dbt transforms raw warehouse data with SQL and Jinja into tables and views for analysts, BI, and ML](images/02-dbt-transformation-layer-imagegen.png)
+*dbt provides the transformation layer and surrounds it with tests, documentation, version control, and environments.*
+
 ---
 
 ## What is dbt?
