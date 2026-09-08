@@ -4,6 +4,10 @@ Now that we've got all our pipelines working and we know how to quickly create n
 
 In this bonus section, we'll cover how you can deploy Kestra on Google Cloud and automatically sync your workflows from a Git repository.
 
+![A Git repository is reviewed and deployed to cloud Kestra, where secrets stay protected and schedules continue running](images/17-deploy-to-cloud-imagegen.png)
+
+*Cloud deployment connects reviewed workflow code to scheduled execution while keeping credentials in a separate secret store.*
+
 Note: When committing your workflows to Kestra, make sure your workflow doesn't contain any sensitive information. You can use [Secrets](https://go.kestra.io/de-zoomcamp/secret) and the [KV Store](https://go.kestra.io/de-zoomcamp/kv-store) to keep sensitive data out of your workflow logic.
 
 ## Resources

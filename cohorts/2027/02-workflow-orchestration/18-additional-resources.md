@@ -7,6 +7,10 @@
 - Join our [Slack community](https://go.kestra.io/de-zoomcamp/slack) if you have any questions
 - Find all the videos in this [YouTube Playlist](https://go.kestra.io/de-zoomcamp/yt-playlist)
 
+![A learning hub connects Kestra documentation, blueprints, plugins, videos, community help, and troubleshooting resources](images/18-additional-resources-imagegen.png)
+
+*The resource set is a map for continuing beyond the lesson: reference material, examples, tools, and help channels serve different needs.*
+
 ## Troubleshooting tips
 If you face any issues with Kestra flows in Module 2, make sure to use the following Docker images/ports:
 - `image: kestra/kestra:v1.1` - pin your Kestra Docker image to this version so we can ensure reproducibility; do NOT use `kestra/kestra:develop` as this is a bleeding-edge development version that might contain bugs

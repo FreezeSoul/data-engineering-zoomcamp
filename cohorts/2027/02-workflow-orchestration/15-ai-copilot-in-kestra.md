@@ -5,6 +5,10 @@ video_url: https://www.youtube.com/watch?v=3IbjHfC8bMg
 
 Kestra's AI Copilot is specifically designed to generate and modify Kestra flows with full context about the latest plugins, workflow syntax, and best practices.
 
+![Kestra AI Copilot combines a goal, documentation, and best practices to draft or edit YAML, then sends it through review and run](images/15-ai-copilot-imagegen.png)
+
+*Copilot’s advantage is contextual assistance: it drafts within Kestra’s flow model while keeping review and execution explicit.*
+
 ## Setup AI Copilot
 Before using AI Copilot, you need to configure Gemini API access in your Kestra instance.
 

@@ -9,3 +9,7 @@ As data engineers, we spend significant time writing boilerplate code, searching
 - **Avoid errors**: Get syntax-correct, up-to-date workflow code that follows best practices
 
 However, AI is only as good as the context we provide. This section teaches you how to engineer that context for reliable, production-ready data workflows.
+
+![A workflow request becomes a draft flow, then passes through context, validation, review, and deployment](images/13-why-ai-for-workflows-imagegen.png)
+
+*AI can accelerate workflow creation, but context, validation, and human review remain the path to reliable deployment.*
