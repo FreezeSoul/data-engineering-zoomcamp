@@ -103,7 +103,7 @@ should choose clustering over partitioning:
 - Your mutation operations would modify the majority of the partitions
   frequently - for example, writing to the table every few minutes.
 
-![When to choose clustering over partitioning](images/02-partitioning-vs-clustering-04-clustering-over-partitioning.jpg)
+![When to choose clustering over partitioning](images/02-partitioning-vs-clustering-04-clustering-over-partitioning-cropped.png)
 
 ## Automatic reclustering
 
