@@ -31,6 +31,23 @@ URL, numeric, logo, and plot-like assets remain deterministic or unchanged.
   `Can you request it incrementally?`, and the exact three dispositions.
 - Replacement: `incremental_loading-imagegen.png`
 
+### Homework dataset evidence
+
+- Source: `02-workflow-orchestration/images/homework.png` (the identical
+  original is also preserved in the 2025 and 2027 cohort image directories).
+- References: the 2025, 2026, and 2027 workflow-orchestration homework files.
+- Disposition: `crop/replace`, score 10/12. The screenshot uniquely shows the
+  yellow and green 2021 assets that the assignment asks learners to ingest;
+  it complements the written assignment with concrete filenames and sizes.
+- Method: deterministic crop of each side after local inspection. Removed the
+  browser address bars and reaction controls while preserving the exact
+  filenames, sizes, dates, highlighted 2021 rows, and purple teaching notes.
+- Crop: left pane `820x750+0+25`, right pane `820x760+824+25`, padded and
+  appended to `1640x760`.
+- Replacement: `02-workflow-orchestration/images/homework-cropped.png`
+- No imagegen: exact UI text, filenames, dates, and numeric sizes are the
+  source of truth.
+
 ## Audit record
 
 The remaining source-by-source dispositions and scores will be recorded here
