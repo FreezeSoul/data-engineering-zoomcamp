@@ -174,7 +174,7 @@ def apply_model_in_batch(rows):
     df['predicted_duration'] = predictions
 ```
 
-![The model predicts the duration from the trip distance](images/12-spark-rdd-mappartition-06-model-and-yield.jpg)
+![The model predicts the duration from the trip distance](images/12-spark-rdd-mappartition-06-model-and-yield-cropped.png)
 
 ## Yielding the rows back
 
