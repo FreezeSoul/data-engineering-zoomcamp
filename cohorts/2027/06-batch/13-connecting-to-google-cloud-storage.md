@@ -98,7 +98,7 @@ We still run in `local[*]` mode with the app name `test`. The new parts
 are the jar we just downloaded and the two settings that switch on the
 service-account authentication with our key file.
 
-![The SparkConf with the GCS connector jar and the credentials](images/13-connecting-to-google-cloud-storage-05-spark-conf-gcs-connector.jpg)
+![The SparkConf with the GCS connector jar and the credentials](images/13-connecting-to-google-cloud-storage-05-spark-conf-gcs-connector-cropped.png)
 
 With the configuration we create a Spark context, and through it we
 configure the Hadoop layer that actually handles the `gs://` file system:
