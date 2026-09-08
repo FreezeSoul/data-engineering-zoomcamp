@@ -98,7 +98,7 @@ whether to keep a record, `map` is applied to every element of the RDD and
 transforms it into something else: we put a row in and get some other
 object out.
 
-![Whiteboard: map turns each Row into a (key, value) pair - (hour, zone) and (amount, count)](images/11-operations-on-spark-rdds-02-map-key-value-whiteboard.jpg)
+![map turns each Row into a key/value pair for grouping](images/11-operations-on-spark-rdds-02-map-key-value-whiteboard-imagegen.png)
 
 For grouping, the output needs to be a key/value pair. In our case the key
 is the composite of hour and zone, and the value is the composite of amount

@@ -65,6 +65,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 45 | `10-joins-in-spark-02-sort-merge-join-stages.jpg` | keep | deterministic crop `x=0,y=28,w=500,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the two scan stages, exchanges, and downstream join DAG while removing browser chrome and webcam; the source edge still truncates the far-right UI. |
 | 46 | `10-joins-in-spark-03-zones-lookup.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact zones lookup schema and sample rows while removing notebook chrome and webcam. |
 | 47 | `10-joins-in-spark-04-broadcast-exchange.jpg` | keep | deterministic crop `x=0,y=28,w=480,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the broadcast-exchange job evidence while removing browser chrome and webcam; native row-selection highlight remains because it is inside the exact UI capture. |
+| 48 | `11-operations-on-spark-rdds-02-map-key-value-whiteboard.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 11/12 | Clean diagram preserves Row → map → RDD and key `(H,Z)` / value `(AMT,CNT)` grouping semantics; removed presenter and recording UI. |
 
 ## Validation
 
