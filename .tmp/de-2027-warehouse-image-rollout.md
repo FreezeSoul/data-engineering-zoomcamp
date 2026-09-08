@@ -52,6 +52,25 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+## Final audit
+
+- Sources inspected: 33 local Markdown image references.
+- Retained/replaced: 33; removed: 0. Every original `.jpg` source remains
+  in `images/` for recovery.
+- Decisions: 4 bounded conceptual diagrams used built-in imagegen after
+  deterministic crop; 29 exact slides, tables, SQL/results, terminal, and UI
+  captures used deterministic crops/upscales. No exact text, URL, number,
+  plot, command, or control was entrusted to imagegen.
+- Validation: 33/33 retained references resolve, 0 old `.jpg` references
+  remain in lesson Markdown, 33/33 report entries are present, and
+  `git diff --check` passes for this scope.
+- Limitations: the deterministic path preserves source truncation or
+  source-scale rendering where the 640x360 original lacked recoverable
+  detail; exact UI captures retain the application controls that teach the
+  workflow, while browser tab strips and unrelated terminal backgrounds were
+  cropped away. Generated diagrams are semantically faithful replacements,
+  not pixel-identical copies.
+
 ### 02-partitioning-vs-clustering-01-partitioning-options.jpg
 
 - Source: `02-partitioning-vs-clustering.md`, partitioning options section.
