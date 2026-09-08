@@ -19,7 +19,7 @@ pick 11 and choose the Linux build. For Windows there is a separate
 guide, and there it is better to use the Oracle JDK; on Linux OpenJDK
 is fine.
 
-![The install guide specifies Java 11 and OpenJDK for Linux](images/03-installing-spark-01-install-guide-java-cropped.png)
+![The install guide specifies Java 11 and OpenJDK for Linux](images/03-installing-spark-01-install-guide-java-crisp.png)
 
 We create a `spark` folder in the home directory and download the
 OpenJDK archive there:
@@ -42,7 +42,7 @@ export JAVA_HOME=$HOME/spark/jdk-11.0.1
 export PATH=$JAVA_HOME/bin:$PATH
 ```
 
-![The terminal shows the unpacked JDK and the JAVA_HOME export](images/03-installing-spark-02-java-home-cropped.png)
+![The terminal shows the unpacked JDK and the JAVA_HOME export](images/03-installing-spark-02-java-home-crisp.png)
 
 Check that it works:
 
@@ -68,7 +68,7 @@ archive, and the download has to be redone from a different mirror.
 After unpacking we get a `spark-3.0.3-bin-hadoop3.2` directory, and we
 do the same as with Java:
 
-![The Spark download page with release 3.0.3 pre-built for Apache Hadoop 3.2 and later](images/03-installing-spark-03-spark-download-page-cropped.png)
+![The Spark download page with release 3.0.3 pre-built for Apache Hadoop 3.2 and later](images/03-installing-spark-03-spark-download-page-crisp.png)
 
 ```bash
 tar xzf spark-3.0.3-bin-hadoop3.2.tgz
@@ -77,7 +77,7 @@ export SPARK_HOME=$HOME/spark/spark-3.0.3-bin-hadoop3.2
 export PATH=$SPARK_HOME/bin:$PATH
 ```
 
-![The terminal shows Spark unpacking and the SPARK_HOME export](images/03-installing-spark-04-spark-home-cropped.png)
+![The terminal shows Spark unpacking and the SPARK_HOME export](images/03-installing-spark-04-spark-home-crisp.png)
 
 ## Testing with spark-shell
 
@@ -104,7 +104,7 @@ keep only the ones below 10, and `collect` brings the results back. The
 output is the numbers 1 to 9 - a simple Spark job to confirm things
 work.
 
-![The Spark shell runs a test job and returns the numbers 1 through 9](images/03-installing-spark-05-spark-shell-cropped.png)
+![The Spark shell runs a test job and returns the numbers 1 through 9](images/03-installing-spark-05-spark-shell-crisp.png)
 
 ## Making the variables permanent
 

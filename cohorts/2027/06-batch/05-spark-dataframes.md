@@ -23,7 +23,7 @@ integers. Instead of looking at `df.schema`, there is a nicer way:
 df.printSchema()
 ```
 
-![printSchema shows the types carried by parquet for each column](images/05-spark-dataframes-01-print-schema-cropped.png)
+![printSchema shows the types carried by parquet for each column](images/05-spark-dataframes-01-print-schema-crisp.png)
 
 This is also one of the reasons parquet files are smaller: they know
 the schema and use more efficient ways of compressing the data. For
@@ -40,7 +40,7 @@ df.select('pickup_datetime', 'dropoff_datetime',
           'PULocationID', 'DOLocationID')
 ```
 
-![Selecting four columns from the FHV DataFrame](images/05-spark-dataframes-02-select-cropped.png)
+![Selecting four columns from the FHV DataFrame](images/05-spark-dataframes-02-select-crisp.png)
 
 This DataFrame now contains only these four columns. We can also
 filter rows:
@@ -105,7 +105,7 @@ Type `F.` and hit tab - there are quite a lot of them. The one we want
 is `to_date`: it takes a datetime and keeps only the date, discarding
 the hour, minutes and seconds.
 
-![Importing pyspark.sql.functions as F and browsing the built-in functions](images/05-spark-dataframes-03-built-in-functions-cropped.png)
+![Importing pyspark.sql.functions as F and browsing the built-in functions](images/05-spark-dataframes-03-built-in-functions-crisp.png)
 
 To apply it, we use `withColumn`, which adds a new column to a
 DataFrame - also a transformation:
@@ -166,7 +166,7 @@ function, a UDF:
 crazy_stuff_udf = F.udf(crazy_stuff, returnType=types.StringType())
 ```
 
-![The notebook shows the filter output and the crazy_stuff function before it becomes a UDF](images/05-spark-dataframes-04-udf-cropped.png)
+![The notebook shows the filter output and the crazy_stuff function before it becomes a UDF](images/05-spark-dataframes-04-udf-crisp.png)
 
 By default the return type is string; if we returned an integer, we
 would need to say so explicitly. Now we can use it in `withColumn`:

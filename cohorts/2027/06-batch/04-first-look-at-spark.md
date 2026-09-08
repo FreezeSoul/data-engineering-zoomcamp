@@ -35,7 +35,7 @@ If we run `df.show()`, Spark correctly gets the names of the columns.
 And if we open localhost:4040 and refresh, we see new things there:
 every time we execute something, it is reflected in the UI as a job.
 
-![Spark UI on port 4040 showing the notebook's Spark jobs](images/04-first-look-at-spark-01-spark-ui-cropped.png)
+![Spark UI on port 4040 showing the notebook's Spark jobs](images/04-first-look-at-spark-01-spark-ui-crisp.png)
 
 ## The schema problem
 
@@ -76,7 +76,7 @@ Pandas does a decent job: `PULocationID` and `DOLocationID` are
 `int64`, the rest are strings. The pickup and dropoff datetimes stay
 objects too - pandas is not smart enough to see they are timestamps.
 
-![The notebook reads sample rows into pandas to infer more useful column types](images/04-first-look-at-spark-02-schema-problem-pandas-cropped.png)
+![The notebook reads sample rows into pandas to infer more useful column types](images/04-first-look-at-spark-02-schema-problem-pandas-crisp.png)
 
 Now we turn this pandas DataFrame into a Spark DataFrame:
 
@@ -120,7 +120,7 @@ schema = types.StructType([
 The `True` at the end means the column can be null - `SR_Flag` is
 definitely nullable. And in Python `True` starts with a capital T.
 
-![The schema is declared explicitly with StructField definitions](images/04-first-look-at-spark-03-schema-structtype-cropped.png)
+![The schema is declared explicitly with StructField definitions](images/04-first-look-at-spark-03-schema-structtype-crisp.png)
 
 Now we read the CSV again, telling Spark that this file must have this
 schema:
@@ -176,7 +176,7 @@ So let's do the thing that triggers it - saving the data as parquet:
 df.write.parquet('fhvhv/2021/01/')
 ```
 
-![The notebook repartitions the data into 24 partitions before writing parquet](images/04-first-look-at-spark-05-repartition-write-parquet-cropped.png)
+![The notebook repartitions the data into 24 partitions before writing parquet](images/04-first-look-at-spark-05-repartition-write-parquet-crisp.png)
 
 Now something is happening. In the Spark UI there is a job called
 `parquet`; opening it shows what Spark is actually doing. There is a
