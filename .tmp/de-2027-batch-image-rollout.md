@@ -58,6 +58,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 38 | `08-anatomy-of-a-spark-cluster-03-executors-pull-partitions.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Clean diagram preserves four DataFrame partitions flowing to executors in the Spark cluster; removed presenter and recording UI. |
 | 39 | `08-anatomy-of-a-spark-cluster-04-s3-gcs-instead-of-hdfs.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 11/12 | Clean diagram preserves S3/GCS as active storage, HADOOP/HDFS de-emphasis, and executor partition pulls; removed presenter and recording UI. |
 | 40 | `09-groupby-in-spark-03-reshuffling-whiteboard.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Clean diagram preserves subresults, key-based crossing arrows, output partitions `P1`/`P2`, and external merge sort; removed presenter and recording UI. |
+| 41 | `09-groupby-in-spark-01-revenue-query.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact query notebook context and grouping-key evidence while removing notebook chrome and webcam. |
 
 ## Validation
 
