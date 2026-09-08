@@ -42,7 +42,7 @@ export JAVA_HOME=$HOME/spark/jdk-11.0.1
 export PATH=$JAVA_HOME/bin:$PATH
 ```
 
-![Unpacking the JDK and exporting JAVA_HOME in the terminal](images/03-installing-spark-02-java-home.jpg)
+![The terminal shows the unpacked JDK and the JAVA_HOME export](images/03-installing-spark-02-java-home-cropped.png)
 
 Check that it works:
 
