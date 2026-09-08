@@ -37,7 +37,12 @@ The two types differ in almost every aspect:
   OLAP users are knowledge workers: data analysts, business analysts
   and executives.
 
-![OLTP vs OLAP comparison table from the slides](images/01-data-warehouse-and-bigquery-01-olap-vs-oltp-crisp.png)
+| | OLTP | OLAP |
+| --- | --- | --- |
+| Purpose | Control and run essential business operations in real time | Plan, solve problems, support decisions, discover hidden insights |
+| Data updates | Short, fast updates initiated by user | Data periodically refreshed with scheduled, long-running batch jobs |
+| Database design | Normalized databases for efficiency | Denormalized databases for analysis |
+| Space requirements | Generally small if historical data is archived | Generally large due to aggregating large datasets |
 
 ## What is a data warehouse
 
