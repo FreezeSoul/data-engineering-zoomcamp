@@ -117,7 +117,6 @@ DataFrame, so let us turn each partition into one. First, what do the rows
 look like? `duration_rdd.take(10)` returns a bunch of Row objects, and
 feeding them to pandas works, but the columns get meaningless names:
 
-![pandas does not know the column names, so it numbers them](images/12-spark-rdd-mappartition-05-pandas-dataframe.jpg)
 
 We already have the column names in the `columns` variable, so we pass
 them explicitly:
