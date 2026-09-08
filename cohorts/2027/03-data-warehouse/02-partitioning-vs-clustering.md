@@ -35,7 +35,7 @@ partitions.
 Monthly or yearly is for the opposite case: a small amount of data
 spread across a wide range of dates.
 
-![Partitioning options in BigQuery](images/02-partitioning-vs-clustering-01-partitioning-options.jpg)
+![Partitioning options in BigQuery](images/02-partitioning-vs-clustering-01-partitioning-options-cropped.png)
 
 ## How clustering works
 
