@@ -273,7 +273,7 @@ Because related rows sit next to each other, BigQuery can skip data
 inside a partition too. This improves cost as well as query
 performance.
 
-![Clustering by tag within date partitions](images/01-data-warehouse-and-bigquery-07-clustering-diagram.jpg)
+![Clustering by tag within date partitions](images/01-data-warehouse-and-bigquery-07-clustering-diagram-cropped.png)
 
 For the taxi data, we create a table that is both partitioned and
 clustered:

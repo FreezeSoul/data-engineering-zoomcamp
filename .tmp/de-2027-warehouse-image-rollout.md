@@ -52,6 +52,24 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 01-data-warehouse-and-bigquery-07-clustering-diagram.jpg
+
+- Source: `01-data-warehouse-and-bigquery.md`, clustering section.
+- Rubric: 11/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the diagram shows rows grouped by date and tag,
+  which is a concrete relationship not conveyed as clearly by the prose.
+- Preparation: deterministic crop `(x=20, y=18, width=600, height=335)`;
+  resized 2x with a light unsharp mask. Imagegen was not used because the
+  sample table values and highlighted ranges are exact evidence.
+- Method: deterministic PNG sibling
+  `01-data-warehouse-and-bigquery-07-clustering-diagram-cropped.png`.
+- Invariants checked: source table, date-partitioned tables, tag grouping,
+  highlighted ranges, table headings, and arrow direction remain unchanged;
+  no face, camera tile, cursor, or overlay was present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-06-partition-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, partition-pruning query.
