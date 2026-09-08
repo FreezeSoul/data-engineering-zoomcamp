@@ -59,7 +59,7 @@ a managed version of Presto called Athena. So the rule of thumb is: if
 you can express your job as a SQL query, use Presto, Athena, or
 BigQuery with external tables over your lake.
 
-![Whiteboard: when to use Spark - if you can express the batch job as SQL, go with Hive, Presto or Athena](images/02-introduction-to-spark-03-when-to-use-spark-whiteboard.jpg)
+![Decision aid: use Hive, Presto, or Athena when the batch job can be expressed as SQL](images/02-introduction-to-spark-03-when-to-use-spark-whiteboard-imagegen.png)
 
 Sometimes you cannot express the job with SQL. Maybe you need more
 flexibility, maybe the code becomes too difficult to manage as one big
