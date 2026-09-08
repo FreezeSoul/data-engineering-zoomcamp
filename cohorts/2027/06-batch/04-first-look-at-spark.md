@@ -120,7 +120,7 @@ schema = types.StructType([
 The `True` at the end means the column can be null - `SR_Flag` is
 definitely nullable. And in Python `True` starts with a capital T.
 
-![Declaring the schema as a list of StructFields](images/04-first-look-at-spark-03-schema-structtype.jpg)
+![The schema is declared explicitly with StructField definitions](images/04-first-look-at-spark-03-schema-structtype-cropped.png)
 
 Now we read the CSV again, telling Spark that this file must have this
 schema:
