@@ -169,7 +169,7 @@ temporary training dataset with a temporary evaluation dataset. The
 evaluation tab shows the error metrics of the training run - the mean
 squared error is around 8 and the mean absolute error is around 1:
 
-![Evaluation tab of the tip_model page](images/05-machine-learning-in-bigquery-03-model-evaluation-tab.jpg)
+![Evaluation tab of the tip_model page](images/05-machine-learning-in-bigquery-03-model-evaluation-tab-cropped.png)
 
 That is not very optimal, but for a simple model and dataset it is perfectly
 fine - the aim here is the workflow, not the most optimal model.
