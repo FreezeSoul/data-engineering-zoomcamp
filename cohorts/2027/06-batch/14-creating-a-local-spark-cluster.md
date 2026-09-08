@@ -36,7 +36,7 @@ The master has a web UI, but unlike the notebook-created cluster it is not
 on port 4040 - a standalone master listens on port 8080. Open it in the
 browser and you see the master with no workers connected yet:
 
-![The standalone Spark master web UI on port 8080, with no workers yet](images/14-creating-a-local-spark-cluster-01-spark-master-ui.jpg)
+![The standalone Spark master web UI on port 8080, with no workers yet](images/14-creating-a-local-spark-cluster-01-spark-master-ui-cropped.png)
 
 The master URL is shown at the top of the UI: `spark://de-zoomcamp...
 :7077`. This is the address that workers and applications use to connect.
