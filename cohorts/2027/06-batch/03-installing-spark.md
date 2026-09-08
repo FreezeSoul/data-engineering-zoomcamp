@@ -19,7 +19,7 @@ pick 11 and choose the Linux build. For Windows there is a separate
 guide, and there it is better to use the Oracle JDK; on Linux OpenJDK
 is fine.
 
-![The install guide in the course repo: Java 11, OpenJDK for Linux](images/03-installing-spark-01-install-guide-java.jpg)
+![The install guide specifies Java 11 and OpenJDK for Linux](images/03-installing-spark-01-install-guide-java-cropped.png)
 
 We create a `spark` folder in the home directory and download the
 OpenJDK archive there:

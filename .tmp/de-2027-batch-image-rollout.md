@@ -29,6 +29,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 9 | `02-introduction-to-spark-02-data-processing-engine-whiteboard.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Clean cluster diagram preserves input data → Spark cluster → output data and the language note; removed presenter and recording UI. |
 | 10 | `02-introduction-to-spark-03-when-to-use-spark-whiteboard.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 11/12 | Clean decision diagram preserves the SQL-versus-Spark recommendation and Hive/Presto/Athena labels; removed recording artifacts. |
 | 11 | `02-introduction-to-spark-04-typical-workflow-whiteboard.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 11/12 | Clean workflow preserves SQL preparation, Spark/Python training, model creation, and Spark model application; removed recording artifacts. |
+| 12 | `03-installing-spark-01-install-guide-java.jpg` | keep | deterministic crop `x=20,y=205,w=465,h=145`, 2x Lanczos/sharpen | 9/12 | Keeps the relevant Linux/Java/OpenJDK instructions, removes browser chrome and webcam, and intentionally excludes unrelated page/sidebar content. |
 
 ## Validation
 
