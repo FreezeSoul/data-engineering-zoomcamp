@@ -62,7 +62,7 @@ model to serve through the `MODEL_NAME` environment variable.
 
 With `docker ps` we can check that the container is running:
 
-![docker ps showing the tensorflow/serving container up](images/06-deploying-a-machine-learning-model-03-docker-running.jpg)
+![docker ps showing the tensorflow/serving container up](images/06-deploying-a-machine-learning-model-03-docker-running-cropped.png)
 
 ## Checking the model
 
