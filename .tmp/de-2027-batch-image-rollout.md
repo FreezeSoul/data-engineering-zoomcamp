@@ -35,6 +35,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 15 | `03-installing-spark-04-spark-home.jpg` | keep | deterministic crop `x=20,y=32,w=480,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact unpack/remove/export commands and paths while removing browser chrome and webcam. |
 | 16 | `03-installing-spark-05-spark-shell.jpg` | keep | deterministic crop `x=20,y=32,w=480,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact Spark 3.0.3 shell output and result `[1, 2, 3, 4, 5, 6, 7, 8, 9]` while removing browser chrome and webcam. |
 | 17 | `04-first-look-at-spark-01-spark-ui.jpg` | keep | deterministic crop `x=0,y=28,w=480,h=320`, 2x Lanczos/sharpen | 9/12 | Preserves the Spark 3.0.3 Jobs UI and job-state evidence while removing browser tabs/chrome and webcam. |
+| 18 | `04-first-look-at-spark-02-schema-problem-pandas.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact `StringType` schema and pandas sample setup while removing browser chrome and webcam. |
 
 ## Validation
 

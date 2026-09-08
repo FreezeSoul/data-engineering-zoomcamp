@@ -76,7 +76,7 @@ Pandas does a decent job: `PULocationID` and `DOLocationID` are
 `int64`, the rest are strings. The pickup and dropoff datetimes stay
 objects too - pandas is not smart enough to see they are timestamps.
 
-![Spark reads everything as StringType; we take 100 rows and let pandas infer the types](images/04-first-look-at-spark-02-schema-problem-pandas.jpg)
+![The notebook reads sample rows into pandas to infer more useful column types](images/04-first-look-at-spark-02-schema-problem-pandas-cropped.png)
 
 Now we turn this pandas DataFrame into a Spark DataFrame:
 
