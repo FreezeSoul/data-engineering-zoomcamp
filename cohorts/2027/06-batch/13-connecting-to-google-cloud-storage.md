@@ -13,7 +13,6 @@ The setup follows instructions written by Alvin Do - thanks, Alvin! We
 walk through them step by step. The finished configuration is in
 [`code/09_spark_gcs.ipynb`](code/09_spark_gcs.ipynb).
 
-![The Slack post with the original instructions for connecting Spark to GCS](images/13-connecting-to-google-cloud-storage-01-gcs-connector-instructions.jpg)
 
 ## Uploading the data to Google Cloud Storage
 

@@ -78,6 +78,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 58 | `12-spark-rdd-mappartition-05-pandas-dataframe.jpg` | remove | — | 4/12 | The prose claims this shows pandas assigning meaningless column names, but the capture instead shows a later named-column function and partition counts; it is a hard caption/content mismatch, so the reference is removed and the original preserved. |
 | 59 | `12-spark-rdd-mappartition-06-model-and-yield.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the exact model prediction, predicted-duration column, and yielded-row code while removing notebook chrome and webcam; adjacent `infinite_seq` context remains in the source capture. |
 | 60 | `12-spark-rdd-mappartition-07-predicted-duration.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the exact `mapPartitions`/`toDF` pipeline and predicted-duration query while removing notebook chrome and webcam; the source capture clips the output table below the visible frame. |
+| 61 | `13-connecting-to-google-cloud-storage-01-gcs-connector-instructions.jpg` | remove | — | 5/12 | A transient Slack post with a presenter avatar and browser/chat chrome is largely redundant with the lesson's reproduced setup steps; it adds no durable evidence beyond attribution, so the reference is removed and the original preserved. |
 
 ## Validation
 
