@@ -178,8 +178,6 @@ rdd \
     .take(5)
 ```
 
-![The RDD chain applies filter, map, and reduceByKey](images/11-operations-on-spark-rdds-03-reducebykey-chain-crisp.png)
-
 The result follows the same format as before - composite key, composite
 value - except the value is now aggregated: the sum of all amounts, and the
 sum of all the ones, which is the total number of records for this hour and
@@ -198,8 +196,6 @@ def unwrap(row):
 If we call `toDF()` on it and `show()`, we get a DataFrame - but the column
 names are gone (we see `_1`, `_2` and so on), and Spark had to figure out
 the schema by going through the records.
-
-![Calling toDF without a schema produces generic numbered columns](images/11-operations-on-spark-rdds-04-todf-lost-names-crisp.png)
 
 To get the names back we can use a named tuple:
 
@@ -231,8 +227,6 @@ result_schema = types.StructType([
     types.StructField('revenue', types.DoubleType(), True),
     types.StructField('count', types.IntegerType(), True)
 ])
-
-![The named tuple and explicit schema restore meaningful result columns](images/11-operations-on-spark-rdds-05-namedtuple-schema-crisp.png)
 
 df_result = rdd \
     .filter(filter_outliers) \
