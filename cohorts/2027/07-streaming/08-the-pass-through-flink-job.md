@@ -7,6 +7,10 @@ Jupyter notebook. They are submitted to the Flink cluster as .py files
 using `docker compose exec`. We cover how job submission works in
 production in the "Flink in production" section at the end.
 
+![New events pass continuously from a Kafka source through Flink processing into PostgreSQL while checkpoint snapshots preserve state](images/08-pass-through-job-imagegen.png)
+
+*The pass-through job keeps running: it moves arriving events to the sink and periodically snapshots state and source progress for recovery.*
+
 Create `src/job/pass_through_job.py`.
 
 The Kafka source table:

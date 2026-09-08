@@ -3,6 +3,10 @@
 Printing to the screen is fine for debugging, but let's save events to a
 database. Add the PostgreSQL service to `docker-compose.yml`:
 
+![Kafka events flow from an ordered broker log through a consumer into durable PostgreSQL rows](images/05-postgresql-sink-imagegen.png)
+
+*The database sink turns each consumed event into a durable row instead of leaving it only in a terminal or in memory.*
+
 ```yaml
   postgres:
     image: postgres:18
