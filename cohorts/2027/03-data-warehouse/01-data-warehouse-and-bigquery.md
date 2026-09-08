@@ -102,8 +102,6 @@ queries running and all your 100 slots are full, the 51st query has to
 wait. That would not happen on demand: there BigQuery gives you more
 slots based on the requirements of a query.
 
-![BigQuery cost: on-demand vs flat rate pricing](images/01-data-warehouse-and-bigquery-03-bigquery-cost-crisp.png)
-
 ## Public datasets
 
 Before working with BigQuery, two things worth knowing. First, BigQuery
