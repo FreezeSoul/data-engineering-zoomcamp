@@ -77,6 +77,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 57 | `12-spark-rdd-mappartition-04-partition-sizes.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the counting function, `mapPartitions` call, and exact unbalanced partition counts while removing notebook chrome and webcam. |
 | 58 | `12-spark-rdd-mappartition-05-pandas-dataframe.jpg` | remove | — | 4/12 | The prose claims this shows pandas assigning meaningless column names, but the capture instead shows a later named-column function and partition counts; it is a hard caption/content mismatch, so the reference is removed and the original preserved. |
 | 59 | `12-spark-rdd-mappartition-06-model-and-yield.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the exact model prediction, predicted-duration column, and yielded-row code while removing notebook chrome and webcam; adjacent `infinite_seq` context remains in the source capture. |
+| 60 | `12-spark-rdd-mappartition-07-predicted-duration.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the exact `mapPartitions`/`toDF` pipeline and predicted-duration query while removing notebook chrome and webcam; the source capture clips the output table below the visible frame. |
 
 ## Validation
 

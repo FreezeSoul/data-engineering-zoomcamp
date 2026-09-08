@@ -232,7 +232,7 @@ df_predicts.select('predicted_duration').show()
 We drop the `Index` column that `itertuples` added, and since we do not
 specify a schema, Spark infers it:
 
-![The predicted duration for each trip, computed partition by partition](images/12-spark-rdd-mappartition-07-predicted-duration.jpg)
+![The predicted duration for each trip, computed partition by partition](images/12-spark-rdd-mappartition-07-predicted-duration-cropped.png)
 
 For every row of our data we now have a predicted duration in minutes -
 something we could show to a passenger who wants to know how long the
