@@ -130,7 +130,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 ```
 
-![Creating the Spark session from the context, then reading from gs://](images/13-connecting-to-google-cloud-storage-06-spark-session-gcs.jpg)
+![Creating the Spark session from the context, then reading from gs://](images/13-connecting-to-google-cloud-storage-06-spark-session-gcs-cropped.png)
 
 ## Testing the connection
 
