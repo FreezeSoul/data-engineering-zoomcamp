@@ -11,6 +11,9 @@ Add information about setting a username and password.
 
 We'll set up Kestra using Docker Compose containing one container for the Kestra server and another for the Postgres database:
 
+![Docker Compose starts a Kestra server and PostgreSQL with persistent data and local flow access](images/03-installing-kestra-topology-imagegen.png)
+*The local installation topology keeps the orchestration service and its database in separate containers.*
+
 ```bash
 cd 02-workflow-orchestration
 docker compose up -d

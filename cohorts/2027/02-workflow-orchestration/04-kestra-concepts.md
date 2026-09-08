@@ -16,6 +16,9 @@ To start building workflows in Kestra, we need to understand a number of concept
 
 While there are more concepts used for building powerful workflows, these are the ones we're going to use to build our data pipelines.
 
+![A Kestra Flow connects to tasks, inputs, outputs, triggers, executions, variables, defaults, and concurrency](images/04-kestra-concepts-map-imagegen.png)
+*The core concepts connect around a Flow: triggers start executions, inputs enter, and outputs move data onward.*
+
 The flow [`01_hello_world.yaml`](flows/01_hello_world.yaml) showcases all of these concepts inside of one workflow:
 - The flow has 5 tasks: 3 log tasks and a sleep task
 - The flow takes an input called `name`.

@@ -11,6 +11,9 @@ graph LR
   Transform --> Query[Query Data with DuckDB]
 ```
 
+![The starter pipeline extracts through an HTTP API, transforms with Python, and queries with DuckDB](images/06-starter-etl-pipeline-imagegen.png)
+*The three-stage starter flow makes task order and dependencies visible.*
+
 Add the flow [`03_getting_started_data_pipeline.yaml`](flows/03_getting_started_data_pipeline.yaml) from the UI if you haven't already and execute it to see the results. Inspect the Gantt and Logs tabs to understand the flow execution.
 
 ## Resources

@@ -14,4 +14,7 @@ A workflow orchestrator might do the following tasks:
 
 In data engineering, you often need to move data from one place, to another, sometimes with some modifications made to the data in the middle. This is where a workflow orchestrator can help out by managing these steps, while giving us visibility into it at the same time.
 
+![An orchestrator coordinates extract, transform, load, scheduling, monitoring, and retry steps](images/01-workflow-orchestration-imagegen.png)
+*An orchestrator coordinates independent pipeline tasks and reacts to schedules or events.*
+
 In this module, we're going to build our own data pipeline using ETL (Extract, Transform Load) with Kestra at the core of the operation, but first we need to understand a bit more about how Kestra works before we can get building!

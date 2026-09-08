@@ -11,6 +11,9 @@ First, adjust the following flow [`06_gcp_kv.yaml`](flows/06_gcp_kv.yaml) to inc
 - GCP_BUCKET_NAME
 - GCP_DATASET.
 
+![Protected credentials and project settings feed a workflow that creates Cloud Storage and a BigQuery dataset](images/10-gcp-kv-setup-imagegen.png)
+*Keep credentials in the protected store while the workflow uses project and location settings to target cloud resources.*
+
 ## Create GCP Resources
 If you haven't already created the GCS bucket and BigQuery dataset in the first week of the course, you can use this flow to create them: [`07_gcp_setup.yaml`](flows/07_gcp_setup.yaml).
 
