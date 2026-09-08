@@ -143,7 +143,7 @@ df_green = spark.read.parquet('gs://dtc_data_lake_de-zoomcamp-nytaxi/pq/green/*/
 A simple `df_green.count()` confirms that it works - Spark connects to
 Google Cloud Storage, downloads the parquet files and counts the rows:
 
-![Counting the rows of a DataFrame read from gs:// proves the setup works](images/13-connecting-to-google-cloud-storage-07-read-from-gcs-test.jpg)
+![Counting the rows of a DataFrame read from gs:// proves the setup works](images/13-connecting-to-google-cloud-storage-07-read-from-gcs-test-cropped.png)
 
 That is all the configuration takes. Note that we only need this when we
 run Spark ourselves - on a virtual machine or on a laptop. Later in this

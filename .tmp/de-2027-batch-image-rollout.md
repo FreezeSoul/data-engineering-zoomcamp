@@ -84,6 +84,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 64 | `13-connecting-to-google-cloud-storage-04-download-connector-jar.jpg` | keep | deterministic crop `x=60,y=200,w=540,h=108`, 2x Lanczos/sharpen | 11/12 | Preserves the exact `gsutil` connector download, completion status, and jar filename while removing Google Cloud/browser chrome, webcam, and cursor/selection UI. |
 | 65 | `13-connecting-to-google-cloud-storage-05-spark-conf-gcs-connector.jpg` | keep | deterministic crop `x=100,y=150,w=500,h=100`, 2x Lanczos/sharpen | 10/12 | Focuses on the exact SparkConf jar and service-account settings, removing notebook/browser chrome, the webcam, and cursor; imports and the credential path are already reproduced in the lesson text. |
 | 66 | `13-connecting-to-google-cloud-storage-06-spark-session-gcs.jpg` | keep | deterministic crop `x=20,y=198,w=600,h=130`, 2x Lanczos/sharpen | 11/12 | Preserves the exact `SparkSession.builder` configuration and complete `gs://.../green/*/*` read path while removing notebook/browser chrome and the webcam. |
+| 67 | `13-connecting-to-google-cloud-storage-07-read-from-gcs-test.jpg` | keep | deterministic crop `x=20,y=184,w=600,h=48`, 2x Lanczos/sharpen | 9/12 | Preserves the exact `df_green.count()` call and Spark stage progress while removing notebook/browser chrome, webcam, and cursor; the source frame does not show the final count output. |
 
 ## Validation
 
