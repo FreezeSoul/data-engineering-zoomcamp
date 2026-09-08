@@ -207,6 +207,25 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: generated output visually inspected at lesson size; Markdown
   reference resolves and `git diff --check` passes.
 
+### 04-internals-of-bigquery-02-columnar-storage.jpg
+
+- Source: `04-internals-of-bigquery.md`, record-versus-column orientation
+  explanation.
+- Rubric: 11/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the side-by-side storage representation directly
+  supports the explanation and benefits from crisp labels and blocks.
+- Preparation: deterministic crop `(x=15, y=10, width=590, height=330)`;
+  resized 2x before generation.
+- Method: built-in imagegen, `scientific-educational`; generated sibling
+  `04-internals-of-bigquery-02-columnar-storage-imagegen.png`.
+- Invariants checked: record-oriented and column-oriented sides, `r1`/`r2`
+  labels, A–E tree structure, colored blocks, and the comparison meaning are
+  retained; no extra nodes, labels, people, chrome, cursor, or watermark
+  appears.
+- Validation: generated output visually inspected at lesson size; Markdown
+  reference resolves and `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.

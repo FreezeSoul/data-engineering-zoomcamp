@@ -49,7 +49,7 @@ is laid out. The video calls this part Polymer — the component on the
 storage side — and compares record-oriented storage with column-oriented
 storage.
 
-![Record-oriented storage keeps rows r1 and r2 together, like CSV; column-oriented storage keeps each column in its own place](images/04-internals-of-bigquery-02-columnar-storage.jpg)
+![Record-oriented storage keeps rows r1 and r2 together, like CSV; column-oriented storage keeps each column in its own place](images/04-internals-of-bigquery-02-columnar-storage-imagegen.png)
 
 On the left is record-oriented storage: each record (row `r1`, `r2`) is
 stored as one piece. This is very similar to structures like CSV, and it's
