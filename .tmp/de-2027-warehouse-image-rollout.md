@@ -443,6 +443,24 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 06-deploying-a-machine-learning-model-04-model-status.jpg
+
+- Source: `06-deploying-a-machine-learning-model.md`, model-status check.
+- Rubric: 10/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 1, caption/accessibility 2).
+- Decision: `crop/replace`; the Postman response proves the deployed model
+  version is `AVAILABLE`, a concrete state transition in the walkthrough.
+- Preparation: deterministic crop `(x=0, y=0, width=575, height=315)`;
+  resized 2x with a light unsharp mask. The Postman UI and JSON response were
+  retained while the terminal background was removed.
+- Method: deterministic PNG sibling
+  `06-deploying-a-machine-learning-model-04-model-status-cropped.png`.
+- Invariants checked: GET endpoint, `model_version_status`, `AVAILABLE`, and
+  response JSON remain unchanged; surrounding terminal, faces, camera tiles,
+  cursors, and unrelated chrome are absent.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.

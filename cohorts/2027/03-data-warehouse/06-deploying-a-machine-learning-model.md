@@ -70,7 +70,7 @@ TensorFlow Serving exposes a REST API. The model metadata lives at
 `http://localhost:8501/v1/models/tip_model` - a GET there (in the video, with
 Postman) should tell us the model is fine:
 
-![Postman GET showing the tip_model version is AVAILABLE](images/06-deploying-a-machine-learning-model-04-model-status.jpg)
+![Postman GET showing the tip_model version is AVAILABLE](images/06-deploying-a-machine-learning-model-04-model-status-cropped.png)
 
 Indeed, the response says the tip model, version 1, is available - no error.
 
