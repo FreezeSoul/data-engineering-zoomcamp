@@ -103,8 +103,6 @@ The generated `06_spark_sql.py` needs a small cleanup: remove the `In
 setup. In the video we also replace the generated column list with an
 explicit `common_columns` list, which reads better in a script.
 
-![The converted script, cleaned up in the editor](images/14-creating-a-local-spark-cluster-03-converted-script-crisp.png)
-
 If we run the script right away with `python 06_spark_sql.py`, it connects
 to the master and starts executing. But look at the master UI: the job
 sits again at "Initial job has not accepted any resources". This time the
@@ -145,8 +143,6 @@ python 06_spark_sql.py \
     --output=data/report-2020
 ```
 
-![Running the script for 2020 from the terminal](images/14-creating-a-local-spark-cluster-04-running-script-2020-crisp.png)
-
 It finishes quickly - there is not much 2020 data - and the report lands
 in `data/report-2020`.
 
@@ -174,8 +170,6 @@ Everything before the Python file is the configuration for Spark - the
 master, and optionally things like executor memory or the number of
 cores. Everything after the file name is passed to the job itself, so our
 `argparse` arguments go at the end.
-
-![spark-submit running the 2021 job against the local cluster](images/14-creating-a-local-spark-cluster-05-spark-submit-2021-crisp.png)
 
 This is the way you submit Spark jobs in practice, and it is also how you
 would wire them into Airflow later. When it finishes, `data/report-2021`
