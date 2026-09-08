@@ -209,7 +209,7 @@ tip_amount IS NOT NULL
 ));
 ```
 
-![ML.EVALUATE output for tip_model](images/05-machine-learning-in-bigquery-05-ml-evaluate.jpg)
+![ML.EVALUATE output for tip_model](images/05-machine-learning-in-bigquery-05-ml-evaluate-cropped.png)
 
 Here we see the mean absolute error is 1 and the mean squared error is
 around 150. These evaluation metrics are what we would use for optimizing
