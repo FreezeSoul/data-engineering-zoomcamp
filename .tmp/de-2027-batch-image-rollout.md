@@ -101,6 +101,10 @@ were removed. Temporary crops/contact sheets remain disposable under
 
 ## Validation
 
-Validation will be completed after the last entry: all retained references
-resolve, originals remain, `git diff --check` passes, and disposable
-intermediates are not staged.
+Completed: all 80 source references have an audit entry; 74 are retained and
+6 are removed. Every retained Markdown reference resolves to a sibling
+`-cropped.png` or `-imagegen.png` asset, and all 80 original JPG sources
+remain. The retained set contains 17 imagegen diagrams and 57 deterministic
+technical crops. `git diff --check` passes for the scoped lesson/report files;
+disposable contact sheets and crops are untracked under `.tmp` and are
+removed from the repository worktree before handoff.
