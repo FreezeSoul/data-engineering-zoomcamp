@@ -64,7 +64,7 @@ a partition, works through it, and marks the task as completed
 successfully. Then it gets another task. This way the executors process the
 partitions of the DataFrame one by one and save the results somewhere.
 
-![Whiteboard: each executor pulls partitions of the DataFrame](images/08-anatomy-of-a-spark-cluster-03-executors-pull-partitions.jpg)
+![Each executor pulls one partition from the DataFrame](images/08-anatomy-of-a-spark-cluster-03-executors-pull-partitions-imagegen.png)
 
 These days the DataFrames usually live in S3 or Google Cloud Storage.
 
