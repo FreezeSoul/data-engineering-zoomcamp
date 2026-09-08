@@ -178,7 +178,7 @@ rdd \
     .take(5)
 ```
 
-![The full chain executed: filter, map into key/value pairs, reduceByKey](images/11-operations-on-spark-rdds-03-reducebykey-chain.jpg)
+![The RDD chain applies filter, map, and reduceByKey](images/11-operations-on-spark-rdds-03-reducebykey-chain-cropped.png)
 
 The result follows the same format as before - composite key, composite
 value - except the value is now aggregated: the sum of all amounts, and the
