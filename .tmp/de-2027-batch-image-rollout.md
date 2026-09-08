@@ -69,6 +69,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 49 | `11-operations-on-spark-rdds-01-rdd-of-rows.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the exact Row-object output and RDD setup while removing notebook chrome and webcam; lower output is naturally sparse in the source. |
 | 50 | `11-operations-on-spark-rdds-03-reducebykey-chain.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact filter/map/reduceByKey chain and aggregated output while removing notebook chrome and webcam. |
 | 51 | `11-operations-on-spark-rdds-04-todf-lost-names.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the generic `_1`–`_4` columns and the surrounding toDF chain while removing notebook chrome and webcam. |
+| 52 | `11-operations-on-spark-rdds-05-namedtuple-schema.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact RevenueRow/namedtuple and explicit StructType schema while removing notebook chrome and webcam. |
 
 ## Validation
 

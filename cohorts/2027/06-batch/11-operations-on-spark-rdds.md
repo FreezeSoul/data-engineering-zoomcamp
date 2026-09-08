@@ -232,7 +232,7 @@ result_schema = types.StructType([
     types.StructField('count', types.IntegerType(), True)
 ])
 
-![The RevenueRow named tuple and the explicit result schema](images/11-operations-on-spark-rdds-05-namedtuple-schema.jpg)
+![The named tuple and explicit schema restore meaningful result columns](images/11-operations-on-spark-rdds-05-namedtuple-schema-cropped.png)
 
 df_result = rdd \
     .filter(filter_outliers) \
