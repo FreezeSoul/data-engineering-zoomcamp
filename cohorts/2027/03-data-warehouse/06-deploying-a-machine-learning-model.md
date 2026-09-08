@@ -23,7 +23,7 @@ bq --project_id taxi-rides-ny extract -m nytaxi.tip_model gs://taxi_ml_model/tip
 Once the export finishes, the `tip_model` folder shows up in the
 `taxi_ml_model` bucket:
 
-![The exported tip_model folder in the taxi_ml_model bucket](images/06-deploying-a-machine-learning-model-01-exported-to-gcs.jpg)
+![The exported tip_model folder in the taxi_ml_model bucket](images/06-deploying-a-machine-learning-model-01-exported-to-gcs-cropped.png)
 
 ## Copying the model locally
 
