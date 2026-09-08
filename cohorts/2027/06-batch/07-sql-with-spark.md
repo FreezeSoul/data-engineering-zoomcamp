@@ -47,7 +47,7 @@ sets:
 set(df_green.columns) & set(df_yellow.columns)
 ```
 
-![alt text](images/07-sql-with-spark-02-common-columns.jpg)
+![The notebook lists the columns shared by the green and yellow DataFrames](images/07-sql-with-spark-02-common-columns-cropped.png)
 
 One problem: the pickup and dropoff time columns are named differently -
 `lpep_pickup_datetime` in green and `tpep_pickup_datetime` in yellow. We
