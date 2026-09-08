@@ -74,7 +74,7 @@ def apply_model_in_batch(partition):
 
 Applying it and collecting the result gives a list of four ones:
 
-![mapPartitions applied with a function that returns [1]: the result is [1, 1, 1, 1]](images/12-spark-rdd-mappartition-03-one-result-per-partition.jpg)
+![mapPartitions applied with a function that returns [1]: the result is [1, 1, 1, 1]](images/12-spark-rdd-mappartition-03-one-result-per-partition-cropped.png)
 
 The function ran once per partition, and the RDD has four partitions.
 Spark then flattened the four one-element lists into one list. Note that
