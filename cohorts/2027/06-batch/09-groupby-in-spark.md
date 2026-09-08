@@ -53,7 +53,7 @@ With the `ORDER BY` there are three stages. Without it - two:
 - the first stage is the preparation for the group by
 - the second stage is the actual group by
 
-![Three stages in the Spark UI: scan and group by per partition, then the exchanges and the final reduce](images/09-groupby-in-spark-02-three-stages.jpg)
+![Spark UI shows the scan, exchange, and final reduce stages](images/09-groupby-in-spark-02-three-stages-cropped.png)
 
 Let's unpack what these two stages mean.
 
