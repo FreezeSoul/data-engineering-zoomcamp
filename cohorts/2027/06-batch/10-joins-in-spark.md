@@ -21,8 +21,6 @@ df_join = df_green_revenue_temp \
     .join(df_yellow_revenue_temp, on=['hour', 'zone'], how='outer')
 ```
 
-![The notebook performs an outer join of the green and yellow revenue tables](images/10-joins-in-spark-01-outer-join-crisp.png)
-
 The join type is `outer`: when a record exists in green but not in yellow,
 we still want it in the result - with nulls in the yellow columns - and the
 other way around.
@@ -138,7 +136,21 @@ the first videos by loading the zones CSV and writing it as parquet:
 df_zones = spark.read.parquet('zones/')
 ```
 
-![The notebook displays the zones lookup table with location and service-zone fields](images/10-joins-in-spark-03-zones-lookup-crisp.png)
+The first rows of the lookup table are:
+
+| LocationID | Borough | Zone | service_zone |
+| ---: | --- | --- | --- |
+| 1 | EWR | Newark Airport | EWR |
+| 2 | Queens | Jamaica Bay | Boro Zone |
+| 3 | Bronx | Allerton/Pelham Gardens | Boro Zone |
+| 4 | Manhattan | Alphabet City | Yellow Zone |
+| 5 | Staten Island | Arden Heights | Boro Zone |
+| 6 | Staten Island | Arrochar/Fort Wadsworth | Boro Zone |
+| 7 | Queens | Astoria | Boro Zone |
+| 8 | Queens | Astoria Park | Boro Zone |
+| 9 | Queens | Auburndale | Boro Zone |
+| 10 | Queens | Baisley Park | Boro Zone |
+| 11 | Brooklyn | Bath Beach | Boro Zone |
 
 It's a small lookup table: location ID, borough, zone name and service
 zone. Now the join - this time the column names are different in the two
