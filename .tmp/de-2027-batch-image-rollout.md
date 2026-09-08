@@ -37,6 +37,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 17 | `04-first-look-at-spark-01-spark-ui.jpg` | keep | deterministic crop `x=0,y=28,w=480,h=320`, 2x Lanczos/sharpen | 9/12 | Preserves the Spark 3.0.3 Jobs UI and job-state evidence while removing browser tabs/chrome and webcam. |
 | 18 | `04-first-look-at-spark-02-schema-problem-pandas.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact `StringType` schema and pandas sample setup while removing browser chrome and webcam. |
 | 19 | `04-first-look-at-spark-03-schema-structtype.jpg` | keep | deterministic crop `x=45,y=28,w=455,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact StructField declarations while removing editor chrome, webcam, and unrelated panels. |
+| 20 | `04-first-look-at-spark-04-partitions-slides.jpg` | keep | imagegen from crop `x=132,y=50,w=350,h=270` | 10/12 | Clean diagram preserves cloud-storage partitions and Spark-cluster executor relationship; removed Slides chrome, selection handles, and presenter. |
 
 ## Validation
 
