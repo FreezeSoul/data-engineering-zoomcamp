@@ -41,12 +41,9 @@ borrowed it:
 FMONTH=`printf "%02d" ${MONTH}`
 ```
 
-![The shell formats the month number with printf before building URLs](images/06-preparing-taxi-data-03-printf-crisp.png)
-
 With that we can assemble the URL for each month and check it with `echo`
-before actually downloading anything:
-
-![The generated download script lists the monthly TLC URLs](images/06-preparing-taxi-data-02-url-list-crisp.png)
+before actually downloading anything. The complete script is in the
+materials section below.
 
 For each file we also build the local path: `data/raw/<taxi type>/<year>/<month>`,
 so every month gets its own folder. We create the folder with `mkdir -p`
