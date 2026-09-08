@@ -23,7 +23,7 @@ integers. Instead of looking at `df.schema`, there is a nicer way:
 df.printSchema()
 ```
 
-![printSchema shows the types parquet carries for each column](images/05-spark-dataframes-01-print-schema.jpg)
+![printSchema shows the types carried by parquet for each column](images/05-spark-dataframes-01-print-schema-cropped.png)
 
 This is also one of the reasons parquet files are smaller: they know
 the schema and use more efficient ways of compressing the data. For

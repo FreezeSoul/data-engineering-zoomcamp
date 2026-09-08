@@ -39,6 +39,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 19 | `04-first-look-at-spark-03-schema-structtype.jpg` | keep | deterministic crop `x=45,y=28,w=455,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact StructField declarations while removing editor chrome, webcam, and unrelated panels. |
 | 20 | `04-first-look-at-spark-04-partitions-slides.jpg` | keep | imagegen from crop `x=132,y=50,w=350,h=270` | 10/12 | Clean diagram preserves cloud-storage partitions and Spark-cluster executor relationship; removed Slides chrome, selection handles, and presenter. |
 | 21 | `04-first-look-at-spark-05-repartition-write-parquet.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact schema, `repartition(24)`, and parquet write code while removing browser chrome and webcam. |
+| 22 | `05-spark-dataframes-01-print-schema.jpg` | keep | deterministic crop `x=22,y=30,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact `printSchema()` output and typed columns while removing notebook chrome and webcam. |
 
 ## Validation
 
