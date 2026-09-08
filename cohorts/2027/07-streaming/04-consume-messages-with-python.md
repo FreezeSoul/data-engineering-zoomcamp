@@ -4,6 +4,10 @@ Now let's read back the messages. The consumer receives raw bytes from
 Kafka. Instead of deserializing to a dict and then constructing a `Ride`
 manually, let's write a function that does both in one step:
 
+![A Python consumer reads ordered topic records, deserializes them into Ride objects, and processes them while its consumer-group cursor advances](images/04-python-kafka-consumer-imagegen.png)
+
+*Consumer groups track progress through the topic: earliest replays available records, while latest starts at new records.*
+
 ```python
 import json
 

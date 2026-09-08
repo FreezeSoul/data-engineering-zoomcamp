@@ -18,6 +18,10 @@ What we'll build by the end:
 Producer (Python) -> Kafka (Redpanda) -> Flink -> PostgreSQL
 ```
 
+![Streaming workshop architecture: a producer sends events through Kafka-compatible Redpanda to Flink and PostgreSQL](images/01-pyflink-streaming-workshop-imagegen.png)
+
+*The workshop grows a live event path from production through broker and stream processing to durable relational storage.*
+
 Prerequisites:
 
 - Docker and Docker Compose

@@ -14,6 +14,10 @@ We'll send NYC yellow taxi trip data to Kafka. You can run the code below
 either as a Python script or in a Jupyter notebook (`uv add jupyter`,
 then `uv run jupyter lab`).
 
+![Taxi rows become typed Ride events, are serialized to JSON, and are appended by a Kafka producer to the rides topic partitions](images/03-kafka-producer-flow-imagegen.png)
+
+*The producer path makes the schema boundary explicit: tabular input becomes an event, then bytes, then a topic record.*
+
 First, download the data. We read a parquet file of yellow taxi trips and
 take the first 1000 rows:
 
