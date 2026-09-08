@@ -43,7 +43,7 @@ with some metadata to a data stream. Something - a stream processor -
 reads events from this stream, processes them, and puts the results to
 another stream. All of this happens on the fly, in real time.
 
-![alt text](images/01-introduction-to-batch-processing-02-streaming-example.jpg)
+![A ride-start event flowing through a stream processor into an output stream](images/01-introduction-to-batch-processing-02-streaming-example-imagegen.png)
 
 ## When do batch jobs run
 

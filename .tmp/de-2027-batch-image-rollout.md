@@ -19,6 +19,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | # | Lesson/source | Decision | Method | Score | Teaching point / limitation |
 |---:|---|---|---|---:|---|
 | 1 | `01-introduction-to-batch-processing-01-batch-vs-streaming.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Cleaned diagram preserves the batch calendar → job → output and continuous streaming flow; removed presenter, webcam tile, toolbar, and borders. |
+| 2 | `01-introduction-to-batch-processing-02-streaming-example.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Clean event-stream diagram preserves `RIDE.STARTS` → processor → output flow; removed presenter, webcam tile, toolbar, and borders. |
 
 ## Validation
 
