@@ -49,7 +49,7 @@ sorted first by a, then by b, then by c.
 Clustering improves filter and aggregate queries, especially when you
 filter or aggregate on the columns you clustered by.
 
-![How clustering works in BigQuery](images/02-partitioning-vs-clustering-02-clustering-basics.jpg)
+![How clustering works in BigQuery](images/02-partitioning-vs-clustering-02-clustering-basics-cropped.png)
 
 Partitioning and clustering are not free, though. If your table is
 small - less than 1 GB - neither shows a significant improvement in

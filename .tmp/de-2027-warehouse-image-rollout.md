@@ -70,6 +70,23 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 02-partitioning-vs-clustering-02-clustering-basics.jpg
+
+- Source: `02-partitioning-vs-clustering.md`, clustering basics section.
+- Rubric: 10/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 1, durability 2, caption/accessibility 2).
+- Decision: `crop/replace`; the slide summarizes column ordering, filter and
+  aggregate-query benefits, the 1 GB caveat, and the four-column limit.
+- Preparation: deterministic crop `(x=20, y=20, width=600, height=285)`;
+  resized 2x with a light unsharp mask. Exact wording was retained.
+- Method: deterministic PNG sibling
+  `02-partitioning-vs-clustering-02-clustering-basics-cropped.png`.
+- Invariants checked: all clustering bullets, nested query types, `< 1 GB`
+  qualification, and the four-column limit remain unchanged; no face, camera
+  tile, cursor, or overlay was present.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.
