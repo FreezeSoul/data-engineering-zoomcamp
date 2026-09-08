@@ -124,7 +124,7 @@ we saw in the web UI, and it finishes. Run it once more for a different
 year to see the parameterization at work - the 2020 report lands next to
 the 2021 one in the bucket.
 
-![Both reports in the bucket, computed by the Dataproc cluster](images/15-setting-up-a-dataproc-cluster-05-reports-in-bucket.jpg)
+![Both reports in the bucket, computed by the Dataproc cluster](images/15-setting-up-a-dataproc-cluster-05-reports-in-bucket-cropped.png)
 
 When we wire this into Airflow later, the simplest possible approach is a
 BashOperator that runs exactly this `gcloud` command; there are also
