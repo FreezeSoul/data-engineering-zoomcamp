@@ -37,7 +37,7 @@ gsutil cp -r gs://taxi_ml_model/tip_model /tmp/model
 The copy output shows what an exported BigQuery model is made of - it is a
 TensorFlow model: `assets`, `variables`, and a few metadata files:
 
-![gsutil copying the tip_model files into /tmp/model](images/06-deploying-a-machine-learning-model-02-copy-model-local.jpg)
+![gsutil copying the tip_model files into /tmp/model](images/06-deploying-a-machine-learning-model-02-copy-model-local-cropped.png)
 
 ## Serving the model with Docker
 

@@ -406,6 +406,24 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 06-deploying-a-machine-learning-model-02-copy-model-local.jpg
+
+- Source: `06-deploying-a-machine-learning-model.md`, local model-copy step.
+- Rubric: 10/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 1, caption/accessibility 2).
+- Decision: `crop/replace`; the terminal output demonstrates the `gsutil`
+  copy and lists the downloaded model artifacts.
+- Preparation: deterministic crop `(x=0, y=0, width=628, height=350)`;
+  resized 2x with a light unsharp mask. Exact commands, paths, and output
+  were retained; no imagegen was used for terminal text.
+- Method: deterministic PNG sibling
+  `06-deploying-a-machine-learning-model-02-copy-model-local-cropped.png`.
+- Invariants checked: `/tmp/model`, `tip_model`, copied files, byte count,
+  and successful-operation output remain unchanged; terminal content is the
+  teaching target, with no face, camera tile, cursor, or unrelated chrome.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.
