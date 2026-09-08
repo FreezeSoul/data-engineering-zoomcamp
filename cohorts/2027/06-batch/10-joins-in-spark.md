@@ -21,7 +21,7 @@ df_join = df_green_revenue_temp \
     .join(df_yellow_revenue_temp, on=['hour', 'zone'], how='outer')
 ```
 
-![The outer join of the green and yellow revenue tables](images/10-joins-in-spark-01-outer-join.jpg)
+![The notebook performs an outer join of the green and yellow revenue tables](images/10-joins-in-spark-01-outer-join-cropped.png)
 
 The join type is `outer`: when a record exists in green but not in yellow,
 we still want it in the result - with nulls in the yellow columns - and the
