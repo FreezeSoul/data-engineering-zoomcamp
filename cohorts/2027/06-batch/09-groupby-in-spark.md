@@ -35,8 +35,6 @@ this with `spark.sql`. The result has a row for each hour and zone: how
 much money taxi drivers got in total, and how many trips started in this
 location during this hour.
 
-![The notebook builds the revenue query grouped by hour and zone](images/09-groupby-in-spark-01-revenue-query-crisp.png)
-
 Two small fixes along the way. First, in this notebook we did not rename
 the columns, so the green pickup time is still `lpep_pickup_datetime` - not
 `pickup_datetime` as in the previous unit. Second, looking at the output we
