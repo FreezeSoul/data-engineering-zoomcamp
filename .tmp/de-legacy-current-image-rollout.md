@@ -55,7 +55,7 @@ URL, numeric, logo, and plot-like assets remain deterministic or unchanged.
 - Disposition: `keep`, score 8/12. The screenshot directly supports the
   instruction to search for IAM before creating an access key, and its exact
   AWS labels are readable. The original relative reference was broken and was
-  corrected to `../../../images/aws/iam.png`.
+  corrected to `../../../../images/aws/iam.png`.
 - Method: retained exact source; no imagegen because this is a live UI whose
   labels are the source of truth. The source contains no face or camera tile.
 
