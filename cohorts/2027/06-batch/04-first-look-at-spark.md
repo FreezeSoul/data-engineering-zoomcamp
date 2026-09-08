@@ -35,7 +35,7 @@ If we run `df.show()`, Spark correctly gets the names of the columns.
 And if we open localhost:4040 and refresh, we see new things there:
 every time we execute something, it is reflected in the UI as a job.
 
-![The Spark UI on port 4040 showing the jobs of our notebook](images/04-first-look-at-spark-01-spark-ui.jpg)
+![Spark UI on port 4040 showing the notebook's Spark jobs](images/04-first-look-at-spark-01-spark-ui-cropped.png)
 
 ## The schema problem
 
