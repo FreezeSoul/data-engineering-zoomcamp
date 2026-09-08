@@ -46,6 +46,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 26 | `06-preparing-taxi-data-01-tlc-website.jpg` | remove | — | 4/12 | The page capture is navigational, the open browser context menu obscures the links, and the surrounding prose already gives the source; original preserved. |
 | 27 | `06-preparing-taxi-data-02-url-list.jpg` | keep | deterministic crop `x=20,y=32,w=465,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the exact generated TLC URLs and loop output while removing editor/browser chrome and webcam. |
 | 28 | `06-preparing-taxi-data-03-printf.jpg` | keep | deterministic crop `x=20,y=32,w=465,h=300`, 2x Lanczos/sharpen | 9/12 | Preserves the exact `printf` format command and its zero-padded output while removing editor/browser chrome and webcam. |
+| 29 | `06-preparing-taxi-data-04-zcat.jpg` | keep | deterministic crop `x=20,y=32,w=465,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact `zcat ... | head -n 10` command and CSV output evidence while removing editor/browser chrome and webcam. |
 
 ## Validation
 

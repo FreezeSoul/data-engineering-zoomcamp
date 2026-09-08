@@ -82,7 +82,7 @@ with `zcat` - the same as `cat`, but for gzipped files:
 zcat data/raw/yellow/2021/01/yellow_tripdata_2021_01.csv.gz | head -n 10
 ```
 
-![alt text](images/06-preparing-taxi-data-04-zcat.jpg)
+![zcat prints the first rows of the compressed yellow taxi CSV](images/06-preparing-taxi-data-04-zcat-cropped.png)
 
 And `tree` shows us the folder structure we ended up with: for each taxi
 type and year, one folder per month with a compressed CSV inside:
