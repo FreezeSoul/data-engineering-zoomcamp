@@ -8,6 +8,9 @@ video_url: https://www.youtube.com/watch?v=KfhUA9Kfp8Y
 
 One of the things that makes dbt's community so strong is packages. A dbt package is basically a self-contained dbt project — it has its own macros, tests, models, sources — but instead of using it yourself, you distribute it so other people can drop it into their own projects. Think Python libraries, but for dbt. This video covers the most useful packages out there and how to actually install and use them.
 
+![A package registry feeds dbt deps, a lock file, and an installed package whose macros and tests are reused by a project](images/10-dbt-packages-install-imagegen.png)
+*Review the source, pin what was installed, and then reuse the package components in your project.*
+
 ---
 
 ## Packages worth knowing about

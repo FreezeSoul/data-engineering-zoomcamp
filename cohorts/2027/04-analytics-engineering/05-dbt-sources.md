@@ -8,6 +8,9 @@ video_url: https://www.youtube.com/watch?v=7CrrXazV_8k
 
 This video is about telling dbt where your raw data actually lives. Sources are how dbt knows which tables to pull from before any transformation happens. Everything in this video takes place inside the `models/staging/` folder that we set up in 4.3.1.
 
+![dbt source metadata points from raw DuckDB or BigQuery tables into a staging model that renames and casts fields](images/05-dbt-sources-staging-imagegen.png)
+*Sources declare where raw data lives; staging models make its shape consistent for downstream work.*
+
 ---
 
 ## Defining Sources

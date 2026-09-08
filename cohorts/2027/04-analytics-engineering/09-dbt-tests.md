@@ -7,6 +7,9 @@ video_url: https://www.youtube.com/watch?v=bvZ-rJm7uMU
 
 Wrong KPIs in dashboards, bad numbers in reports — there are really only two causes: the underlying data wasn't what you expected, or you messed up the SQL. As an analytics engineer, if you can't tell which one it is, both are technically your fault. Tests are how you stay on top of this proactively. dbt ships with a pretty large suite of testing options, and this video walks through all of them.
 
+![Singular, freshness, generic, unit, and contract checks gate a dbt model build into pass or fail](images/09-dbt-test-gates-imagegen.png)
+*Different test types catch different failure modes before bad data reaches downstream users.*
+
 ---
 
 ## 1. Singular tests

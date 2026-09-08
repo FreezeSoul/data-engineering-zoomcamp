@@ -8,6 +8,9 @@ video_url: https://www.youtube.com/watch?v=lT4fmTDEqVk
 
 The union model is done, but right now vendor IDs and location IDs are just numbers — meaningless codes. This video is about enriching that data. Two dbt features come in: **seeds** for bringing in lookup data, and **macros** for turning reusable SQL logic into something you don't have to copy-paste everywhere.
 
+![Seed lookup data turns codes into readable labels while one macro supplies consistent logic to multiple models](images/07-dbt-seeds-macros-imagegen.png)
+*Seeds provide small reference data; macros keep repeated transformation logic consistent.*
+
 ---
 
 ## The problem — codes everywhere
