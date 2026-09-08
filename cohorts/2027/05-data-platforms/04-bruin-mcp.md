@@ -15,6 +15,10 @@ With the Bruin MCP and an AI agent, you can:
 - Run queries and analyze data using natural language
 - Ask questions about your pipeline logic and structure
 
+![Bruin MCP connects an AI agent to project documentation, pipeline queries, troubleshooting, review, validation, and runs](images/04-bruin-mcp-agent-loop-imagegen.png)
+
+*The MCP server gives an agent structured ways to inspect and operate a Bruin project instead of guessing from chat context alone.*
+
 ## Installing Bruin MCP
 
 Make sure you have [Bruin CLI installed](https://getbruin.com/docs/bruin/getting-started/introduction/installation) first.

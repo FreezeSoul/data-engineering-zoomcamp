@@ -13,6 +13,10 @@ Three-layered pipeline using DuckDB as a locally hosted database:
 
 All assets have dependencies that create the data lineage Bruin uses for orchestration.
 
+![NYC taxi data flows through ingestion, staging, and reports in a three-layer Bruin pipeline with dependencies](images/03-bruin-nyc-taxi-pipeline-imagegen.png)
+
+*The three layers separate raw extraction, cleaning and joins, and business-facing aggregations while preserving lineage.*
+
 ## Project setup
 
 Initialize from the zoomcamp template:
