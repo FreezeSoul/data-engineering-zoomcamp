@@ -155,7 +155,14 @@ have 20 files each. With `ls -lhR` we see the yellow report is about 15 MB
 and the green one about 6 MB - a small dataset, but 20 files is still
 better than 200 tiny ones.
 
-![Spark stage details show the repartition stage and shuffle-read evidence](images/09-groupby-in-spark-04-shuffle-read-write-crisp.png)
+The completed-stages table in the Spark UI shows the work behind that
+report:
+
+| Stage ID | Description | Submitted | Duration | Tasks | Input | Output | Shuffle read |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 35 | `parquet at NativeMethodAccessorImpl.java:0` | 2022/02/18 22:09:58 | 2 s | 20/20 |  | 14.4 MiB | 28.7 MiB |
+| 34 | `parquet at NativeMethodAccessorImpl.java:0` | 2022/02/18 22:09:57 | 2 s | 200/200 |  |  |  |
+| 33 | `parquet at NativeMethodAccessorImpl.java:0` | 2022/02/18 22:09:42 | 15 s | 11/11 | 425.1 MiB |  |  |
 
 ## Summary
 
