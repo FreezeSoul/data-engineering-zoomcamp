@@ -85,7 +85,7 @@ Our Spark version is older, where a worker was called a slave - on newer
 versions the script is `start-worker.sh`. After starting it, the worker
 appears in the master UI:
 
-![The worker is registered with the master and picks up the task](images/14-creating-a-local-spark-cluster-02-worker-registered.jpg)
+![The worker is registered with the master and picks up the task](images/14-creating-a-local-spark-cluster-02-worker-registered-cropped.png)
 
 Now the pending job gets resources and executes. The notebook application
 is connected to a real cluster with one worker.
