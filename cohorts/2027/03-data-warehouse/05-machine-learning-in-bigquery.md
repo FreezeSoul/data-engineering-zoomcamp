@@ -182,7 +182,7 @@ fine - the aim here is the workflow, not the most optimal model.
 SELECT * FROM ML.FEATURE_INFO(MODEL `taxi-rides-ny.nytaxi.tip_model`);
 ```
 
-![ML.FEATURE_INFO output for tip_model](images/05-machine-learning-in-bigquery-04-feature-info.jpg)
+![ML.FEATURE_INFO output for tip_model](images/05-machine-learning-in-bigquery-04-feature-info-cropped.png)
 
 The numeric columns - passenger count, trip distance, fare amount, tolls
 amount - come with min, max and mean values, which are used for

@@ -300,6 +300,23 @@ Postman chrome is removed only where it is outside the instructional UI.
 - Validation: output visually inspected; Markdown reference resolves and
   `git diff --check` passes.
 
+### 05-machine-learning-in-bigquery-04-feature-info.jpg
+
+- Source: `05-machine-learning-in-bigquery.md`, feature-information section.
+- Rubric: 10/12 (instructional contribution 2, relevance 2, readability 1,
+  complementarity 2, durability 1, caption/accessibility 2).
+- Decision: `crop/replace`; the ML.FEATURE_INFO result shows the model's
+  inferred feature types/statistics and is evidence not conveyed by prose.
+- Preparation: deterministic crop `(x=28, y=35, width=612, height=325)`;
+  resized 2x with a light unsharp mask. Exact query output was retained.
+- Method: deterministic PNG sibling
+  `05-machine-learning-in-bigquery-04-feature-info-cropped.png`.
+- Invariants checked: `ML.FEATURE_INFO`, model context, feature names, data
+  types, and visible statistics remain unchanged; browser tab chrome, faces,
+  camera tiles, and cursors are absent.
+- Validation: output visually inspected; Markdown reference resolves and
+  `git diff --check` passes.
+
 ### 01-data-warehouse-and-bigquery-08-cluster-pruning.jpg
 
 - Source: `01-data-warehouse-and-bigquery.md`, clustering query result.
