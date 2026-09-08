@@ -35,7 +35,7 @@ partitions.
 Monthly or yearly is for the opposite case: a small amount of data
 spread across a wide range of dates.
 
-![Partitioning options in BigQuery](images/02-partitioning-vs-clustering-01-partitioning-options-cropped.png)
+![Partitioning options in BigQuery](images/02-partitioning-vs-clustering-01-partitioning-options-crisp.png)
 
 ## How clustering works
 
@@ -49,7 +49,7 @@ sorted first by a, then by b, then by c.
 Clustering improves filter and aggregate queries, especially when you
 filter or aggregate on the columns you clustered by.
 
-![How clustering works in BigQuery](images/02-partitioning-vs-clustering-02-clustering-basics-cropped.png)
+![How clustering works in BigQuery](images/02-partitioning-vs-clustering-02-clustering-basics-crisp.png)
 
 Partitioning and clustering are not free, though. If your table is
 small - less than 1 GB - neither shows a significant improvement in
@@ -89,7 +89,7 @@ Cardinality. Use clustering when the number of distinct values in a
 column or group of columns is large. That cardinality is a hindrance
 for partitioning, because of the 4000-partition limit.
 
-![Partitioning vs clustering](images/02-partitioning-vs-clustering-03-partitioning-vs-clustering-cropped.png)
+![Partitioning vs clustering](images/02-partitioning-vs-clustering-03-partitioning-vs-clustering-crisp.png)
 
 ## When clustering beats partitioning
 
@@ -103,7 +103,7 @@ should choose clustering over partitioning:
 - Your mutation operations would modify the majority of the partitions
   frequently - for example, writing to the table every few minutes.
 
-![When to choose clustering over partitioning](images/02-partitioning-vs-clustering-04-clustering-over-partitioning-cropped.png)
+![When to choose clustering over partitioning](images/02-partitioning-vs-clustering-04-clustering-over-partitioning-crisp.png)
 
 ## Automatic reclustering
 
@@ -121,7 +121,7 @@ partition.
 Reclustering does not impact query performance, and it does not cost
 you anything - BigQuery takes care of it.
 
-![Automatic reclustering](images/02-partitioning-vs-clustering-05-automatic-reclustering-cropped.png)
+![Automatic reclustering](images/02-partitioning-vs-clustering-05-automatic-reclustering-crisp.png)
 
 ## Summary
 

@@ -12,7 +12,7 @@ improving query performance.
 Most of our effort goes into cost reduction or query performance, and the
 two are related: the cheaper query is usually the one that reads less data.
 
-![The cost reduction slide: avoid SELECT *, price your queries before running them, use clustered or partitioned tables, use streaming inserts with caution, materialize query results in stages](images/03-bigquery-best-practices-01-cost-reduction-cropped.png)
+![The cost reduction slide: avoid SELECT *, price your queries before running them, use clustered or partitioned tables, use streaming inserts with caution, materialize query results in stages](images/03-bigquery-best-practices-01-cost-reduction-crisp.png)
 
 The slide lists five habits:
 
@@ -41,7 +41,7 @@ query, it can serve the cached result instead of recomputing it.
 
 The second group of best practices is about making queries fast.
 
-![The query performance slide: filter on partitioned columns, denormalizing data, nested or repeated columns, external data sources, reduce data before a JOIN, WITH clauses, oversharding](images/03-bigquery-best-practices-02-query-performance-cropped.png)
+![The query performance slide: filter on partitioned columns, denormalizing data, nested or repeated columns, external data sources, reduce data before a JOIN, WITH clauses, oversharding](images/03-bigquery-best-practices-02-query-performance-crisp.png)
 
 - Always filter on the partitioned column, or on the clustered column.
   Otherwise the partitioning and clustering you set up do you no good.
@@ -67,7 +67,7 @@ The second group of best practices is about making queries fast.
 
 A few more things that speed up queries:
 
-![The second query performance slide: avoid JavaScript user-defined functions, approximate aggregation functions with HyperLogLog++, order last, optimize join patterns](images/03-bigquery-best-practices-03-join-patterns-cropped.png)
+![The second query performance slide: avoid JavaScript user-defined functions, approximate aggregation functions with HyperLogLog++, order last, optimize join patterns](images/03-bigquery-best-practices-03-join-patterns-crisp.png)
 
 - Avoid JavaScript user-defined functions (UDFs, functions you write
   yourself in SQL).

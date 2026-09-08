@@ -63,7 +63,7 @@ the trained model using a Docker image - that is the next unit.
 Which algorithm fits which use case? The BigQuery documentation answers this
 with a decision diagram:
 
-![BigQuery ML diagram mapping use cases to algorithms](images/05-machine-learning-in-bigquery-01-model-choice-cropped.png)
+![BigQuery ML diagram mapping use cases to algorithms](images/05-machine-learning-in-bigquery-01-model-choice-crisp.png)
 
 Predicting a number - sales figures, stock prices - calls for linear
 regression, boosted trees, AutoML, a DNN regressor or wide-and-deep
@@ -140,7 +140,7 @@ FROM `taxi-rides-ny.nytaxi.yellow_tripdata_partitioned` WHERE fare_amount != 0
 Running this processed about 6.5 GB of data and produced a table with the
 correct types for our machine learning model:
 
-![Query result after creating the yellow_tripdata_ml table](images/05-machine-learning-in-bigquery-02-feature-table-cropped.png)
+![Query result after creating the yellow_tripdata_ml table](images/05-machine-learning-in-bigquery-02-feature-table-crisp.png)
 
 ## Creating the model
 
@@ -169,7 +169,7 @@ temporary training dataset with a temporary evaluation dataset. The
 evaluation tab shows the error metrics of the training run - the mean
 squared error is around 8 and the mean absolute error is around 1:
 
-![Evaluation tab of the tip_model page](images/05-machine-learning-in-bigquery-03-model-evaluation-tab-cropped.png)
+![Evaluation tab of the tip_model page](images/05-machine-learning-in-bigquery-03-model-evaluation-tab-crisp.png)
 
 That is not very optimal, but for a simple model and dataset it is perfectly
 fine - the aim here is the workflow, not the most optimal model.
@@ -182,7 +182,7 @@ fine - the aim here is the workflow, not the most optimal model.
 SELECT * FROM ML.FEATURE_INFO(MODEL `taxi-rides-ny.nytaxi.tip_model`);
 ```
 
-![ML.FEATURE_INFO output for tip_model](images/05-machine-learning-in-bigquery-04-feature-info-cropped.png)
+![ML.FEATURE_INFO output for tip_model](images/05-machine-learning-in-bigquery-04-feature-info-crisp.png)
 
 The numeric columns - passenger count, trip distance, fare amount, tolls
 amount - come with min, max and mean values, which are used for
@@ -209,7 +209,7 @@ tip_amount IS NOT NULL
 ));
 ```
 
-![ML.EVALUATE output for tip_model](images/05-machine-learning-in-bigquery-05-ml-evaluate-cropped.png)
+![ML.EVALUATE output for tip_model](images/05-machine-learning-in-bigquery-05-ml-evaluate-crisp.png)
 
 Here we see the mean absolute error is 1 and the mean squared error is
 around 150. These evaluation metrics are what we would use for optimizing
@@ -235,7 +235,7 @@ tip_amount IS NOT NULL
 ));
 ```
 
-![ML.PREDICT output with the predicted_tip_amount column](images/05-machine-learning-in-bigquery-06-ml-predict-cropped.png)
+![ML.PREDICT output with the predicted_tip_amount column](images/05-machine-learning-in-bigquery-06-ml-predict-crisp.png)
 
 Every row now carries a `predicted_tip_amount` column next to the actual
 `tip_amount`. With both side by side, we can also do a manual evaluation of
@@ -263,7 +263,7 @@ tip_amount IS NOT NULL
 ), STRUCT(3 as top_k_features));
 ```
 
-![ML.EXPLAIN_PREDICT output with per-feature attributions](images/05-machine-learning-in-bigquery-07-explain-predict-cropped.png)
+![ML.EXPLAIN_PREDICT output with per-feature attributions](images/05-machine-learning-in-bigquery-07-explain-predict-crisp.png)
 
 Looking at the top three features, all our categorical features are there -
 pickup location, dropoff location and payment type are what the model relies
@@ -295,7 +295,7 @@ WHERE
 tip_amount IS NOT NULL;
 ```
 
-![CREATE MODEL with hyperparameter tuning options](images/05-machine-learning-in-bigquery-08-hyperparameter-tuning-cropped.png)
+![CREATE MODEL with hyperparameter tuning options](images/05-machine-learning-in-bigquery-08-hyperparameter-tuning-crisp.png)
 
 This is a rich set. The same `CREATE MODEL` documentation lists many more
 options - learning rate strategy, early stopping, minimum relative progress,

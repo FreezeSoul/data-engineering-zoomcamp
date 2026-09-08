@@ -23,7 +23,7 @@ bq --project_id taxi-rides-ny extract -m nytaxi.tip_model gs://taxi_ml_model/tip
 Once the export finishes, the `tip_model` folder shows up in the
 `taxi_ml_model` bucket:
 
-![The exported tip_model folder in the taxi_ml_model bucket](images/06-deploying-a-machine-learning-model-01-exported-to-gcs-cropped.png)
+![The exported tip_model folder in the taxi_ml_model bucket](images/06-deploying-a-machine-learning-model-01-exported-to-gcs-crisp.png)
 
 ## Copying the model locally
 
@@ -37,7 +37,7 @@ gsutil cp -r gs://taxi_ml_model/tip_model /tmp/model
 The copy output shows what an exported BigQuery model is made of - it is a
 TensorFlow model: `assets`, `variables`, and a few metadata files:
 
-![gsutil copying the tip_model files into /tmp/model](images/06-deploying-a-machine-learning-model-02-copy-model-local-cropped.png)
+![gsutil copying the tip_model files into /tmp/model](images/06-deploying-a-machine-learning-model-02-copy-model-local-crisp.png)
 
 ## Serving the model with Docker
 
@@ -62,7 +62,7 @@ model to serve through the `MODEL_NAME` environment variable.
 
 With `docker ps` we can check that the container is running:
 
-![docker ps showing the tensorflow/serving container up](images/06-deploying-a-machine-learning-model-03-docker-running-cropped.png)
+![docker ps showing the tensorflow/serving container up](images/06-deploying-a-machine-learning-model-03-docker-running-crisp.png)
 
 ## Checking the model
 
@@ -70,7 +70,7 @@ TensorFlow Serving exposes a REST API. The model metadata lives at
 `http://localhost:8501/v1/models/tip_model` - a GET there (in the video, with
 Postman) should tell us the model is fine:
 
-![Postman GET showing the tip_model version is AVAILABLE](images/06-deploying-a-machine-learning-model-04-model-status-cropped.png)
+![Postman GET showing the tip_model version is AVAILABLE](images/06-deploying-a-machine-learning-model-04-model-status-crisp.png)
 
 Indeed, the response says the tip model, version 1, is available - no error.
 
@@ -88,12 +88,12 @@ curl -d '{"instances": [{"passenger_count":1, "trip_distance":12.2, "PULocationI
 
 For this ride, the model predicts a tip of around 3.2 dollars:
 
-![Postman POST predicting a tip of about 3.2 dollars](images/06-deploying-a-machine-learning-model-05-predict-cropped.png)
+![Postman POST predicting a tip of about 3.2 dollars](images/06-deploying-a-machine-learning-model-05-predict-crisp.png)
 
 If we change the payment type to 2 and send the request again, the predicted
 tip amount goes drastically down - to about 0.26 dollars:
 
-![Postman POST with payment type 2 predicting about 0.26 dollars](images/06-deploying-a-machine-learning-model-06-predict-payment-type-2-cropped.png)
+![Postman POST with payment type 2 predicting about 0.26 dollars](images/06-deploying-a-machine-learning-model-06-predict-payment-type-2-crisp.png)
 
 And that is the whole loop: a model trained with SQL inside BigQuery,
 exported, and served as a REST service from a Docker container on our own

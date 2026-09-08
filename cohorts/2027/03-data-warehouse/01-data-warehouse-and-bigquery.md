@@ -37,7 +37,7 @@ The two types differ in almost every aspect:
   OLAP users are knowledge workers: data analysts, business analysts
   and executives.
 
-![OLTP vs OLAP comparison table from the slides](images/01-data-warehouse-and-bigquery-01-olap-vs-oltp-cropped.png)
+![OLTP vs OLAP comparison table from the slides](images/01-data-warehouse-and-bigquery-01-olap-vs-oltp-crisp.png)
 
 ## What is a data warehouse
 
@@ -102,7 +102,7 @@ queries running and all your 100 slots are full, the 51st query has to
 wait. That would not happen on demand: there BigQuery gives you more
 slots based on the requirements of a query.
 
-![BigQuery cost: on-demand vs flat rate pricing](images/01-data-warehouse-and-bigquery-03-bigquery-cost-cropped.png)
+![BigQuery cost: on-demand vs flat rate pricing](images/01-data-warehouse-and-bigquery-03-bigquery-cost-crisp.png)
 
 ## Public datasets
 
@@ -167,7 +167,7 @@ external table, BigQuery cannot determine its rows or size — the data
 is not inside BigQuery, it is in an external system, Google Cloud
 Storage.
 
-![External table details: 0 bytes, source URIs in Cloud Storage, CSV format](images/01-data-warehouse-and-bigquery-04-external-table-details-cropped.png)
+![External table details: 0 bytes, source URIs in Cloud Storage, CSV format](images/01-data-warehouse-and-bigquery-04-external-table-details-crisp.png)
 
 Querying it works like any other table:
 
@@ -195,7 +195,7 @@ once BigQuery understands it only needs the data for 2 March 2018, it
 will not read or process the data for 1 March or 3 March. Processing
 less data reduces cost.
 
-![Partitioning a Stack Overflow questions table by creation date](images/01-data-warehouse-and-bigquery-05-partitioning-diagram-cropped.png)
+![Partitioning a Stack Overflow questions table by creation date](images/01-data-warehouse-and-bigquery-05-partitioning-diagram-crisp.png)
 
 Back to the taxi data. Until now we only had the external table, which
 is not partitioned. First let's create a plain, non-partitioned table
@@ -239,7 +239,7 @@ partitioned one, and the estimate drops to about 106 MB. If you run
 this query over and over, you process 106 MB each time instead of
 1.6 GB, which directly reduces your cost.
 
-![The partitioned variant of the same query processes only 105.9 MB](images/01-data-warehouse-and-bigquery-06-partition-pruning-cropped.png)
+![The partitioned variant of the same query processes only 105.9 MB](images/01-data-warehouse-and-bigquery-06-partition-pruning-crisp.png)
 
 You can also inspect the partitions themselves. Every dataset has an
 `INFORMATION_SCHEMA` with a `PARTITIONS` view:
@@ -273,7 +273,7 @@ Because related rows sit next to each other, BigQuery can skip data
 inside a partition too. This improves cost as well as query
 performance.
 
-![Clustering by tag within date partitions](images/01-data-warehouse-and-bigquery-07-clustering-diagram-cropped.png)
+![Clustering by tag within date partitions](images/01-data-warehouse-and-bigquery-07-clustering-diagram-crisp.png)
 
 For the taxi data, we create a table that is both partitioned and
 clustered:
@@ -312,7 +312,7 @@ still says 1.1 GB — the approximation cannot know what clustering will
 skip. But the actual run processes less: 843.5 MB instead of 1.1 GB.
 That is the clustering effect.
 
-![The clustered table actually processes 843.5 MB, below the 1.1 GB estimate](images/01-data-warehouse-and-bigquery-08-cluster-pruning-cropped.png)
+![The clustered table actually processes 843.5 MB, below the 1.1 GB estimate](images/01-data-warehouse-and-bigquery-08-cluster-pruning-crisp.png)
 
 When to prefer partitioning, when clustering, and when both — that is
 the topic of [the next unit](02-partitioning-vs-clustering.md).
