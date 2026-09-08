@@ -23,7 +23,7 @@ It is also distributed. We can have a cluster with tens, hundreds or
 thousands of machines, and all of them pull the data, process it, and
 save the results somewhere.
 
-![Whiteboard: Spark as a data processing engine pulling data from a lake into a cluster and writing it back](images/02-introduction-to-spark-02-data-processing-engine-whiteboard.jpg)
+![Spark as a data-processing engine moving data through a distributed cluster](images/02-introduction-to-spark-02-data-processing-engine-whiteboard-imagegen.png)
 
 ## Languages
 

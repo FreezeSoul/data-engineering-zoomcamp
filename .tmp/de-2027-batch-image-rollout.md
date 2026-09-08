@@ -26,6 +26,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 6 | `01-introduction-to-batch-processing-06-advantages.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Clean comparison preserves the three advantages and the delay disadvantage; removed recording artifacts. |
 | 7 | `01-introduction-to-batch-processing-07-batch-vs-streaming-share.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Clean diagram preserves the approximate 80% batch / 20% streaming split and processing relationship; removed recording artifacts. |
 | 8 | `02-introduction-to-spark-01-spark-google-search.jpg` | remove | — | 4/12 | Navigational Google results add no understanding beyond the surrounding definition of Spark, are transient, and are not complementary evidence. Original preserved. |
+| 9 | `02-introduction-to-spark-02-data-processing-engine-whiteboard.jpg` | keep | imagegen from crop `x=37,y=0,w=465,h=340` | 10/12 | Clean cluster diagram preserves input data → Spark cluster → output data and the language note; removed presenter and recording UI. |
 
 ## Validation
 
