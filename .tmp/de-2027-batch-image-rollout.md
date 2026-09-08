@@ -33,6 +33,7 @@ were removed. Temporary crops/contact sheets remain disposable under
 | 13 | `03-installing-spark-02-java-home.jpg` | keep | deterministic crop `x=20,y=32,w=480,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact extraction output, path, and `JAVA_HOME` command while removing browser chrome and webcam. |
 | 14 | `03-installing-spark-03-spark-download-page.jpg` | keep | deterministic crop `x=0,y=28,w=490,h=305`, 2x Lanczos/sharpen | 9/12 | Preserves the exact Spark version and Hadoop build selectors, removes browser chrome/webcam, and focuses the relevant left content. |
 | 15 | `03-installing-spark-04-spark-home.jpg` | keep | deterministic crop `x=20,y=32,w=480,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact unpack/remove/export commands and paths while removing browser chrome and webcam. |
+| 16 | `03-installing-spark-05-spark-shell.jpg` | keep | deterministic crop `x=20,y=32,w=480,h=300`, 2x Lanczos/sharpen | 10/12 | Preserves the exact Spark 3.0.3 shell output and result `[1, 2, 3, 4, 5, 6, 7, 8, 9]` while removing browser chrome and webcam. |
 
 ## Validation
 

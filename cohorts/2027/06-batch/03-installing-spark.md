@@ -104,7 +104,7 @@ keep only the ones below 10, and `collect` brings the results back. The
 output is the numbers 1 to 9 - a simple Spark job to confirm things
 work.
 
-![The Spark shell running the test job: Spark 3.0.3 with Java 11](images/03-installing-spark-05-spark-shell.jpg)
+![The Spark shell runs a test job and returns the numbers 1 through 9](images/03-installing-spark-05-spark-shell-cropped.png)
 
 ## Making the variables permanent
 
