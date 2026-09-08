@@ -138,7 +138,7 @@ the first videos by loading the zones CSV and writing it as parquet:
 df_zones = spark.read.parquet('zones/')
 ```
 
-![The zones lookup table: location ID, borough, zone and service zone](images/10-joins-in-spark-03-zones-lookup.jpg)
+![The notebook displays the zones lookup table with location and service-zone fields](images/10-joins-in-spark-03-zones-lookup-cropped.png)
 
 It's a small lookup table: location ID, borough, zone name and service
 zone. Now the join - this time the column names are different in the two
