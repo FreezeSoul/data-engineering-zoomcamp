@@ -119,7 +119,7 @@ they show up on a dashboard. Because batch is so convenient, the
 majority of data processing jobs - in my experience, 80% or more - are
 batch. The remaining 10-20% are streaming.
 
-![alt text](images/01-introduction-to-batch-processing-07-batch-vs-streaming-share.jpg)
+![Approximate 80/20 split between batch and streaming data processing](images/01-introduction-to-batch-processing-07-batch-vs-streaming-share-imagegen.png)
 
 We already saw how to do batch transformations with SQL in the previous
 module, and we touched Python scripts in week one. So the rest of this
