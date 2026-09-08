@@ -32,7 +32,7 @@ gsutil -m cp -r pq/ gs://dtc_data_lake_de-zoomcamp-nytaxi/pq
 Uploading the parquet files takes a while - the folder holds 380 files,
 1.1 GiB in total:
 
-![The upload progresses over 380 objects, 1.1 GiB in total](images/13-connecting-to-google-cloud-storage-03-upload-progress.jpg)
+![The upload progresses over 380 objects, 1.1 GiB in total](images/13-connecting-to-google-cloud-storage-03-upload-progress-cropped.png)
 
 When it finishes, the `pq` folder with the green and yellow parquet files
 sits in the bucket.
