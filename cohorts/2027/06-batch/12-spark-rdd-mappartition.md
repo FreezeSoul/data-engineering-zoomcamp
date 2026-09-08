@@ -48,7 +48,33 @@ these columns:
 
 We select the columns and look at the result:
 
-![Selecting the feature columns from the green taxi dataset](images/12-spark-rdd-mappartition-02-feature-columns-crisp.png)
+```python
+columns = ['VendorID', 'lpep_pickup_datetime', 'PULocationID',
+           'DOLocationID', 'trip_distance']
+
+df_green \
+    .select(columns) \
+    .show()
+```
+
+```text
+VendorID | lpep_pickup_datetime | PULocationID | DOLocationID | trip_distance
+2        | 2020-01-16 19:49:27  | 260          | 173          | 2.59
+2        | 2020-01-19 01:55:32  | 181          | 211          | 6.25
+2        | 2020-01-18 15:58:31  | 74           | 244          | 2.8
+null     | 2020-01-03 09:37:00  | 51           | 185          | 2.55
+2        | 2020-01-27 09:27:18  | 146          | 146          | 0.02
+2        | 2020-01-14 09:33:35  | 129          | 226          | 2.21
+2        | 2020-01-27 22:52:52  | 74           | 194          | 2.26
+null     | 2020-01-19 07:35:00  | 51           | 116          | 10.0
+2        | 2020-01-07 06:36:27  | 244          | 74           | 3.18
+2        | 2020-01-17 21:06:51  | 66           | 132          | 1.22
+2        | 2020-01-16 17:39:15  | 75           | 143          | 2.8
+2        | 2020-01-24 22:33:24  | 75           | 74           | 3.07
+2        | 2020-01-09 23:58:57  | 65           | 97           | 2.19
+2        | 2020-01-17 08:48:46  | 95           | 135          | 2.31
+null     | 2020-01-28 20:16:30  | 42           | 10           | 15.78
+```
 
 In practice, the pre-processing would happen in SQL, and by the time the
 data reaches this point it would already contain only the prepared
