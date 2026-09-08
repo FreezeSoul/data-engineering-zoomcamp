@@ -25,7 +25,7 @@ enable the API - one click. Then click create cluster and configure it:
   lets you run experiments right on the cluster - and Docker, which we
   will use in a later section.
 
-![Creating the Dataproc cluster in the Google Cloud console](images/15-setting-up-a-dataproc-cluster-01-create-cluster.jpg)
+![Creating the Dataproc cluster in the Google Cloud console](images/15-setting-up-a-dataproc-cluster-01-create-cluster-cropped.png)
 
 Everything else - the machine types of the master and the workers - stays
 at the defaults. Click create, and after a few minutes the cluster is
