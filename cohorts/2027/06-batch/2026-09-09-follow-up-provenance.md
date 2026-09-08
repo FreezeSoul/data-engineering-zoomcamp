@@ -19,6 +19,24 @@ The exact bounded crop is retained at
 It is the `465×340` region `x=37,y=0,w=465,h=340`, extracted from the
 original `640×360` JPG before the imagegen repair.
 
+## Dataproc create-cluster form
+
+| Published target | Original JPG SHA-256 | Bounded crop SHA-256 | Published output SHA-256 | Imagegen output | Validation |
+|---|---|---|---|---|---|
+| `images/15-setting-up-a-dataproc-cluster-01-create-cluster-crisp.png` | `bcbc1727edf57f8792b975af2b6206c7058928299c32873ad04069ce04092876` | `a6a2d05c23ffaa70300ae3e83a97a7c0dc6b7440b9abca9d748a87aecff1715d` | `3195bd5bebf8171aa56df35a8e59fb38b6cff3cef711f50563a6e45d4b633975` | Generation artifact was not retained separately; the published PNG contains `gpt-image`/OpenAI C2PA metadata. | Output unchanged. Native `1597×985` and the source-derived crop chain are recorded; exact Dataproc setup labels and selected Jupyter/Docker components are preserved. |
+
+The retained bounded crop is
+`images/15-setting-up-a-dataproc-cluster-01-create-cluster-cropped.png`.
+It represents `x=0,y=30,w=535,h=330` in the original `640×360` JPG and is
+stored at `1070×660` after the documented 2× Lanczos raster step. The
+geometry can be reproduced with:
+
+```bash
+ffmpeg -i 15-setting-up-a-dataproc-cluster-01-create-cluster.jpg \
+  -vf 'crop=535:330:0:30,scale=1070:660:flags=lanczos' \
+  15-setting-up-a-dataproc-cluster-01-create-cluster-cropped.png
+```
+
 ## Dataproc submit-job form
 
 | Published target | Original JPG SHA-256 | Bounded crop SHA-256 | Published output SHA-256 | Imagegen output | Validation |
