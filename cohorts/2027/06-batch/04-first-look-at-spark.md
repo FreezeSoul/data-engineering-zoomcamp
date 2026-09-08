@@ -176,7 +176,7 @@ So let's do the thing that triggers it - saving the data as parquet:
 df.write.parquet('fhvhv/2021/01/')
 ```
 
-![The notebook with the declared schema, the repartition to 24 partitions and the parquet write](images/04-first-look-at-spark-05-repartition-write-parquet.jpg)
+![The notebook repartitions the data into 24 partitions before writing parquet](images/04-first-look-at-spark-05-repartition-write-parquet-cropped.png)
 
 Now something is happening. In the Spark UI there is a job called
 `parquet`; opening it shows what Spark is actually doing. There is a
