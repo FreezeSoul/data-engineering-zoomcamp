@@ -98,3 +98,27 @@ and remains readable. The generated output is stored under
 | File | SHA-256 |
 |---|---|
 | `06-deploying-a-machine-learning-model-03-docker-running-crisp.png` | `bcbf293e5febb408c19e329dd9bbb6c75f628dadd20bc7220636b449b7bbc686` |
+
+## Strict follow-up repair — 2026-09-09
+
+The earlier partition-pruning row above is superseded. A strict review found
+that the published image still showed the `CREATE OR REPLACE TABLE` step and a
+table-replacement result, even though the lesson discusses the cost of the
+partitioned `SELECT`. The Dremel row was also repaired because its top query
+omitted the table name. The final outputs below were generated from the
+original non-crisp JPGs and fresh bounded crops made directly from those JPGs;
+the previous published PNGs were layout references only.
+
+The final PNGs were inspected at native size and after proportional rendering
+to 608px wide. Both contain C2PA metadata. Crop geometry is recorded so the
+input selection is reproducible.
+
+| Published target | Original JPG (SHA-256) | Fresh bounded crop (geometry; SHA-256) | Imagegen output | Final PNG (SHA-256) | C2PA / validation |
+|---|---|---|---|---|---|
+| `cohorts/2027/03-data-warehouse/images/01-data-warehouse-and-bigquery-06-partition-pruning-crisp.png` | `01-data-warehouse-and-bigquery-06-partition-pruning.jpg` (`11bcbf8c5cc5afb7945dba804c3bfbb78c8b2d90f6a0a2ca0a2a3c2ffaa3b875`) | `01-data-warehouse-and-bigquery-06-partition-pruning-source-crop.png` (`490x340+150+10`; `995c11cdd288c6d2f8b0161ae43f41b0af0ac25e1f9a3f5b5ec09ce14042f4ec`) | `/home/alexey/.codex/generated_images/01a083d3-1c68-7521-a874-2507255989bc/exec-9f499379-741a-4865-a3b7-4742e38ee68e.png` | `ca53634165d93dfd78d42dec4c6e0ba85aa35fe43965fd71d8db808aeebd904d` | C2PA `urn:c2pa:024fb66e-a92e-4663-a2a8-3d3439e94f46`; shows the partitioned `SELECT`, June 2019 filter, and `105.9 MiB processed`; no table-creation callout. |
+| `cohorts/2027/03-data-warehouse/images/04-internals-of-bigquery-03-dremel-tree-imagegen.png` | `04-internals-of-bigquery-03-dremel-tree.jpg` (`37e8124f48499e1f411fa81f807804c357f9e1d7f3da48c72c5d8b9ebcaa88a8`) | `04-internals-of-bigquery-03-dremel-tree-source-crop.png` (`590x345+25+8`; `6f3f6c68f4d03a3ddd47c01bc585d67b4253f9494a10c9fde7d8657c5045224e`) | `/home/alexey/.codex/generated_images/01a083d3-1c68-7521-a874-2507255989bc/exec-06f4ee9e-ba1b-43ac-9723-91ba0ca05f93.png` | `79f8ff3a602471f7fadc5b3fee463171155afc24fbb2e42b876a615e4053c1ee` | C2PA `urn:c2pa:c6b22232-e6e6-40db-b178-61fa7cd3fca0`; top query is exactly `SELECT A, COUNT(B) FROM T GROUP BY A`, with the source topology retained. |
+
+The `02-workflow-orchestration/images/homework-cropped.png` embed was removed
+from `homework.md` and replaced by a native Markdown table listing the seven
+2021 yellow and green monthly files. It was not regenerated; the source image
+remains unmodified and no C2PA claim is made for it.
