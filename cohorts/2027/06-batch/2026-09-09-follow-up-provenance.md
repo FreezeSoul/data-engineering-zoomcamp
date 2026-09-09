@@ -8,6 +8,34 @@ published output is inspected at native resolution and at a proportional
 preserved. The crop coordinates below are measured in the original `640×360`
 frame; the tracked crop hash is the authoritative byte-level reference.
 
+## Strict 06-batch semantic repairs
+
+These four outputs repair the semantic defects found by the strict 06-batch
+review. Each was generated with the original non-crisp JPG and a fresh,
+native-resolution bounded crop as imagegen inputs. The generated artifact was
+copied byte-for-byte into the published target; no resize, sharpening, or
+post-generation text edit was used. C2PA identifiers were read from the
+published PNGs.
+
+| Published target | Original JPG SHA-256 | Fresh crop (geometry; SHA-256) | Imagegen artifact | Published output SHA-256 | C2PA / validation |
+|---|---|---|---|---|---|
+| `images/04-first-look-at-spark-01-spark-ui-crisp.png` | `59ab4b83b501e10b8e70ee48ee560282ba1c47fc566563d64ae9fa2c3ce67f8a` | `x=0,y=27,w=640,h=213`; `f61658745eaf6c73f6ba4a458ba074f5944a6c4a011df2a5dd85f66afaab82ad` | `/home/alexey/.codex/generated_images/01a083f5-2669-7b33-9eee-fc91bf35902a/exec-2deec469-6837-46af-87aa-1d51980902d6.png` | `af09ca8730dcd3e2864f80f7cece625bc6406630643ba40ee6f9e16f9f2208ec` | `urn:c2pa:1375db67-a8d4-43fe-a0e3-79ac6c737bac`; native `2170×725` and 608px `608×203` inspected. Blank Jobs page is preserved; the lesson wording now describes the application Jobs page rather than claiming a visible job row. |
+| `images/04-first-look-at-spark-02-schema-problem-pandas-crisp.png` | `53d58e89d35b4ffc5e0462d80728e734bb37d08f49df3bfdabcbac3804ecb704` | `x=0,y=27,w=600,h=215`; `dba05af6d0c2d0dcfd9f0b754f32f181c14e8c67213ea82927ae99a503e09e87` | `/home/alexey/.codex/generated_images/01a083f5-2669-7b33-9eee-fc91bf35902a/exec-7e027aba-fe1d-4717-ae69-1e58bca5bbbe.png` | `540cb55a9a4308c87707fbfb0bc3f62fd7cd47110d6f4494e3d1006e4a3e495a` | `urn:c2pa:9f042254-5254-43d8-b1a2-6e7aa4ea83c6`; native `2098×750` and 608px `608×217` inspected. The command visibly uses exact `head -n 101`, not `1001`. |
+| `images/04-first-look-at-spark-04-partitions-slides-imagegen.png` | `33be12471c94b2b6f7001915b11bc0c510f1cb02e35c6ddf4d0f9ed4f0c144a2` | `x=131,y=20,w=467,h=220`; `819b09469da6be9a708be81a0e22d80742a68e836a9ba35beba54462f3c6cb11` | `/home/alexey/.codex/generated_images/01a083f5-2669-7b33-9eee-fc91bf35902a/exec-14476e43-1941-48c3-a072-b3fa37331edb.png` | `d8699e24408e321ac126a08e72cd1f6eb105664665df2e60d69347ef1bd4cdf9` | `urn:c2pa:2093003d-efe6-4f04-9901-95f03e97c023`; native `1672×941` and 608px `608×342` inspected. Six arrows terminate inside matching `Executor 1`–`Executor 6` boxes. An earlier generated grid variant was rejected because three arrows landed between boxes. |
+| `images/05-spark-dataframes-03-built-in-functions-crisp.png` | `e446434b8e919d2e3ad53c34939e0cef2ff017fa6f8cb6fd9f3c4e0e422597e0` | `x=0,y=27,w=600,h=215`; `2da9f4e8080cac06a509cbf964d72d9c1375b779e4944f28b144e406d0d2767e` | `/home/alexey/.codex/generated_images/01a083f5-2669-7b33-9eee-fc91bf35902a/exec-e15f8c91-2fdc-4a5e-a333-80c30317d281.png` | `301d8a17b22b44b536de506ca1fb1beda8519ecb491a5348154222c1ba0fb29e` | `urn:c2pa:99f899e3-6162-4916-ad5c-0e1291c63e5a`; native `1672×941` and 608px `608×342` inspected. The SQL context and DataFrame filter both show the exact quoted value `'HV0003'`. |
+
+The four bounded crops above were created with ImageMagick 6.9.12-98 using
+the native original frames:
+
+```bash
+convert <original.jpg> -crop <width>x<height>+<x>+<y> +repage -strip \
+  -define png:exclude-chunk=tIME <target-imagegen-crop.png>
+```
+
+The four 608px validation renders are reproducible with
+`convert <published.png> -resize '608x608>' <validation.png>` and are kept
+outside the repository under `/tmp/de-batch-06-batch-repair-608/`.
+
 ## MapPartitions diagram
 
 | Published target | Original JPG SHA-256 | Bounded crop SHA-256 | Published output SHA-256 | Imagegen output | Validation |

@@ -32,10 +32,10 @@ df = spark.read \
 ```
 
 If we run `df.show()`, Spark correctly gets the names of the columns.
-And if we open localhost:4040 and refresh, we see new things there:
-every time we execute something, it is reflected in the UI as a job.
+And if we open localhost:4040 and refresh, we see the Spark application's
+Jobs page. After a notebook action runs, it appears here as a job.
 
-![Spark UI on port 4040 showing the notebook's Spark jobs](images/04-first-look-at-spark-01-spark-ui-crisp.png)
+![Spark UI on port 4040 showing the active application's Jobs page](images/04-first-look-at-spark-01-spark-ui-crisp.png)
 
 ## The schema problem
 
