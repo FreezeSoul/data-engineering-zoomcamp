@@ -8,6 +8,39 @@ published output is inspected at native resolution and at a proportional
 preserved. The crop coordinates below are measured in the original `640×360`
 frame; the tracked crop hash is the authoritative byte-level reference.
 
+## Authoritative current-ref audit — lessons 11–15
+
+After the independent audit result was available, the live Markdown image
+references in lessons 11–15 were re-enumerated. There are eight current
+references: two in lesson 11, one in lesson 12, none in lesson 13, two in
+lesson 14, and three in lesson 15. The four outputs marked **kept** below
+were already proven imagegen outputs and were left byte-for-byte unchanged.
+The four outputs marked **regenerated** had either a deterministic
+resize/sharpen derivative or a non-native retained crop in their prior
+history, so each was regenerated from its original non-crisp JPG plus the
+fresh native bounded crop shown below. The older processed crops remain
+preserved as historical evidence and are not imagegen inputs.
+
+| Live published ref | Disposition | Original JPG (SHA-256) | Native bounded crop (geometry; SHA-256) | Imagegen artifact / published output (SHA-256) | C2PA / validation |
+|---|---|---|---|---|---|
+| `images/11-operations-on-spark-rdds-02-map-key-value-whiteboard-imagegen.png` | kept — proven output unchanged | `61271e3361f77bd04eaefe44c4102d273c18fb7b0d375df72c6fdeb55836e1a8` | `x=37,y=0,w=465,h=340`; `c2930292eb4311141e1a91a5c1075b9cd5bddb54882d265e9fc3cd3e5cde3110` | `/home/alexey/.codex/generated_images/01a07ea3-b076-7290-bbd7-a10ef2cbb11f/exec-4990ab34-0718-4637-8e06-762d99fc6aae.png`; `daae0a1dbfb04c8930edad0fea7531a2146532d5576f634d63f4dc4b121b1ba0` | `urn:c2pa:853eb46d-4d04-4d2d-90d3-652a3713407c`; native `1667×943`, 608px `608×344`; exact `RDD`, `Row`, `map`, `(H, Z)`, `(AMT, CNT)`, arrows, and grouping semantics retained; no face/camera/toolbar/browser/cursor overlay. |
+| `images/11-operations-on-spark-rdds-06-dag-two-stages-crisp.png` | regenerated from original + native crop | `a248d024dc20af56290836e8697ce8c7b3af950123323ea5012659b56666fabf` | `x=0,y=28,w=480,h=300`; `4b1c48456aedcb774b203369e36958c70e464291d6c3547bc2c666f1f094dee4` | `/home/alexey/.codex/generated_images/01a08481-68d1-7250-9be5-0e0d56a74eed/exec-e7bffc9c-d6ce-4279-b989-d122844f5b5c.png`; `0f42f80efc98dde09b1d9bbb99f64567950c589ea871af6bcebca127ac7d8572` | `urn:c2pa:1cf8efa6-f942-43ce-863c-ffff6b760a79`; byte-identical published/artifact; native `1586×992`, 608px `608×380`; exact Stage 30/31 labels, both `mapPartitions` nodes, all arrows, and full bottom map node retained; no face/camera/browser/editor/cursor/play/selection overlay. |
+| `images/12-spark-rdd-mappartition-01-map-partitions-diagram-imagegen.png` | kept — proven output unchanged | `7db8b45581bcdda460a273ef9f0f5ba5b128a8e9b44f323250169902cb3fb106` | `x=37,y=0,w=465,h=340`; `b4eacca11cc92bf35c464c7f98dce8924492f4284d01f8ff9a32a5d6b573c075` | `/home/alexey/.codex/generated_images/01a08324-9092-7f41-b36b-4be7f604bada/exec-9ac431f6-bbc4-473f-9471-9ec224466957.png`; `70f194fe755ec4450a9b9ce85944f770ce7522a79cf086b15b97ad5aa7bacbe8` | `urn:c2pa:11d620fd-952b-4a14-b797-ce102a1c2f06`; native `1774×887`, 608px `608×304`; exact `RDD`, `Partition`, `mapPartitions`, `1TB`, and arrows retained; no face/camera/toolbar/browser/cursor overlay. |
+| `images/14-creating-a-local-spark-cluster-01-spark-master-ui-crisp.png` | regenerated from original + native crop | `acbe938fb541ae8322b9e3bcb9c64663a811a121914f3e071393b35dec38978d` | `x=0,y=30,w=640,h=105`; `7687753cded06fad619191a34998275383fc27f017f92adf4057982d9fe5bc9c` | `/home/alexey/.codex/generated_images/01a08481-68d1-7250-9be5-0e0d56a74eed/exec-93867794-7809-468d-849a-cf0d0af6f1ce.png`; `0040b1fcc345cb9290d9715f849ae14778486b7aaef6925857ee4abe8ce736a5` | `urn:c2pa:9f5fb88b-b746-4ec6-8467-ff97ec05070a`; byte-identical published/artifact; native `1991×790`, 608px `608×241`; exact Spark `3.0.3`, master URL, zero counts, `ALIVE`, and empty table headers retained; no face/camera/browser/editor/cursor/play/selection overlay. |
+| `images/14-creating-a-local-spark-cluster-02-worker-registered-crisp.png` | regenerated from original + native crop | `ebbf95dd6eaf2196d9069f3360303004886952231b15e1edb6364c9fba97c106` | `x=0,y=30,w=640,h=160`; `7048812f2712535051393fa66d2cfc412dc86c4a30cefa2134c2f538bfc19393` | `/home/alexey/.codex/generated_images/01a08481-68d1-7250-9be5-0e0d56a74eed/exec-c47fe6e4-538d-45bc-adb5-beb26015c03b.png`; `e817cd6e56a82ff8e2867ddbcc0a4fa3effdc956ead76f5786f7b88342ccdfe6` | `urn:c2pa:48cd3d0a-7d54-49d2-b76c-ddb50bf5a0b0`; byte-identical published/artifact; native `1774×887`, 608px `608×304`; exact worker ID/address, `ALIVE`, resource values, application IDs, timestamps, states, and table headers retained; no face/camera/browser/editor/cursor/play/selection overlay. |
+| `images/15-setting-up-a-dataproc-cluster-01-create-cluster-crisp.png` | kept — proven output unchanged | `bcbc1727edf57f8792b975af2b6206c7058928299c32873ad04069ce04092876` | `x=0,y=30,w=535,h=330`; `7cca0e94be7edacb547c04f974188958589905f26e3c7e09bf655c21c6c96ef1` | `/home/alexey/.codex/generated_images/01a0836e-71b4-7e51-81c7-c5b905ca6493/exec-64b34174-22aa-4a10-b641-ab7c83a96f31.png`; `cd7e76b3b1c8bf24bd9cf3cecfbadb66b79e26942e4bbc63c88fbf9e9d50863f` | `urn:c2pa:124a9367-e097-4131-8a7f-577c8a048c6e`; native `1598×984`, 608px `608×374`; exact Dataproc labels, project, Jupyter/Docker selections, and controls retained; no face/camera/browser/cursor overlay. |
+| `images/15-setting-up-a-dataproc-cluster-02-submit-job-form-crisp.png` | regenerated from original + native crop | `2dc190d5becb85faa1528065388e2f87300d7fb1f46c9de14d16fec17e037ef0` | `x=280,y=95,w=360,h=265`; `a26f1a72f3fc5ad78765186d5e552da4f3de4eb220d7380f67292405aa6b7538` | `/home/alexey/.codex/generated_images/01a08481-68d1-7250-9be5-0e0d56a74eed/exec-dfc80e47-8567-4283-a756-c3bbbd402eb0.png`; `ef5572be340409c8e4a9a63fd79cb23c6ff7b24b539f7f7654609c8d50851ec3` | `urn:c2pa:7f811570-2045-4ce8-8e9d-4f4134193c0b`; byte-identical published/artifact; native `1630×965`, 608px `608×360`; exact PySpark path, all three 2021 bucket arguments/wildcards, restart placeholder, and Properties control retained; no face/camera/browser/editor/cursor/play/selection overlay. |
+| `images/15-setting-up-a-dataproc-cluster-05-reports-in-bucket-crisp.png` | kept — proven output unchanged | `01a1cc28707c611321086bfd4de3be9db38cbf0b6ad74ec32ef8bc953f459cf6` | `x=0,y=30,w=535,h=330`; `c5812061eddc30c2e933e501445c53f79f13a92e201b3d67b9e7e226e811cffb` | `/home/alexey/.codex/generated_images/01a07b59-81f1-7ad0-8caf-684763eaf05e/exec-3511bef5-af63-4b99-b8a9-ed679d96d569.png`; `0458cb6048aec80f359e4dfe5fe99f9f8b348e97d13ef1564525f2b59ccd21b5` | `urn:c2pa:55ad7e30-1210-4d98-85e3-8f23723d1751`; native `1672×941`, 608px `608×342`; exact bucket name, `code/`, `pq/`, `report-2020/`, and `report-2021/` rows retained; no face/camera/browser/cursor overlay. |
+
+All new crops above were extracted from the native `640×360` JPGs with
+ImageMagick `6.9.12-98 Q16 x86_64 18038` using `-crop`, `+repage`, `-strip`,
+and `-define png:exclude-chunk=tIME`; none was resized or sharpened before
+imagegen. The regenerated published PNGs were copied byte-for-byte from the
+listed imagegen artifacts. The 608px renders are validation-only outputs
+under `/tmp/de-batch-11-15-608/`, made with `convert <published.png>
+-resize '608x608>'`; no published output was derived from a resize,
+Lanczos, or sharpening step.
+
 ## Strict 06-batch semantic repairs
 
 These four outputs repair the semantic defects found by the strict 06-batch
