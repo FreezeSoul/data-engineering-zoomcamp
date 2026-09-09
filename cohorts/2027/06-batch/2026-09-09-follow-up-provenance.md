@@ -178,3 +178,72 @@ it is not the crop used for provenance or generation.
 | Former published target | Original JPG SHA-256 | Bounded crop SHA-256 | Former output SHA-256 | Decision |
 |---|---|---|---|---|
 | `images/16-connecting-spark-to-bigquery-02-failed-to-find-bigquery-crisp.png` | `f5bd4950c6b57cad657d6e787b58c84aa7bd9688b52546d583625a4b46b3880b` | `65d7259a7c58b69a03982db395c85fcb4063aa6f63c10692d76708ed98265f44` | `dd7a40484fc34b5fc8e543b8ca81e20ef166745bf6c72e1de006b19c238fc927` | Removed the Markdown embed. This is exact traceback/code output and is more useful as native lesson text; retaining it as a bitmap adds no instructional value and preserves capture artifacts. The JPG, crop, and PNG remain in the repository for auditability. |
+
+## Lessons 08–10 provenance-blocked illustration repairs — 2026-09-09
+
+These six repairs close the remaining provenance blocks in lessons 08–10 of
+06-batch. Every source JPG is the retained native `640×360` video frame. A
+fresh bounded crop was made at native resolution, with no resize, Lanczos,
+sharpening, or text edit, and the original JPG plus that crop were sent to
+the built-in imagegen workflow as Image 1 and Image 2. The final published
+PNG is byte-identical to the listed final imagegen artifact. The Spark UI
+asset remains a raster because the UI layout, job rows, counts, and progress
+bars are instructional evidence; replacing it with a Markdown table would
+not preserve that structure. The validation renders are display-only and
+remain outside the repository at
+`/tmp/de-batch-06-batch-repair-608-2026-09-09/`.
+
+| Published target | Original JPG (SHA-256) | Fresh native crop (geometry; SHA-256) | Final imagegen artifact (path; SHA-256) | Published output (SHA-256; native → simulated 608px) | C2PA / semantic validation |
+|---|---|---|---|---|---|
+| `images/08-anatomy-of-a-spark-cluster-01-spark-submit-master-imagegen.png` | `images/08-anatomy-of-a-spark-cluster-01-spark-submit-master.jpg` (`a581ca58ccb942e7a2440040d2f27c28a7dc8b680e82852b1ded88dae5c18478`) | `images/08-anatomy-of-a-spark-cluster-01-spark-submit-master-imagegen-crop.png` (`x=54,y=3,w=446,h=330`; `d44213272a9df8dcaa6a71d6eaf5cf443577568f4aefb13c732c539cb5fea0ae`) | `/home/alexey/.codex/generated_images/01a08475-4c39-78e3-9808-678666e6c738/exec-a7f95ce2-8670-44e5-bfc8-bf49c622a157.png` (`00f47406910ab34ca13dd2c8480e4b474f4c8780c5838726b824eec3c8ca15b4`) | `00f47406910ab34ca13dd2c8480e4b474f4c8780c5838726b824eec3c8ca15b4`; `1672×940 → 608×342` | `urn:c2pa:812d179d-ad6a-45da-a357-689341858354`; `DRIVER → SPARK SUBMIT → MASTER`, `4040` is associated with `MASTER`, and the cluster contains no executor nodes. No face, camera, browser, editor, or selection overlay. |
+| `images/08-anatomy-of-a-spark-cluster-02-executors-failure-imagegen.png` | `images/08-anatomy-of-a-spark-cluster-02-executors-failure.jpg` (`31546cb274f628bf40524dd21b0e7ab09a6de9e1b226d5d7d9cd978bd17ace69`) | `images/08-anatomy-of-a-spark-cluster-02-executors-failure-imagegen-crop.png` (`x=54,y=3,w=446,h=330`; `6b2a636b8d7e87b425cd74a87590f6333d38feceb911c2c09426f69b92c816eb`) | `/home/alexey/.codex/generated_images/01a08475-4c39-78e3-9808-678666e6c738/exec-24f7acef-604f-4250-b8ba-45217998163f.png` (`1a159090345423358816911b023fc0988b14b62f36d2ee1f9a7eb694bb10425c`) | `1a159090345423358816911b023fc0988b14b62f36d2ee1f9a7eb694bb10425c`; `1672×941 → 608×342` | `urn:c2pa:71480ee2-8eaa-4b1d-9a46-03e6a410150e`; exactly five executor boxes are shown: one failed red-X box and four green-check boxes, with master-to-executor arrows directed toward the executor group. The first candidate was rejected for one stray blank rectangle; the final targeted edit removes it. |
+| `images/08-anatomy-of-a-spark-cluster-03-executors-pull-partitions-imagegen.png` | `images/08-anatomy-of-a-spark-cluster-03-executors-pull-partitions.jpg` (`3719ec21d59f2e99b7068cb4098157efcda7149042479ff40ec9ee6174869e83`) | `images/08-anatomy-of-a-spark-cluster-03-executors-pull-partitions-imagegen-crop.png` (`x=54,y=3,w=446,h=330`; `b6d65e5a7245849309eff62e2d0b3433da5fc0b321c7c74cf8a3b3af82ffd678`) | `/home/alexey/.codex/generated_images/01a08475-4c39-78e3-9808-678666e6c738/exec-d65dd395-21de-45a3-bd1b-cb49c3db0d15.png` (`dedafa9b59689d3a106dbc0992d4c253069e120c4faef982b44db6c6ddc65d64`) | `dedafa9b59689d3a106dbc0992d4c253069e120c4faef982b44db6c6ddc65d64`; `1672×941 → 608×342` | `urn:c2pa:2ace5489-f45c-4e59-ab11-f0ad25a246cf`; four `DF` partitions feed `EXECUTOR 1`–`EXECUTOR 4` with four left-pointing partition-to-executor arrows; no face, camera, browser, editor, or selection overlay. |
+| `images/08-anatomy-of-a-spark-cluster-04-s3-gcs-instead-of-hdfs-imagegen.png` | `images/08-anatomy-of-a-spark-cluster-04-s3-gcs-instead-of-hdfs.jpg` (`e0c6fe0810ea031f42db9c70f1aef3acda0e72fad02882d31d5944228c5346ee`) | `images/08-anatomy-of-a-spark-cluster-04-s3-gcs-instead-of-hdfs-imagegen-crop.png` (`x=54,y=3,w=446,h=330`; `8ce7f692b24ec4c28904fc348100c5829bab53708ff56e53078c4c32dd4a52f3`) | `/home/alexey/.codex/generated_images/01a08475-4c39-78e3-9808-678666e6c738/exec-459f97d9-aad0-4163-8af1-562b9f0f7389.png` (`de59e4bae1ad5cdf51a3b9605b4f6392a4b95f8c21d580241b5c48f46b6bff18`) | `de59e4bae1ad5cdf51a3b9605b4f6392a4b95f8c21d580241b5c48f46b6bff18`; `1672×941 → 608×342` | `urn:c2pa:2bed2ac0-5a9d-4aac-9fe8-8df6098eded2`; `HADOOP/HDFS` is crossed out, `S3/GCS` is the active store, and exactly four non-crossing left-pointing arrows map `partition 1/2/3/N` to the four healthy executors. The first candidate was rejected because the arrows crossed/mislanded; the final targeted edit fixes the mapping. |
+| `images/09-groupby-in-spark-03-reshuffling-whiteboard-imagegen.png` | `images/09-groupby-in-spark-03-reshuffling-whiteboard.jpg` (`10326539ab2c4ea9dd99563e465fcd9924a274f17e26892be029c06e9f953f17`) | `images/09-groupby-in-spark-03-reshuffling-whiteboard-imagegen-crop.png` (`x=54,y=3,w=446,h=330`; `4ec08aaa7055acd9999622c4fd1e94556e856195441ea7ea0331a210723d651d`) | `/home/alexey/.codex/generated_images/01a08475-4c39-78e3-9808-678666e6c738/exec-3d2d857d-0141-4769-9aa4-5899cdf3fc05.png` (`f7034d5cfd17a5439783a82ab24fa9c1f827050f6b2de7218cb40f455f466aab`) | `f7034d5cfd17a5439783a82ab24fa9c1f827050f6b2de7218cb40f455f466aab`; `1459×1078 → 608×449` | `urn:c2pa:37f851ca-ccf5-49ea-b2ef-45e82a7718ee`; exact subresult values `100,5`, `200,10`, `50,2`, and `250,12` are preserved, with five left-to-right arrows grouping `(h1,z1)` into `P1` and `(h1,z2)` into `P2`. |
+| `images/10-joins-in-spark-04-broadcast-exchange-crisp.png` | `images/10-joins-in-spark-04-broadcast-exchange.jpg` (`6ad6de2cc8cd383682459256764be1f3977e2cb4bed6b64d9dc09de230d9ac97`) | `images/10-joins-in-spark-04-broadcast-exchange-imagegen-crop.png` (`x=0,y=24,w=640,h=216`; `cd74244456707198c89d9e7e1dea9cdfd665526c0ba0f0a468d627602e9817ae`) | `/home/alexey/.codex/generated_images/01a08475-4c39-78e3-9808-678666e6c738/exec-940344e1-e0a2-44bd-b9cf-f702cc5a0696.png` (`1168c85376ec32fb9882684f1fcd0e9b9da3c4546e1021dd2f1261997351c8af`) | `1168c85376ec32fb9882684f1fcd0e9b9da3c4546e1021dd2f1261997351c8af`; `2160×728 → 608×205` | `urn:c2pa:2e30f186-b6f5-42b9-b22d-6be819e5f61d`; `Completed Jobs: 42`, broadcast-exchange rows 40/39/37, stage `1/1`, row-41 task `7/7`, and the visible Spark UI hierarchy are preserved; camera, browser chrome, cursor, and selection highlight are absent. |
+
+The exact native crop commands were:
+
+```bash
+# ImageMagick 6.9.12-98 Q16 x86_64 18038; no scaling or sharpening
+convert 08-anatomy-of-a-spark-cluster-01-spark-submit-master.jpg \
+  -crop 446x330+54+3 +repage -strip -define png:exclude-chunk=tIME \
+  08-anatomy-of-a-spark-cluster-01-spark-submit-master-imagegen-crop.png
+convert 08-anatomy-of-a-spark-cluster-02-executors-failure.jpg \
+  -crop 446x330+54+3 +repage -strip -define png:exclude-chunk=tIME \
+  08-anatomy-of-a-spark-cluster-02-executors-failure-imagegen-crop.png
+convert 08-anatomy-of-a-spark-cluster-03-executors-pull-partitions.jpg \
+  -crop 446x330+54+3 +repage -strip -define png:exclude-chunk=tIME \
+  08-anatomy-of-a-spark-cluster-03-executors-pull-partitions-imagegen-crop.png
+convert 08-anatomy-of-a-spark-cluster-04-s3-gcs-instead-of-hdfs.jpg \
+  -crop 446x330+54+3 +repage -strip -define png:exclude-chunk=tIME \
+  08-anatomy-of-a-spark-cluster-04-s3-gcs-instead-of-hdfs-imagegen-crop.png
+convert 09-groupby-in-spark-03-reshuffling-whiteboard.jpg \
+  -crop 446x330+54+3 +repage -strip -define png:exclude-chunk=tIME \
+  09-groupby-in-spark-03-reshuffling-whiteboard-imagegen-crop.png
+convert 10-joins-in-spark-04-broadcast-exchange.jpg \
+  -crop 640x216+0+24 +repage -strip -define png:exclude-chunk=tIME \
+  10-joins-in-spark-04-broadcast-exchange-imagegen-crop.png
+```
+
+The final prompts used the original JPG and crop as factual/layout
+references, required a clean high-resolution redraw, and prohibited simple
+enlargement, sharpening, invented text, reversed arrows, faces, camera
+circles, browser/editor chrome, cursors, selections, watermarks, and
+post-generation text edits. The 08-02 base candidate
+`exec-ebc519b9-61e3-4e84-b6b8-ba3162bd4124.png` was superseded by the listed
+targeted edit after native inspection found one stray blank rectangle. The
+08-04 base candidate
+`exec-81040435-4bdf-42b1-9df7-f43598fe6e34.png` was superseded by the listed
+targeted edit after native inspection found crossed/mislanded storage arrows.
+Both base generations had already used the required original-JPG-plus-crop
+input pair. No resized or sharpened derivative was used as a published asset.
+
+The six display-only validation renders were generated without sharpening:
+
+```bash
+convert <published.png> -filter Triangle -resize '608x608>' <validation.png>
+```
+
+Native and simulated 608px inspections passed for all six finals; the
+validation PNGs are not source or published assets.
