@@ -21,38 +21,65 @@ original `640×360` JPG before the imagegen repair.
 
 ## Dataproc create-cluster form
 
-| Published target | Original JPG SHA-256 | Bounded crop SHA-256 | Published output SHA-256 | Imagegen output | Validation |
+| Published target | Original JPG SHA-256 | Fresh bounded crop SHA-256 | Imagegen artifact SHA-256 | Published output SHA-256 | Validation |
 |---|---|---|---|---|---|
-| `images/15-setting-up-a-dataproc-cluster-01-create-cluster-crisp.png` | `bcbc1727edf57f8792b975af2b6206c7058928299c32873ad04069ce04092876` | `a6a2d05c23ffaa70300ae3e83a97a7c0dc6b7440b9abca9d748a87aecff1715d` | `3195bd5bebf8171aa56df35a8e59fb38b6cff3cef711f50563a6e45d4b633975` | Generation artifact was not retained separately; the published PNG contains `gpt-image`/OpenAI C2PA metadata. | Output unchanged. Native `1597×985` and the source-derived crop chain are recorded; exact Dataproc setup labels and selected Jupyter/Docker components are preserved. |
+| `images/15-setting-up-a-dataproc-cluster-01-create-cluster-crisp.png` | `bcbc1727edf57f8792b975af2b6206c7058928299c32873ad04069ce04092876` | `7cca0e94be7edacb547c04f974188958589905f26e3c7e09bf655c21c6c96ef1` | `cd7e76b3b1c8bf24bd9cf3cecfbadb66b79e26942e4bbc63c88fbf9e9d50863f` | `cd7e76b3b1c8bf24bd9cf3cecfbadb66b79e26942e4bbc63c88fbf9e9d50863f` | Fresh imagegen redraw copied byte-for-byte into the published target. Native `1598×984` and proportional `608×374` renders inspected; exact Dataproc setup labels and selected Jupyter/Docker components are preserved. The output contains `gpt-image`/OpenAI C2PA metadata and has no webcam, browser chrome, cursor, or overlay artifacts. |
 
-The retained bounded crop is
-`images/15-setting-up-a-dataproc-cluster-01-create-cluster-cropped.png`.
-It represents `x=0,y=30,w=535,h=330` in the original `640×360` JPG and is
-stored at `1070×660` after the documented 2× Lanczos raster step. The
-geometry can be reproduced with:
+The new imagegen input crop is retained at
+`images/15-setting-up-a-dataproc-cluster-01-create-cluster-imagegen-crop.png`.
+It is a native-resolution `535×330` crop at `x=0,y=30,w=535,h=330` from the
+original `640×360` JPG. It is intentionally not upscaled or sharpened before
+imagegen. The exact crop command, including the tool version used, is:
 
 ```bash
-ffmpeg -i 15-setting-up-a-dataproc-cluster-01-create-cluster.jpg \
-  -vf 'crop=535:330:0:30,scale=1070:660:flags=lanczos' \
-  15-setting-up-a-dataproc-cluster-01-create-cluster-cropped.png
+# ImageMagick 6.9.12-98 Q16 x86_64 18038
+convert 15-setting-up-a-dataproc-cluster-01-create-cluster.jpg \
+  -crop 535x330+0+30 +repage -strip -define png:exclude-chunk=tIME \
+  15-setting-up-a-dataproc-cluster-01-create-cluster-imagegen-crop.png
 ```
 
-The command documents the crop geometry only; it is not claimed to reproduce
-the historical reference bytes. A 2026-09-09 reproduction with FFmpeg
-`6.1.1-3ubuntu5` produced a `1070×660` PNG with SHA-256
-`d9d0114afa7f7ff1ebc7dee963e94226a97ee3682f9234ec305cefc749d1e18e`.
-Comparing that file with the retained crop gives `AE=265712` and
-`MAE=710.214`, so the historical sharpening/raster step is still missing.
-The retained crop hash above remains the authoritative record of the
-historical reference bytes, and the published crisp image was not changed.
+The resulting crop is SHA-256
+`7cca0e94be7edacb547c04f974188958589905f26e3c7e09bf655c21c6c96ef1`.
+The imagegen artifact was generated from both the original JPG and this fresh
+crop. It was saved at
+`/home/alexey/.codex/generated_images/01a0836e-71b4-7e51-81c7-c5b905ca6493/exec-64b34174-22aa-4a10-b641-ab7c83a96f31.png`, has SHA-256
+`cd7e76b3b1c8bf24bd9cf3cecfbadb66b79e26942e4bbc63c88fbf9e9d50863f`, and was
+copied without post-processing to the published target. The published target
+therefore has the identical SHA-256 and retains the imagegen C2PA metadata.
 
-The earlier batch rollout describes this operation only as “2x
-Lanczos/sharpen”; it does not record the sharpening filter, radius, sigma,
-amount, threshold, or tool version. This is the exact remaining provenance
-task: recover those parameters from the original worker run, or regenerate
-the bounded reference from the original JPG and imagegen input, then record
-the complete command, tool versions, crop/output hashes, and pixel comparison
-before changing any published asset.
+The exact imagegen prompt was:
+
+```text
+Use case: ui-mockup
+Asset type: high-resolution instructional lesson illustration
+Primary request: Recreate the Google Cloud Dataproc “Create a cluster” setup form as a clean, crisp, high-resolution raster illustration. Use Image 1 (the original non-crisp video frame) and Image 2 (the freshly bounded native-resolution crop) only as factual/layout references. Redraw the visible interface cleanly; do not upscale or sharpen the screenshot.
+Input images: Image 1: original non-crisp JPG, factual source; Image 2: freshly bounded crop, composition/detail reference.
+Scene/backdrop: clean white Google Cloud console interface with a blue cloud-console header and a narrow left navigation rail.
+Subject: the “Create a cluster” page. Keep the left setup navigation and the right “Optional components” checklist.
+Style/medium: faithful typeset UI redraw, precise vector-like edges, high-resolution bitmap output, neutral white background.
+Composition/framing: wide landscape composition matching the reference; show the complete relevant form area, including the “Create a cluster” heading, left setup steps, right optional-components checklist, and Create/Cancel controls.
+Text (verbatim): “Google Cloud Platform”, “de-zoomcamp-nytaxi”, “Search”, “dataproc”, “Create a cluster”, “Set up cluster”, “Begin by providing basic information.”, “Configure nodes (optional)”, “Change node compute and storage capabilities.”, “Customize cluster (optional)”, “Add cluster properties, features, and actions.”, “Manage security (optional)”, “Change access, encryption, and security settings.”, “Optional components”, “Select one or multiple components.”, “Learn more”, “Anaconda”, “Hive WebHCAT”, “Jupyter Notebook”, “Zeppelin Notebook”, “Druid”, “Presto”, “ZooKeeper”, “Ranger”, “HBase”, “Flink”, “Docker”, “Solr”, “CREATE”, “CANCEL”.
+Constraints: preserve the factual layout and exact labels from the references; Jupyter Notebook and Docker are checked; all other optional components are unchecked; keep the selected project text “de-zoomcamp-nytaxi”; retain the blue header and console navigation as clean UI context.
+Avoid: the presenter’s face, webcam circle, browser tabs/address bar, browser chrome, cursor, annotations, handwritten marks, selection highlights, watermarks, invented fields, altered labels, extra components, illegible text, cropped checklist rows, and any screenshot-like blur or simple enlargement.
+```
+
+The prior `images/15-setting-up-a-dataproc-cluster-01-create-cluster-cropped.png`
+is retained as historical audit evidence for the superseded output. Its
+`1070×660` bytes were produced by an undocumented 2× Lanczos/sharpen step and
+could not be reproduced (`AE=265712`, `MAE=710.214`); it is not an input to
+the new imagegen chain and is no longer used to substantiate the published
+output.
+
+For the required display check, resize the published output without sharpening:
+
+```bash
+convert 15-setting-up-a-dataproc-cluster-01-create-cluster-crisp.png \
+  -resize '608x608>' /tmp/dataproc-create-cluster-608.png
+```
+
+Expected render dimensions are `608×374`; inspect both the native target and
+that render for readable labels, complete checklist rows, and absence of
+camera/browser/overlay artifacts.
 
 ## Dataproc reports in bucket
 
