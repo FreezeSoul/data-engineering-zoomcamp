@@ -122,3 +122,28 @@ The `02-workflow-orchestration/images/homework-cropped.png` embed was removed
 from `homework.md` and replaced by a native Markdown table listing the seven
 2021 yellow and green monthly files. It was not regenerated; the source image
 remains unmodified and no C2PA claim is made for it.
+
+## Strict follow-up repair — 2026-09-09: deployment prediction screenshots
+
+The strict audit found three defects in the published deployment screenshots:
+the model-status response had duplicated/skipped line numbers, and both
+prediction requests copied the stale source value `22.2` even though the
+current lesson uses `trip_distance: 12.2`; the payment-type-2 response also
+had corrupted line numbering. Each replacement was generated with the built-in
+imagegen tool from the original non-crisp JPEG and its retained deterministic
+crop. Supporting generated layout references were used for the prediction
+passes only; no resized or sharpened derivative was used as the source of
+truth.
+
+The final PNGs were inspected at native resolution and after proportional
+rendering to 608px lesson width. The status response has a complete numbered
+JSON block from 1 through 14. Both prediction request editors have numbered
+lines 1 and 2, use the lesson-authoritative `12.2`, and retain their original
+response values; both response panels have consecutive line numbers 1 through
+7. All three outputs contain C2PA metadata.
+
+| Published target | Original JPG (SHA-256) | Deterministic crop (SHA-256) | Imagegen output | Final PNG (SHA-256) | C2PA / validation |
+|---|---|---|---|---|---|
+| `cohorts/2027/03-data-warehouse/images/06-deploying-a-machine-learning-model-04-model-status-crisp.png` | `06-deploying-a-machine-learning-model-04-model-status.jpg` (`5ce611080efdc428384a0385a66fc058c6144205b677ca3c4801aca2b5e89dd2`) | `06-deploying-a-machine-learning-model-04-model-status-cropped.png` (`585ac58fcf28ff801dedf6855604963e0c8f6756d68a9d26bbb215dc11362f79`) | `/home/alexey/.codex/generated_images/01a083d3-42e1-7b11-8381-2eb4b4ba6920/exec-cf18e4f0-e6fa-4cfc-9ff4-c1d388652389.png` | `bce2b64a77f7794732233a3b75ac28f1b7251b36d473cdc3a00d42887277cb2c` | C2PA `urn:c2pa:478b5a8f-eb36-412f-a7e7-18364d9f6f77`; exact `AVAILABLE` response retained; gutter 1–14; native `1694×929` and 608px checks passed. |
+| `cohorts/2027/03-data-warehouse/images/06-deploying-a-machine-learning-model-05-predict-crisp.png` | `06-deploying-a-machine-learning-model-05-predict.jpg` (`c92bf5a12d3a87e4b91c8ebc694710b5e094e1f011dee37002d91a9c9397b4c8`) | `06-deploying-a-machine-learning-model-05-predict-cropped.png` (`8dcf32c3e95d2000e629485440adbb592ec2596869167f03fc1cb0a9c4647199`) | `/home/alexey/.codex/generated_images/01a083d3-42e1-7b11-8381-2eb4b4ba6920/exec-8328b032-8417-45c2-b6c9-9ca9ad9f6869.png` | `1425481effd7b53f6fbfebf5c1a4e0162e088fe191408567ee43849e7a39a2eb` | C2PA `urn:c2pa:af4c3ea5-b7e7-4431-b189-9457168e3300`; request corrected to lesson `12.2`, response `3.2106109757442027` retained; request/response gutters consecutive; native `1693×929` and 608px checks passed. |
+| `cohorts/2027/03-data-warehouse/images/06-deploying-a-machine-learning-model-06-predict-payment-type-2-crisp.png` | `06-deploying-a-machine-learning-model-06-predict-payment-type-2.jpg` (`9bd2719d206afa8f92885e189bac067e3b62bdcb7454b80217ff044b48730b06`) | `06-deploying-a-machine-learning-model-06-predict-payment-type-2-cropped.png` (`084452f462faf00917480ac19da742f28df0e2b22cb27fc28d96abdac6c20484`) | `/home/alexey/.codex/generated_images/01a083d3-42e1-7b11-8381-2eb4b4ba6920/exec-7943939f-e07a-400d-8008-a6905b3b4297.png` | `a46b6ebb6cc85986e7ae4eb4598545563ca9be488ce9ca5aa0d55ffc67e41fef` | C2PA `urn:c2pa:4e5cdb45-bf73-4945-a074-08310022e18a`; request corrected to lesson `12.2` with `payment_type: 2`, response `0.25916742680327297` retained; request/response gutters consecutive; native `1695×928` and 608px checks passed. |
