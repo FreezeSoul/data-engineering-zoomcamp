@@ -36,6 +36,37 @@ The four 608px validation renders are reproducible with
 `convert <published.png> -resize '608x608>' <validation.png>` and are kept
 outside the repository under `/tmp/de-batch-06-batch-repair-608/`.
 
+## Typical Spark workflow — MODEL application-flow repair
+
+The strict review found that the previous redraw showed `MODEL` beside
+`SPARK APPLY ML` but did not connect them. The output was regenerated from the
+original non-crisp video frame and a fresh native-resolution crop. The new
+diagram makes the required directed `MODEL` → `SPARK APPLY ML` relationship
+explicit while preserving the lesson's SQL preparation, Spark/Python training,
+and data-lake flow. The presenter, webcam inset, editor controls, and other
+capture artifacts are removed.
+
+| Published target | Original JPG SHA-256 | Native bounded crop (geometry; SHA-256) | Imagegen artifact (SHA-256) | Published output SHA-256 | C2PA / validation |
+|---|---|---|---|---|---|
+| `images/02-introduction-to-spark-04-typical-workflow-whiteboard-imagegen.png` | `28d74acb2c1a4787aeb2bef9126292a8089e32981e45b8d1495ed6bd786161c1` | `x=54,y=3,w=528,h=330`; `ff32c3ac3264b74e8029173dd38d4da95614ad3a32f14edb7221024dc716f7e3` | `/home/alexey/.codex/generated_images/01a0846a-ff62-7b53-ab57-4f77fb0a4f0e/exec-a37f9f13-3d22-4560-892b-fc44d8bebb15.png`; `552a80c8b4ccf18555a756ca9c818c9c976c456da5863932b5383bbeb1423d95` | `552a80c8b4ccf18555a756ca9c818c9c976c456da5863932b5383bbeb1423d95` | `urn:c2pa:13a81cf3-3e5e-4450-8e26-d0e7c0867a74`; native `1942×809` and proportional 608px `608×253` inspected. The output is byte-identical to the imagegen artifact; the directed MODEL-to-SPARK APPLY ML arrow, exact labels, and no-face/no-overlay constraints were checked at both sizes. |
+
+The crop was created from the native `640×360` JPG without scaling or
+sharpening:
+
+```bash
+convert 02-introduction-to-spark-04-typical-workflow-whiteboard.jpg \
+  -crop 528x330+54+3 +repage -strip -define png:exclude-chunk=tIME \
+  02-introduction-to-spark-04-typical-workflow-whiteboard-imagegen-crop.png
+```
+
+The imagegen prompt required these exact labels: `RAW DATA`, `LAKE`,
+`SQL / ATHENA`, `SPARK`, `PYTHON TRAIN ML`, `MODEL`, `SPARK APPLY ML`, and
+`LAKE`. It explicitly required the SQL → Spark/Python training → MODEL →
+SPARK APPLY ML flow and prohibited invented text, faces, camera/browser UI,
+watermarks, overlays, and simple enlargement/sharpening. The generated PNG
+was copied byte-for-byte into the published target with no post-generation
+resize, sharpening, or text edit.
+
 ## MapPartitions diagram
 
 | Published target | Original JPG SHA-256 | Bounded crop SHA-256 | Published output SHA-256 | Imagegen output | Validation |
